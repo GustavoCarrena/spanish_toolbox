@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600;700&family=Noto+Sans:wght@400;700&display=swap');
+
+@font-face {
+    font-family: ball-pen;
+    src: url('/styles/fonts/Ball-Pen-Regular.woff'), url('/styles/fonts/Ball-Pen-Extra.woff');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-size: 16px;
+    --montserrat-font: 'Montserrat', sans-serif;
+    --noto-font: 'Noto Sans', sans-serif;
+    --first-orange-color: #fe5757;
+    --second-orange-color: #eb585a;
+    --violet-color: #512583;
+    --yellow-color: #f9c640;
+    --blue-color: #2f6fb6;
+    --gray-color: #9d9a9a;
+    --white-color: #fcfcfc;
+}
+
+body {
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 4.938rem;
+}
+
+.header .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    width: 32%;
+    height: auto;
+    margin: 0 14.2% 0 5.341%;
+}
+
+.header .logo-img {
+    width: auto;
+    height: 36px;
+    margin-right: 4%;
+}
+
+.header span {
+    width: 240px;
+    height: 1rem;
+    font-family: var(--montserrat-font);
+    font-size: 1.313rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.75rem;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--first-orange-color);
+}
+
+.header nav {
+    width: 100%;
+}
+
+.header nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header nav ul li {
+    list-style-type: none;
+    margin-right: 7.79%;
+}
+
+.header nav ul .last {
+    margin-right: 0;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: var(--montserrat-font);
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--violet-color);
+}
+
+.header .contact {
+    grid-area: contact-button;
+    min-width: 144px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    background-color: var(--second-orange-color);
+    margin: 0 4.25% -1% 0;
+}
+
+.header .contact span {
+    font-family: var(--noto-font);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fcfcfc;
+    width: 60px;
+    height: 22px;
+    font-size: 16px;
+}
+
+main {
+    grid-area: main;
+}
+
+main .hero {
+    display: grid;
+    grid-template-columns: 6.823% 24.527% auto 1fr 6.823%;
+    grid-template-rows: 61% 22% auto;
+    grid-template-areas:
+        "left-small-circles lamp-flowerpot computer varius right-circle"
+        ". lamp-flowerpot computer varius . "
+        ". lamp-flowerpot computer varius . ";
+    align-items: stretch;
+    justify-content: center;
+}
+
+main .hero .line {
+    width: 110%;
+    height: 1px;
+    border: solid 1px #2e2a4a;
+    background: #2e2a4a;
+    grid-row: 2/4;
+    grid-column: 2/5;
+    margin-left: -66px;
+
+}
+
+main .hero .left-small {
+    grid-area: left-small-circles;
+    width: auto;
+    height: fit-content;
+}
+
+main .hero .left-small .left-circle {
+
+    width: auto;
+    height: 188px;
+}
+
+main .hero .left-small .small-circle {
+
+    width: 26.2px;
+    height: 26.2px;
+    margin: 38.4px 0 0 25.2%;
+}
+
+main .hero .right-circle {
+    grid-area: right-circle;
+    width: 92%;
+    height: 186.4px;
+    margin-top: 4px;
+}
+
+main .hero .lamp-flowerpot {
+    grid-area: lamp-flowerpot;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    width: auto;
+    height: fit-content;
+    margin: 138px 40.3px 0 13.55%;
+    z-index: 1;
+}
+
+main .hero .lamp-flowerpot .lamp {
+    width: auto;
+    height: 314px;
+}
+
+main .hero .lamp-flowerpot .flowerpot {
+    width: auto;
+    height: 184px;
+    margin-left: 15%;
+}
+
+main .hero .computer {
+    grid-area: computer;
+    width: 473.5px;
+    height: 358px;
+    margin: 127px 0 0 7.5%;
+}
+
+
+
+main .hero .varius {
+    grid-area: varius;
+    display: grid;
+    grid-template-columns: 39% 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        "post-it cell-phone "
+        "cofee cell-phone";
+}
+
+main .hero .varius .post-it {
+    grid-area: post-it;
+    width: auto;
+    height: 73px;
+    margin-top: 192px;
+}
+
+main .hero .varius .cell-phone {
+    grid-area: cell-phone;
+    width: auto;
+    height: 218px;
+    margin-top: 228px;
+}
+
+main .hero .varius .cofee {
+    grid-area: cofee;
+    width: auto;
+    height: 137px;
+    margin: 0 0 44px 15.63%;
+}
+
+main .lets-learn {
+    display: grid;
+    background-image: url(/styles/img/home/generales/inicio-ilustracion_onda_superior_blanco.svg);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 243px auto auto;
+    grid-template-areas:
+        "learn-blue-circle learn-header-text ."
+        "main-cards main-cards main-cards"
+        ". . .";
+    position: relative;
+    top: -95px;
+    z-index: 1;
+}
+
+main .lets-learn .blue-circle,
+main .lets-learn header,
+main .lets-learn .main {
+    margin-top: 95px;
+}
+
+
+
+main .lets-learn .blue-circle {
+    grid-area: learn-blue-circle;
+    width: 187px;
+    height: 319px;
+    background: var(--blue-color);
+    border-radius: 0 319px 319px 0;
+}
+
+main .lets-learn header h1 {
+    grid-area: learn-header-text;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+main .lets-learn header h1 line {
+    font-family: var(--montserrat-font);
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 159px;
+    text-align: left;
+}
+
+main .lets-learn header h1 .first {
+    color: var(--second-orange-color);
+    font-weight: 600;
+    font-size: 60px;
+}
+
+main .lets-learn header h1 .second {
+    color: var(--yellow-color);
+    font-weight: 600;
+    font-size: 85px;
+    margin-top: -13px;
+}
+
+main .lets-learn header h1 .third {
+    color: var(--second-orange-color);
+    font-weight: bold;
+    font-size: 27px;
+}
+
+
+main .lets-learn main {
+    grid-area: main-cards;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(376px, 1fr));
+    grid-template-areas: "first-card second-card third-card";
+    place-items: center;
+}
+
+main .lets-learn main .yellow-circle {
+    position: relative;
+    right: 0;
+    top: 3%;
+    grid-column: 3/4;
+    grid-row: 1/2;
+    width: 100%;
+    height: 760px;
+    border-radius: 1440px 0 0 1440px;
+    background: var(--yellow-color);
+}
+
+main .lets-learn main .first-card {
+    grid-area: first-card;
+}
+
+main .lets-learn main .second-card {
+    grid-area: second-card;
+}
+
+main .lets-learn main .third-card {
+    grid-area: third-card;
+}
+
+main .lets-learn main .card {
+    z-index: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    width: 82.58%;
+    height: 543px;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: var(--white-color);
+    margin-top: 50px;
+}
+
+main .lets-learn main .card img {
+    width: 100%;
+    height: 243px;
+    margin-bottom: 37.3px;
+}
+
+main .lets-learn main .card h6 {
+    height: 23px;
+    font-family: var(--montserrat-font);
+    font-size: 1.188rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--violet-color);
+    margin-bottom: 17.7px;
+}
+
+main .lets-learn main .card p {
+    width: 80.055%;
+    height: 114px;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.19rem;
+    color: var(--gray-color);
+    margin-bottom: 29.7px;
+}
+
+main .lets-learn main .card button {
+    width: 149.6px;
+    height: 44.9px;
+    padding: 12.2px 35.5px;
+    border-radius: 24px;
+    border: none;
+    text-align: center;
+    font-size: 0.813rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    color: var(--white-color);
+}
+
+main .lets-learn main .card .first-button {
+    background: var(--blue-color);
+}
+
+main .lets-learn main .card .second-button {
+    background: var(--violet-color);
+}
+
+main .lets-learn main .card .third-button {
+    background: var(--second-orange-color);
+}
+
+main .online-courses{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: -94px;
+}
+
+main .online-courses .online-courses-text-container{
+    z-index: 1;
+    position: absolute;
+    left: 8.8%;
+    margin-bottom: 76px;
+}
+
+main .online-courses .online-courses-text-container h2{
+    font-size: 2.625rem;
+    line-height: 3.25rem;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    color: var(--violet-color);
+    margin-left: 0.213rem;
+}
+
+main .online-courses .online-courses-text-container p{
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    color: var(--second-orange-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main .online-courses video{
+    width: auto;
+    height: 640px;
+}
+
+main .special-courses{
+    background: url(/styles/img/home/generales/inicio-ilustracion_onda\ superior.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    position: relative;
+    top: -226px;
+}
+
+
+main .special-courses header{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 181.4px 0 53px 3.74%;
+}
+
+main .special-courses header .logo{
+    width: 94px;
+    height: 100%;
+}
+
+main .special-courses header p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22.676%;
+}
+
+main .special-courses header p .text{
+    width: 100%;
+    height: 100%;
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.625rem;
+    color: #eee;
+    margin: 8px 0;
+    text-align: center;
+}
+
+main .special-courses header p .line{
+    width: 30.37%;
+    border-bottom: 1px solid var(--yellow-color);
+}
+
+
+main .special-courses main .cards-container{
+display: flex;
+flex-flow: row nowrap;
+align-items: flex-start;
+justify-content: center;
+margin-left: 4%;
+}
+
+main .special-courses main .cards-container .cards{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 27.74%;
+    margin-right: 2.23%;
+}
+
+
+main .special-courses main .cards-container .cards img{
+    width: 100%;
+    height: 235.5px;
+}
+
+
+
+main .special-courses main .cards-container .cards h6{
+width: 100%;
+text-align: center;
+line-height: 1.5rem;
+font-family: var(--montserrat-font);
+font-weight: 600;
+font-size: 1.25rem;
+color: var(--yellow-color);
+margin: 22px 0 21.5px 0;
+}
+
+main .special-courses main .cards-container .cards p{
+    width: 100%;
+    line-height: 1.188rem;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-weight:lighter;
+    font-size: 1rem;
+    color: var(--white-color);
+}
+
+main .special-courses main .cards-container .cards p span{
+font-weight: 600;
+}
+
+
+
+/* main .special-courses main .cards-container .first-card{
+    grid-area: first-card;
+}
+
+
+
+main .special-courses main .cards-container .second-card{
+    grid-area: second-card;
+}
+
+main .special-courses main .cards-container .third-card{
+    grid-area: third-card;
+} */
+
+
+
+
+footer {
+    grid-area: footer;
+}
+
+
+/* main .hero {
+    grid-area: hero;
+    height: 50px;
+    background: blue;
+}
+
+main .lets-learn {
+    grid-area: lets-learn;
+    height: 50px;
+    background: red;
+} */
+
+
+/*
+.online-courses {
+    grid-area: online-courses;
+    border: 1px solid blue;
+    height: 50px;
+}
+
+.special-courses {
+    grid-area: special-courses;
+    border: 1px solid black;
+    height: 50px;
+}
+
+.why-us {
+    grid-area: why-us;
+    border: 1px solid blue;
+    height: 50px;
+}
+
+.test-level {
+    grid-area: test-level;
+    border: 1px solid black;
+    height: 50px;
+}
+
+.newsletter {
+    grid-area: newsletter;
+    border: 1px solid blue;
+    height: 50px;
+}
+
+footer {
+    grid-area: footer;
+    border: 1px solid black;
+    height: 50px;
+}
+*/
