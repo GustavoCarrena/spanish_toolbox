@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600;700&family=Noto+Sans:wght@400;700&display=swap');
-
 @font-face {
     font-family: ball-pen;
     src: url('/styles/fonts/Ball-Pen-Regular.woff'), url('/styles/fonts/Ball-Pen-Extra.woff');
@@ -22,20 +21,6 @@
     --blue-color: #2f6fb6;
     --gray-color: #9d9a9a;
     --white-color: #fcfcfc;
-}
-
-body {
-    height: 100vh;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
 }
 
 .header {
@@ -139,23 +124,19 @@ main .hero {
     display: grid;
     grid-template-columns: 6.823% 24.527% auto 1fr 6.823%;
     grid-template-rows: 61% 22% auto;
-    grid-template-areas:
-        "left-small-circles lamp-flowerpot computer varius right-circle"
-        ". lamp-flowerpot computer varius . "
-        ". lamp-flowerpot computer varius . ";
+    grid-template-areas: "left-small-circles lamp-flowerpot computer varius right-circle" ". lamp-flowerpot computer varius . " ". lamp-flowerpot computer varius . ";
     align-items: stretch;
     justify-content: center;
 }
 
 main .hero .line {
-    width: 110%;
+    width: 100%;
     height: 1px;
     border: solid 1px #2e2a4a;
     background: #2e2a4a;
     grid-row: 2/4;
     grid-column: 2/5;
     margin-left: -66px;
-
 }
 
 main .hero .left-small {
@@ -165,13 +146,11 @@ main .hero .left-small {
 }
 
 main .hero .left-small .left-circle {
-
     width: auto;
     height: 188px;
 }
 
 main .hero .left-small .small-circle {
-
     width: 26.2px;
     height: 26.2px;
     margin: 38.4px 0 0 25.2%;
@@ -179,9 +158,11 @@ main .hero .left-small .small-circle {
 
 main .hero .right-circle {
     grid-area: right-circle;
-    width: 92%;
+    width: auto;
     height: 186.4px;
     margin-top: 4px;
+    position: absolute;
+    right: 0;
 }
 
 main .hero .lamp-flowerpot {
@@ -213,16 +194,12 @@ main .hero .computer {
     margin: 127px 0 0 7.5%;
 }
 
-
-
 main .hero .varius {
     grid-area: varius;
     display: grid;
     grid-template-columns: 39% 1fr;
     grid-template-rows: 1fr auto;
-    grid-template-areas:
-        "post-it cell-phone "
-        "cofee cell-phone";
+    grid-template-areas: "post-it cell-phone " "cofee cell-phone";
 }
 
 main .hero .varius .post-it {
@@ -251,10 +228,7 @@ main .lets-learn {
     background-image: url(/styles/img/home/generales/inicio-ilustracion_onda_superior_blanco.svg);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 243px auto auto;
-    grid-template-areas:
-        "learn-blue-circle learn-header-text ."
-        "main-cards main-cards main-cards"
-        ". . .";
+    grid-template-areas: "learn-blue-circle learn-header-text ." "main-cards main-cards main-cards" ". . .";
     position: relative;
     top: -95px;
     z-index: 1;
@@ -265,8 +239,6 @@ main .lets-learn header,
 main .lets-learn .main {
     margin-top: 95px;
 }
-
-
 
 main .lets-learn .blue-circle {
     grid-area: learn-blue-circle;
@@ -313,11 +285,10 @@ main .lets-learn header h1 .third {
     font-size: 27px;
 }
 
-
 main .lets-learn main {
     grid-area: main-cards;
     display: grid;
-    grid-template-columns: repeat(3, minmax(376px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "first-card second-card third-card";
     place-items: center;
 }
@@ -412,7 +383,7 @@ main .lets-learn main .card .third-button {
     background: var(--second-orange-color);
 }
 
-main .online-courses{
+main .online-courses {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -423,14 +394,14 @@ main .online-courses{
     margin-top: -94px;
 }
 
-main .online-courses .online-courses-text-container{
+main .online-courses .online-courses-text-container {
     z-index: 1;
     position: absolute;
     left: 8.8%;
     margin-bottom: 76px;
 }
 
-main .online-courses .online-courses-text-container h2{
+main .online-courses .online-courses-text-container h2 {
     font-size: 2.625rem;
     line-height: 3.25rem;
     font-family: var(--montserrat-font);
@@ -439,7 +410,7 @@ main .online-courses .online-courses-text-container h2{
     margin-left: 0.213rem;
 }
 
-main .online-courses .online-courses-text-container p{
+main .online-courses .online-courses-text-container p {
     font-size: 1.5rem;
     line-height: 1.813rem;
     font-family: var(--montserrat-font);
@@ -451,12 +422,12 @@ main .online-courses .online-courses-text-container p{
     justify-content: center;
 }
 
-main .online-courses video{
+main .online-courses video {
     width: auto;
     height: 640px;
 }
 
-main .special-courses{
+main .special-courses {
     background: url(/styles/img/home/generales/inicio-ilustracion_onda\ superior.svg);
     background-repeat: no-repeat;
     background-size: 100vw;
@@ -465,30 +436,29 @@ main .special-courses{
     flex-flow: column nowrap;
     justify-content: flex-start;
     position: relative;
-    top: -226px;
+    top: -237px;
 }
 
-
-main .special-courses header{
+main .special-courses header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     margin: 181.4px 0 53px 3.74%;
 }
 
-main .special-courses header .logo{
+main .special-courses header .logo {
     width: 94px;
     height: 100%;
 }
 
-main .special-courses header p{
+main .special-courses header p {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 22.676%;
 }
 
-main .special-courses header p .text{
+main .special-courses header p .text {
     width: 100%;
     height: 100%;
     font-family: var(--montserrat-font);
@@ -500,21 +470,20 @@ main .special-courses header p .text{
     text-align: center;
 }
 
-main .special-courses header p .line{
+main .special-courses header p .line {
     width: 30.37%;
     border-bottom: 1px solid var(--yellow-color);
 }
 
-
-main .special-courses main .cards-container{
-display: flex;
-flex-flow: row nowrap;
-align-items: flex-start;
-justify-content: center;
-margin-left: 4%;
+main .special-courses main .cards-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 4%;
 }
 
-main .special-courses main .cards-container .cards{
+main .special-courses main .cards-container .cards {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -524,111 +493,52 @@ main .special-courses main .cards-container .cards{
     margin-right: 2.23%;
 }
 
-
-main .special-courses main .cards-container .cards img{
+main .special-courses main .cards-container .cards img {
     width: 100%;
     height: 235.5px;
 }
 
-
-
-main .special-courses main .cards-container .cards h6{
-width: 100%;
-text-align: center;
-line-height: 1.5rem;
-font-family: var(--montserrat-font);
-font-weight: 600;
-font-size: 1.25rem;
-color: var(--yellow-color);
-margin: 22px 0 21.5px 0;
+main .special-courses main .cards-container .cards h6 {
+    width: 100%;
+    text-align: center;
+    line-height: 1.5rem;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--yellow-color);
+    margin: 22px 0 21.5px 0;
 }
 
-main .special-courses main .cards-container .cards p{
+main .special-courses main .cards-container .cards p {
     width: 100%;
+    height: 126px;
     line-height: 1.188rem;
     text-align: center;
     font-family: var(--montserrat-font);
-    font-weight:lighter;
+    font-weight: lighter;
     font-size: 1rem;
     color: var(--white-color);
 }
 
-main .special-courses main .cards-container .cards p span{
-font-weight: 600;
-
+main .special-courses main .cards-container .cards p span {
+    font-weight: 600;
 }
 
-
-
-/* main .special-courses main .cards-container .first-card{
-    grid-area: first-card;
+main .special-courses main .cards-container .cards .card-button {
+    width: 44%;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    background-color: var(--yellow-color);
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    text-align: center;
+    color: #fcfcfc;
+    margin-top: 36.5px;
 }
 
-
-
-main .special-courses main .cards-container .second-card{
-    grid-area: second-card;
+main .special-courses main .cards-container .cards .third-button {
+    margin-top: 12.5px;
 }
-
-main .special-courses main .cards-container .third-card{
-    grid-area: third-card;
-} */
-
-
-
-
-footer {
-    grid-area: footer;
-}
-
-
-/* main .hero {
-    grid-area: hero;
-    height: 50px;
-    background: blue;
-}
-
-main .lets-learn {
-    grid-area: lets-learn;
-    height: 50px;
-    background: red;
-} */
-
-
-/*
-.online-courses {
-    grid-area: online-courses;
-    border: 1px solid blue;
-    height: 50px;
-}
-
-.special-courses {
-    grid-area: special-courses;
-    border: 1px solid black;
-    height: 50px;
-}
-
-.why-us {
-    grid-area: why-us;
-    border: 1px solid blue;
-    height: 50px;
-}
-
-.test-level {
-    grid-area: test-level;
-    border: 1px solid black;
-    height: 50px;
-}
-
-.newsletter {
-    grid-area: newsletter;
-    border: 1px solid blue;
-    height: 50px;
-}
-
-footer {
-    grid-area: footer;
-    border: 1px solid black;
-    height: 50px;
-}
-*/
