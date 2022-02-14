@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600;700&family=Noto+Sans:wght@400;700&display=swap');
+
 @font-face {
     font-family: ball-pen;
     src: url('/styles/fonts/Ball-Pen-Regular.woff'), url('/styles/fonts/Ball-Pen-Extra.woff');
@@ -24,7 +25,6 @@
 }
 
 .header {
-    grid-area: header;
     display: flex;
     justify-content: space-between;
     align-items: end;
@@ -124,7 +124,7 @@ main .hero {
     display: grid;
     grid-template-columns: 6.823% 24.527% auto 1fr 6.823%;
     grid-template-rows: 61% 22% auto;
-    grid-template-areas: "left-small-circles lamp-flowerpot computer varius right-circle" ". lamp-flowerpot computer varius . " ". lamp-flowerpot computer varius . ";
+    grid-template-areas: "left-small-circles lamp-flowerpot computer varius right-circle"". lamp-flowerpot computer varius . "". lamp-flowerpot computer varius . ";
     align-items: stretch;
     justify-content: center;
 }
@@ -199,7 +199,7 @@ main .hero .varius {
     display: grid;
     grid-template-columns: 39% 1fr;
     grid-template-rows: 1fr auto;
-    grid-template-areas: "post-it cell-phone " "cofee cell-phone";
+    grid-template-areas: "post-it cell-phone ""cofee cell-phone";
 }
 
 main .hero .varius .post-it {
@@ -228,7 +228,7 @@ main .lets-learn {
     background-image: url(/styles/img/home/generales/inicio-ilustracion_onda_superior_blanco.svg);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 243px auto auto;
-    grid-template-areas: "learn-blue-circle learn-header-text ." "main-cards main-cards main-cards" ". . .";
+    grid-template-areas: "learn-blue-circle learn-header-text .""main-cards main-cards main-cards"". . .";
     position: relative;
     top: -95px;
     z-index: 1;
@@ -423,20 +423,21 @@ main .online-courses .online-courses-text-container p {
 }
 
 main .online-courses video {
-    width: auto;
-    height: 640px;
+    width: 100%;
+    height: auto;
 }
 
 main .special-courses {
     background: url(/styles/img/home/generales/inicio-ilustracion_onda\ superior.svg);
     background-repeat: no-repeat;
-    background-size: 100vw;
+    background-size: cover;
     height: auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     position: relative;
-    top: -237px;
+    margin-top: -243px;
+
 }
 
 main .special-courses header {
@@ -536,9 +537,106 @@ main .special-courses main .cards-container .cards .card-button {
     line-height: 1.38rem;
     text-align: center;
     color: #fcfcfc;
-    margin-top: 36.5px;
+    margin: 36.5px 0 79.5px 0;
 }
 
 main .special-courses main .cards-container .cards .third-button {
     margin-top: 12.5px;
 }
+
+main .why-us {
+    position: absolute;
+    width: 100%;
+    background: var(--violet-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+main .why-us .rectangle {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    border: none;
+    width: 36px;
+    height: 33px;
+    margin: 33px 0 0 35px;
+}
+
+main .why-us header .rectangle-lines{
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-between;
+}
+
+main .why-us header .rectangle-lines .circle{
+width: 6px;
+height: 6px;
+border: 1px solid var(--violet-color);
+background: var(--white-color);
+border-radius: 50%;
+}
+
+main .why-us .title{
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    justify-content: center;
+    margin-top: 73px;
+    align-items: center;
+}
+
+main .why-us .title h6{
+    color: #eee;
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.31rem;
+    text-align: center;
+}
+
+main .why-us .title .line{
+    border-bottom: 1px solid #eee;
+    margin-top: 21.5px;
+    width: 7%;
+}
+
+
+main .why-us main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: 
+    "first-card second-card third-card"
+    ". button .";
+}
+
+main .why-us main .cards{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+main .why-us main .first-card{
+    grid-area: first-card;
+}
+
+main .why-us main .second-card{
+    grid-area: second-card;
+}
+
+main .why-us main .third-card{
+    grid-area: third-card;
+}
+
+
+
+
+
+
+
+
+
