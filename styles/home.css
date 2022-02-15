@@ -618,6 +618,8 @@ main .why-us main .cards{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    width: 186px;
+    height: auto;
 }
 
 main .why-us main .first-card{
