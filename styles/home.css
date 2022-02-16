@@ -583,8 +583,8 @@ main .why-us .title{
     flex-direction: column;
     width: inherit;
     justify-content: center;
-    margin-top: 73px;
     align-items: center;
+    margin: 73px 0;
 }
 
 main .why-us .title h6{
@@ -602,15 +602,12 @@ main .why-us .title .line{
     width: 7%;
 }
 
-
 main .why-us main {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: 
-    "first-card second-card third-card"
-    ". button .";
+display: flex; 
+flex-flow: row nowrap;
+align-items: center;
+justify-content: space-between;
+width: 100%;
 }
 
 main .why-us main .cards{
@@ -618,21 +615,57 @@ main .why-us main .cards{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 186px;
-    height: auto;
+    width: 279px;
+    height: fit-content;
 }
 
 main .why-us main .first-card{
-    grid-area: first-card;
-}
-
-main .why-us main .second-card{
-    grid-area: second-card;
+    margin-left: 11%;
 }
 
 main .why-us main .third-card{
-    grid-area: third-card;
+    margin-right: 11%;
 }
+
+main .why-us main .cards img{
+    width: 186px;
+}
+
+main .why-us main .first-card img{
+    margin-right: 9%;
+}
+
+main .why-us main .cards .card-text{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+}
+
+main .why-us main .cards .card-text h6{
+    margin: 15px 0 24px 3%;
+    font-size: 1.25rem;
+    line-height: 1.2rem;
+    height: 24px;
+    color: var(--white-color);
+}
+
+main .why-us main .cards .card-text p{
+    margin: 5px 0 0 7%;
+    font-size: 1.125rem;
+    color: #eee;
+    
+}
+
+
+
+
+
+
+
 
 
 
