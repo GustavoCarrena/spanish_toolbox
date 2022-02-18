@@ -685,10 +685,10 @@ main .test-level{
     background-size: cover;
     display: grid;
     grid-template-columns: 1fr 65.8858% 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
         ". rectangle ."
-        ". . .";
+        ". test .";
     height: 830px;
 }
 
@@ -711,7 +711,7 @@ main .test-level .middle-rectangle .all-levels-container{
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 42%;
 }
 
 main .test-level .middle-rectangle .all-levels-container h6{
@@ -756,7 +756,24 @@ main .test-level .middle-rectangle button{
     font-weight: 600;
     font-size: 1.5rem;
     color: var(--white-color);
+}
 
+main .test-level .test-your-level{
+    grid-area: test;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+main .test-level .test-your-level img{
+    width: 48.22%;
+    height: 301px;
+    border-radius: 38px;
+}
+
+
+main .test-level .test-your-level .test-now{
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 
