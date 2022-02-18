@@ -545,7 +545,6 @@ main .special-courses main .cards-container .cards .third-button {
 }
 
 main .why-us {
-    position: absolute;
     width: 100%;
     background: var(--violet-color);
     display: flex;
@@ -660,10 +659,105 @@ main .why-us main .cards .card-text p{
     
 }
 
+main .why-us footer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
+main .why-us footer button{
+    width: 257px;
+    height: 48px;
+    border-radius: 24px;
+    background-color: var(--yellow-color);
+    border: none;
+    margin: 84px 0 77px 1%;
+    line-height: 1.375rem;
+    color: var(--violet-color);
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
 
+main .test-level{
+    background: url(/styles/img/home/generales/inicio-ilustracion_onda\ inferior.svg);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 65.8858% 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        ". rectangle ."
+        ". . .";
+    height: 830px;
+}
 
+main .test-level .middle-rectangle{
+    grid-area: rectangle;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 236px;
+    background: var(--white-color);
+    border-radius: 30px;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    margin-top: 81px;
+}
 
+main .test-level .middle-rectangle .all-levels-container{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+main .test-level .middle-rectangle .all-levels-container h6{
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.31rem;
+    text-align: center;
+    color: var(--yellow-color);
+    margin-bottom: 31px;
+}
+
+main .test-level .middle-rectangle .all-levels-container p{
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.19rem;
+    text-align: center;
+    color: var(--gray-color);
+    width: 83.34%;
+}
+
+main .test-level .middle-rectangle .all-levels-container p{
+    font-family: var(--montserrat-font);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.19rem;
+    text-align: center;
+    color: var(--gray-color);
+    width: 83.34%;
+}
+
+main .test-level .middle-rectangle button{
+    width: 24%;
+    height: 72px;
+    background: var(--yellow-color);
+    border-radius: 36px;
+    border: none;
+    text-align: center;
+    line-height: 1.38rem;
+    font-family: var(--noto-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--white-color);
+
+}
 
 
 
