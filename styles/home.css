@@ -687,9 +687,9 @@ main .test-level{
     grid-template-columns: 1fr 65.8858% 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
-        ". rectangle ."
-        ". test .";
-    height: 830px;
+        "left-images rectangle right-images"
+        "left-images test right-images";
+    height: 993px;
 }
 
 main .test-level .middle-rectangle{
@@ -704,6 +704,7 @@ main .test-level .middle-rectangle{
     border-radius: 30px;
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
     margin-top: 81px;
+    margin: 73px 0 81px 0;
 }
 
 main .test-level .middle-rectangle .all-levels-container{
@@ -762,27 +763,160 @@ main .test-level .test-your-level{
     grid-area: test;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
 }
 
 main .test-level .test-your-level img{
     width: 48.22%;
     height: 301px;
     border-radius: 38px;
+    transform: rotate(-2.5deg);
 }
 
 
 main .test-level .test-your-level .test-now{
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 
+main .test-level .test-your-level .test-now h2{
+    font-family: 'Ball-Pen',sans-serif;
+    font-size: 5.438rem;
+    font-weight: normal;
+    line-height: 7.87rem;
+    text-align: center;
+    color: var(--white-color);
+    width: 100%;
+    height: 25%;
+    z-index: 1;
+}
+
+main .test-level .test-your-level .test-now .arrow-image{
+    position: absolute;
+    height: auto;
+    width: max-content;
+    left: 72.7%;
+    margin-top: 3.7%;
+}
+
+main .test-level .test-your-level .test-now .line{
+    border: 1px solid var(--yellow-color);
+    width: 56%;
+    margin: -10.8% 0 11.46% 20.6%;
+}
 
 
+main .test-level .test-your-level .test-now .text{
+    font-family: var(--montserrat-font);
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.19rem;
+    text-align: center;
+    color: #fff;
+    width: 79%;
+}
 
+main .test-level .test-your-level .test-now .first-p{
+margin-bottom: 27px;
+}
 
+main .test-level .test-your-level .test-now .second-p{
+    margin-bottom: 37px;
+}
 
+main .test-level .test-your-level .test-now button{
+    width: 42.5%;
+    height: 66px;
+    border-radius: 33px;
+    background-color: var(--second-orange-color);
+    border: none;
+    font-family: var(--noto-font);
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.36rem;
+    text-align: center;
+    color: var(--white-color);
+}
 
+main .test-level .img-container{
+    display: flex;
+    flex-flow: column nowrap;
+    height: 75%;
+    justify-content: center;
+    align-items: center;
+}
 
+main .test-level .left-img-container{
+    grid-area: left-images;
+    margin-left: -57px;
+    max-width: 100%;
+}
 
+/* main .test-level .left-img-container .left{
+    transform: scaleX(-1);
+} */
+
+main .test-level .right-img-container{
+    grid-area: right-images;
+}
+
+main .newsletter-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "main-container images";
+}
+
+main .newsletter-section .container{
+    grid-area: main-container;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .newsletter-section .container .main-content{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .newsletter-section .container .main-content .suscribe{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main .newsletter-section .images-container{
+    grid-area: images;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "paper paper"
+    "smaller-paper lamp"
+    ;
+}
+
+main .newsletter-section .images-container .paper{
+    grid-area: paper;
+}
+
+main .newsletter-section .images-container .smaller-paper{
+    grid-area: smaller-paper;
+}
+
+main .newsletter-section .images-container .lamp{
+    grid-area: lamp;
+    transform: scaleX(-1);
+}
 
