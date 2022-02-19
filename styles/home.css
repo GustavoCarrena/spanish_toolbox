@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;600;700&family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&family=Noto+Sans:wght@400;600;700&display=swap');
 
 @font-face {
     font-family: ball-pen;
@@ -868,18 +868,28 @@ main .test-level .right-img-container{
 
 main .newsletter-section{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 68.722% 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "main-container images";
+    margin-top: -17px;
 }
 
 main .newsletter-section .container{
     grid-area: main-container;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    width: auto;
+    height: auto;
+}
+
+main .newsletter-section .container .packet-img{
+    width: 24.4%;
+    height: auto;
+    transform: rotate(-7deg);
+    margin-top: 50px;
 }
 
 main .newsletter-section .container .main-content{
@@ -889,6 +899,35 @@ main .newsletter-section .container .main-content{
     align-items: center;
 }
 
+main .newsletter-section .container .main-content .title{
+display: flex;
+flex-flow: column;
+justify-content: center;
+align-items: center;
+font-family: var(--montserrat-font);
+font-size: 2rem;
+font-weight: 700;
+line-height: 1.31rem;
+text-align: center;
+color: #3d3d3d;
+}
+
+main .newsletter-section .container .main-content .title span{
+    border-bottom: solid 2px #cfcfcf;
+    width: 70%;
+    margin: 7px 0 26px 0;
+    }
+
+main .newsletter-section .container .main-content .receive-news{
+    font-family: var(--montserrat-font);
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.22rem;
+    text-align: left;
+    color: var(--violet-color);
+    margin-bottom: 10px;
+}
+
 main .newsletter-section .container .main-content .suscribe{
     display: flex;
     flex-flow: row nowrap;
@@ -896,27 +935,95 @@ main .newsletter-section .container .main-content .suscribe{
     align-items: center;
 }
 
+main .newsletter-section .container .main-content .suscribe .input{
+    width: 356px;
+    height: 48px;
+    border: solid 2px #8e8d8f;
+    border-radius: 1.5rem;
+    margin-right: 1rem;
+    padding-left: 24px;
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    text-align: left;
+    color: var(--gray-color);
+    margin-left: 8%;
+}
+
+main .newsletter-section .container .main-content .suscribe .input::placeholder{
+    width: 80%;
+    height: 80%;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    text-align: left;
+    color: var(--gray-color);
+}
+
+main .newsletter-section .container .main-content .suscribe button{
+    width: 144px;
+    height: 48px;
+    border-radius: 1.5rem;
+    background-color: var(--violet-color);
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    text-align: center;
+    color: var(--yellow-color);
+    border: none;
+    margin-left: 3.10%;
+}
+
+
 main .newsletter-section .images-container{
     grid-area: images;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 25.271% 1fr;
+    grid-template-rows: auto auto;
     grid-template-areas: 
-    "paper paper"
+    "paper lamp"
     "smaller-paper lamp"
     ;
+    margin-left: 77px;
 }
 
 main .newsletter-section .images-container .paper{
     grid-area: paper;
+    transform: rotate(8.5deg);
+    width: 80px;
+    height: 85px;
+    margin-top: 30px;
 }
 
 main .newsletter-section .images-container .smaller-paper{
     grid-area: smaller-paper;
+    transform: rotate(-12.5deg);
+    width: 67px;
+    height: 70px;
+    margin-top: 47px;
 }
 
 main .newsletter-section .images-container .lamp{
     grid-area: lamp;
     transform: scaleX(-1);
+    width: 142px;
+    height: 254px;
+    left: 85%;
+    position: absolute;
+    margin-top: 109px;
+}
+
+footer{
+    margin-top: 100px;
+    height: auto;
+}
+
+footer main{
+    background-color: var(--yellow-color);
+    height: 500px;
 }
 
