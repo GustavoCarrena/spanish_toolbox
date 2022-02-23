@@ -37,7 +37,7 @@
     align-items: flex-end;
     width: 32%;
     height: auto;
-    margin: 0 14.2% 0 5.341%;
+    margin: 0 14.2% 0.18% 5.341%;
 }
 
 .header .logo-img {
@@ -83,11 +83,8 @@
     text-decoration: none;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
     font-family: var(--montserrat-font);
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
     text-align: left;
     color: var(--violet-color);
 }
@@ -392,6 +389,7 @@ main .online-courses {
     height: auto;
     position: relative;
     overflow: hidden;
+    margin-top: -3.2%;
 }
 
 main .online-courses .online-courses-text-container {
@@ -500,7 +498,7 @@ main .special-courses main .cards-container .cards {
 
 main .special-courses main .cards-container .cards img {
     width: 100%;
-    min-height: 235.5px;
+    min-height: 255.5px;
 }
 
 main .special-courses main .cards-container .cards h6 {
@@ -632,6 +630,7 @@ main .why-us main .first-card {
 
 main .why-us main .third-card {
     margin-right: 11%;
+    margin-bottom: 2%;
 }
 
 main .why-us main .cards img {
@@ -671,6 +670,7 @@ main .why-us footer {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: -3.7%;
 }
 
 main .why-us footer button {
@@ -701,7 +701,7 @@ main .test-level {
 
 main .background{
     position: relative;
-    top: -535px;
+    top: -600px;
     z-index: -1;
 }
 
@@ -1052,7 +1052,7 @@ footer main .the-spanish-toolbox {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    margin-left: 30.341%;
+    margin: -27% 0 0 30.341%;
 }
 
 footer main .the-spanish-toolbox .logo {
@@ -1136,7 +1136,7 @@ footer main .courses-container {
 
 footer main .title {
     font-family: var(--noto-font);
-    font-size: 1.5rem;
+    font-size: 1.313rem;
     font-weight: 700;
     line-height: 1.42rem;
     text-align: left;
@@ -1161,7 +1161,7 @@ footer main .special-courses-footer {
 
 footer .the-spanish-toolbox,
 footer .courses-container {
-    margin-bottom: 96px;
+    margin: 5.835% 0 13% 0;
 }
 
 footer footer {
@@ -1203,7 +1203,12 @@ footer footer .terms-privacy .terms {
     margin-left: 73px;
 }
 
-@media (max-width:1240px) {
+/* Laptop */
+@media (min-width:1024px) and (max-width:1200px) {
+
+    .header .logo {
+        margin: 0 8.5% 0.18% 5.341%;
+    }
 
     main .special-courses main .cards-container .first-card h6 {
         line-height: 1.5rem;
@@ -1219,8 +1224,8 @@ footer footer .terms-privacy .terms {
 
 }
 
-@media (max-width:1231px) {
-
+/* small screen Laptop + landscape view Tablet */
+@media (min-width:768px) and (max-width:1199px) {
     main .special-courses main .cards-container .cards .third-button{
         margin-top: 1rem;
     }
@@ -1231,7 +1236,8 @@ footer footer .terms-privacy .terms {
 
 }
 
-@media (max-width:1024px){
+/* vertical view Tablet + lansdcape view Mobile */
+@media (max-width:767px){
 
     .header .logo {
         margin: 0 4% 0 2%;
@@ -1246,5 +1252,10 @@ footer footer .terms-privacy .terms {
 
         margin-top: 5.7%;
     }
+
+}
+
+/* vertical view Mobile */
+@media (max-width:480px){
 
 }
