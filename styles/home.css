@@ -35,9 +35,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    width: 32%;
+    width: 60%;
     height: auto;
-    margin: 0 14.2% 0.18% 5.341%;
+    margin: 0 5% 0.18% 5.341%;
 }
 
 .header .logo-img {
@@ -47,7 +47,7 @@
 }
 
 .header span {
-    width: 240px;
+    width: 100%;
     height: 1rem;
     font-family: var(--montserrat-font);
     font-size: 1.313rem;
@@ -66,7 +66,7 @@
 
 .header nav ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -266,20 +266,20 @@ main .lets-learn header h1 line {
 main .lets-learn header h1 .first {
     color: var(--second-orange-color);
     font-weight: 600;
-    font-size: 60px;
+    font-size: 3.75rem;
 }
 
 main .lets-learn header h1 .second {
     color: var(--yellow-color);
     font-weight: 600;
-    font-size: 85px;
+    font-size: 5.313rem;
     margin-top: -13px;
 }
 
 main .lets-learn header h1 .third {
     color: var(--second-orange-color);
     font-weight: bold;
-    font-size: 27px;
+    font-size: 1.688rem;
 }
 
 main .lets-learn main {
@@ -288,6 +288,7 @@ main .lets-learn main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: "first-card second-card third-card";
     place-items: center;
+    align-items: baseline;
 }
 
 main .lets-learn main .yellow-circle {
@@ -297,7 +298,7 @@ main .lets-learn main .yellow-circle {
     grid-column: 2/4;
     grid-row: 1/3;
     width: 100%;
-    height: 809px;
+    height: 88.7%;
     background: var(--yellow-color);
     clip-path: circle(44% at 74% 50%);
 }
@@ -318,13 +319,14 @@ main .lets-learn main .card {
     z-index: 1;
     display: flex;
     flex-flow: column nowrap;
-    width: 82.58%;
-    height: auto;
+    width: 89%;
+    height: fit-content;
     align-items: center;
+    justify-content: space-between;
     border-radius: 30px;
     box-shadow: 0 3px 8px 0 rgb(0 0 0 / 16%);
     background-color: var(--white-color);
-    margin-top: 95px;
+    margin-top: 20%;
 }
 
 main .lets-learn main .card img {
@@ -344,8 +346,8 @@ main .lets-learn main .card h6 {
 }
 
 main .lets-learn main .card p {
-    width: 80.055%;
-    height: fit-content;
+    width: 80%;
+    height: 114px;
     text-align: center;
     font-family: var(--montserrat-font);
     font-size: 1rem;
@@ -389,7 +391,7 @@ main .online-courses {
     height: auto;
     position: relative;
     overflow: hidden;
-    margin-top: -3.2%;
+    margin-top: -5%;
 }
 
 main .online-courses .online-courses-text-container {
@@ -442,7 +444,7 @@ main .special-courses header {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    margin: 12.6% 0 4% 3.74%; 
+    margin: 12.6% 0 4% 3.74%;
 }
 
 main .special-courses header .logo {
@@ -490,15 +492,16 @@ main .special-courses main .cards-container .cards {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: auto;
     width: 27.74%;
     margin-right: 2.23%;
 }
 
 main .special-courses main .cards-container .cards img {
-    width: 100%;
-    min-height: 255.5px;
+    width: 94.925%;
+    max-width: 24.5vw;
+    min-height: 43.5vh;
 }
 
 main .special-courses main .cards-container .cards h6 {
@@ -506,23 +509,21 @@ main .special-courses main .cards-container .cards h6 {
     text-align: center;
     font-family: var(--montserrat-font);
     font-weight: 600;
-    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
     color: var(--yellow-color);
-    margin: 22px 0 21.5px 0;
-}
-
-main .special-courses main .cards-container .first-card h6,
-main .special-courses main .cards-container .second-card h6 {
-    line-height: 3rem;
+    margin: 6% 0 3rem 0;
 }
 
 main .special-courses main .cards-container .third-card h6 {
-    line-height: 1.5rem;
+    margin: 6% 0 1.5rem 0;
 }
 
 main .special-courses main .cards-container .cards p {
+    display: flex;
+    flex-flow: column nowrap;
     width: 100%;
-    height: 126px;
+    height: 174px;
     line-height: 1.188rem;
     text-align: center;
     font-family: var(--montserrat-font);
@@ -536,7 +537,7 @@ main .special-courses main .cards-container .cards p span {
 }
 
 main .special-courses main .cards-container .cards .card-button {
-    width: 44%;
+    width: 160px;
     height: 48px;
     border-radius: 24px;
     border: none;
@@ -547,7 +548,8 @@ main .special-courses main .cards-container .cards .card-button {
     line-height: 1.38rem;
     text-align: center;
     color: #fcfcfc;
-    margin: 36.5px 0 79.5px 0;
+    position: relative;
+    margin-bottom: 32%;
 }
 
 main .why-us {
@@ -630,11 +632,11 @@ main .why-us main .first-card {
 
 main .why-us main .third-card {
     margin-right: 11%;
-    margin-bottom: 2%;
 }
 
 main .why-us main .cards img {
     width: 186px;
+    height: 131px;
 }
 
 main .why-us main .first-card img {
@@ -663,7 +665,7 @@ main .why-us main .cards .card-text p {
     margin: 5px 0 0 7%;
     font-size: 1.125rem;
     color: #eee;
-
+    min-height: 88px;
 }
 
 main .why-us footer {
@@ -674,7 +676,7 @@ main .why-us footer {
 }
 
 main .why-us footer button {
-    width: 257px;
+    width: 17.85%;
     height: 48px;
     border-radius: 24px;
     background-color: var(--yellow-color);
@@ -695,14 +697,15 @@ main .test-level {
     grid-template-areas:
         "left-images rectangle right-images"
         "left-images test right-images"
-        ;
-        background-color: var(--blue-color);
+    ;
+    background-color: var(--blue-color);
 }
 
-main .background{
+main .background {
     position: relative;
-    top: -600px;
+    bottom: 495px;
     z-index: -1;
+    transform: scaleY(0.95);
 }
 
 main .test-level .middle-rectangle {
@@ -759,8 +762,8 @@ main .test-level .middle-rectangle .all-levels-container p {
 }
 
 main .test-level .middle-rectangle button {
-    width: 24%;
-    height: 30.5%;
+    width: 216px;
+    height: 72px;
     background: var(--yellow-color);
     border-radius: 36px;
     border: none;
@@ -838,14 +841,16 @@ main .test-level .test-your-level .test-now .text {
 
 main .test-level .test-your-level .test-now .first-p {
     margin-bottom: 27px;
+    width: 80%;
 }
 
 main .test-level .test-your-level .test-now .second-p {
     margin-bottom: 37px;
+    width: 100%;
 }
 
 main .test-level .test-your-level .test-now button {
-    width: 42.5%;
+    width: 199px;
     height: 66px;
     border-radius: 33px;
     background-color: var(--second-orange-color);
@@ -897,10 +902,10 @@ main .newsletter-section .container {
 }
 
 main .newsletter-section .container .packet-img {
-    width: 24.4%;
-    height: auto;
+    width: 190px;
+    height: 150px;
     transform: rotate(-7deg);
-    margin-top: 50px;
+    margin-top: 7%;
 }
 
 main .newsletter-section .container .main-content {
@@ -1007,7 +1012,7 @@ main .newsletter-section .images-container .paper {
     transform: rotate(8.5deg);
     width: 80px;
     height: 85px;
-    margin-top: 30px;
+    margin-top: 35.17%;
 }
 
 main .newsletter-section .images-container .smaller-paper {
@@ -1015,7 +1020,7 @@ main .newsletter-section .images-container .smaller-paper {
     transform: rotate(-12.5deg);
     width: 67px;
     height: 70px;
-    margin-top: 47px;
+    margin-top: 42%;
 }
 
 main .newsletter-section .images-container .lamp {
@@ -1025,7 +1030,7 @@ main .newsletter-section .images-container .lamp {
     height: 254px;
     left: 85%;
     position: absolute;
-    margin-top: 109px;
+    margin-top: 11%;
 }
 
 footer main {
@@ -1204,58 +1209,162 @@ footer footer .terms-privacy .terms {
 }
 
 /* Laptop */
-@media (min-width:1024px) and (max-width:1200px) {
+
+@media (min-width: 1024px) and (max-width: 1200px) {
 
     .header .logo {
-        margin: 0 8.5% 0.18% 5.341%;
+        margin: 0 4.5% 0.18% 2%;
     }
 
-    main .special-courses main .cards-container .first-card h6 {
-        line-height: 1.5rem;
+    .header .logo-img {
+        height: 32px;
+    }
+
+    .header span {
+        font-size: 1.2rem;
+    }
+
+    .header nav ul li {
+        margin-right: 5.79%;
+    }
+
+    .header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .header .contact {
+        min-width: 130px;
+        height: 45px;
+        margin: 0 4% -1% 0;
+    }
+
+    main .lets-learn header h1 .first {
+        font-size: 3.5rem;
+    }
+
+    main .lets-learn header h1 .second {
+        font-size: 4.959rem;
+    }
+
+    main .lets-learn header h1 .third {
+        font-size: 1.575rem;
+    }
+
+    main .lets-learn main .card{
+        width: 89%;
+    }
+
+    main .lets-learn main .card h6{
+        font-size: 1rem;
+    }
+
+    main .lets-learn main .card p{
+        font-size: 0.85rem;
+        width: 85%;
+    }
+
+    main .online-courses {
+        margin-top: -6.4%;
+    }
+
+    main .online-courses .online-courses-text-container h2 {
+        font-size: 2.4rem;
+    }
+
+    main .online-courses .online-courses-text-container p {
+        font-size: 1.3rem;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        width: 100%;
+        max-width: 100%;
+        min-height: 40.5vh;
+    }
+
+    main .special-courses main .cards-container .cards h6 {
+        font-size: 1.03rem;
+    }
+
+    main .why-us main .cards .card-text p {
+        font-size: 1rem;
+
+    }
+    
+    main .test-level .middle-rectangle .all-levels-container h6{
+        font-size: 1.85rem;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container p{
+        font-size: 0.95rem;
+    }
+
+    main .test-level .middle-rectangle button{
+        width: 205px;
+        height: 63px;
     }
 
     main .test-level .test-your-level .test-now .line {
         width: 52%;
     }
 
-    main .background{
-        top: -400px;
+    main .test-level .test-your-level .test-now .first-p {
+        width: 100%;
     }
+
+    main .background {
+        bottom: 430px;
+        transform: scaleY(1.0);
+    }
+
+    main .newsletter-section {
+        grid-template-columns: 72% 1fr;
+    }
+
+    main .newsletter-section .container .packet-img {
+        width: 160px;
+        height: 120px;
+    }
+
+    main .newsletter-section .images-container .paper {
+        width: 65px;
+        height: auto;
+        margin-top: 66.17%;
+    }
+
+    main .newsletter-section .images-container .smaller-paper {
+        width: 53px;
+        height: auto;
+        margin-top: 100%;
+    }
+    
+    main .newsletter-section .images-container .lamp {
+        width: 118px;
+        height: auto;
+        margin-top: 14%;
+    }
+
+    main .newsletter-section .images-container {
+        grid-template-columns: 26% 1fr;
+        margin-left: 18.2%;
+    }
+
+    footer main .left-image{
+        width: 132px;
+    }
+
+    footer main .the-spanish-toolbox{
+        margin: -27% 0 0 9.341%;
+    }
+
+    
 
 }
 
 /* small screen Laptop + landscape view Tablet */
-@media (min-width:768px) and (max-width:1199px) {
-    main .special-courses main .cards-container .cards .third-button{
-        margin-top: 1rem;
-    }
-
-    footer main .the-spanish-toolbox{
-        margin-left: 16%;
-    }
-
-}
+@media (min-width: 768px) and (max-width: 1199px) {}
 
 /* vertical view Tablet + lansdcape view Mobile */
-@media (max-width:767px){
-
-    .header .logo {
-        margin: 0 4% 0 2%;
-    }
-
-    main .test-level .test-your-level .test-now .line {
-        width: 70%;
-        margin: -11.8% 0 11.46% 24.6%;
-    }
-
-    main .test-level .test-your-level .test-now .arrow-image {
-
-        margin-top: 5.7%;
-    }
-
-}
+@media (max-width:767px) {}
 
 /* vertical view Mobile */
-@media (max-width:480px){
-
-}
+@media (max-width:480px) {}
