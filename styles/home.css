@@ -1457,7 +1457,13 @@ footer footer .terms-privacy .terms {
 }
 
 /* small screen Laptop + landscape view Tablet */
-@media (min-width: 768px) and (max-width: 1199px) {}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header nav, .header .contact-button, main .hero .right-circle{
+        display: none;
+    }
+
+
+}
 
 /* vertical view Tablet + lansdcape view Mobile */
 @media (max-width:767px) {}
