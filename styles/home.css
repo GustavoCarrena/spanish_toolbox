@@ -79,6 +79,15 @@
     margin-right: 0;
 }
 
+.header nav ul li a:hover {
+    border-bottom: 2px solid var(--violet-color);
+}
+
+.header nav ul li a:active{
+    color: var(--yellow-color);
+    border-bottom: 2px solid var(--yellow-color);
+}
+
 .header nav ul li a {
     text-decoration: none;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
@@ -89,28 +98,33 @@
     color: var(--violet-color);
 }
 
-.header .contact {
-    grid-area: contact-button;
+.header .contact-button {
     min-width: 144px;
     height: 48px;
     border-radius: 24px;
     border: none;
     background-color: var(--second-orange-color);
     margin: 0 4.25% -1% 0;
+    }
+
+.header .contact-button:hover {
+    cursor: pointer;
+    background-color: rgba(235, 88, 90, 0.71);
 }
 
-.header .contact span {
+.header .contact-button:active {
+    background-color: #ce1719;
+}
+
+.header .contact-button a{
+    text-decoration: none;
     font-family: var(--noto-font);
     font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.38;
-    letter-spacing: normal;
+    line-height: 1.38rem;
     text-align: center;
     color: #fcfcfc;
-    width: 60px;
-    height: 22px;
     font-size: 16px;
+    padding: 2px;
 }
 
 main {
@@ -364,23 +378,25 @@ main .lets-learn main .card button {
     border-radius: 24px;
     border: none;
     text-align: center;
+    margin-bottom: 8.5%;
+    background: var(--blue-color);
+}
+
+main .lets-learn main .card button:hover{
+    background-color: #6e95bf;
+    cursor: pointer;
+}
+
+main .lets-learn main .card button:active{
+    background-color: #005e9e;
+}
+
+main .lets-learn main .card button a{
     font-size: 0.813rem;
     font-weight: 600;
     line-height: 1.38rem;
     color: var(--white-color);
-    margin-bottom: 8.5%;
-}
-
-main .lets-learn main .card .first-button {
-    background: var(--blue-color);
-}
-
-main .lets-learn main .card .second-button {
-    background: var(--violet-color);
-}
-
-main .lets-learn main .card .third-button {
-    background: var(--second-orange-color);
+    text-decoration: none;
 }
 
 main .online-courses {
@@ -542,14 +558,28 @@ main .special-courses main .cards-container .cards .card-button {
     border-radius: 24px;
     border: none;
     background-color: var(--yellow-color);
+    text-align: center;
+    position: relative;
+    margin-bottom: 32%;
+}
+
+main .special-courses main .cards-container .cards .card-button:hover{
+    cursor: pointer;
+    background-color: #f2dda6;
+}
+
+main .special-courses main .cards-container .cards .card-button:active{
+    background-color: #f8b811;
+}
+
+main .special-courses main .cards-container .cards .card-button a{
     font-family: var(--noto-font);
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.38rem;
-    text-align: center;
     color: #fcfcfc;
-    position: relative;
-    margin-bottom: 32%;
+    text-decoration: none;
+    padding: 7% 17%;
 }
 
 main .why-us {
@@ -681,31 +711,39 @@ main .why-us footer button {
     border-radius: 24px;
     background-color: var(--yellow-color);
     border: none;
-    margin: 84px 0 77px 1%;
+    margin: 115px 0 50px 1%;
+    text-align: center;
+}
+
+main .why-us footer button:hover{
+    cursor: pointer;
+    background-color: #f2dda6;
+}
+
+main .why-us footer button:active{
+    background-color: #f8b811;
+}
+
+main .why-us footer button a{
     line-height: 1.375rem;
     color: var(--violet-color);
     font-family: var(--noto-font);
     font-size: 1rem;
     font-weight: 600;
-    text-align: center;
+    text-decoration: none;
+    padding: 13px 40px;
 }
 
 main .test-level {
     display: grid;
     grid-template-columns: 1fr 65.8858% 1fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
         "left-images rectangle right-images"
         "left-images test right-images"
+        "bottom-background bottom-background bottom-background"
     ;
     background-color: var(--blue-color);
-}
-
-main .background {
-    position: relative;
-    bottom: 495px;
-    z-index: -1;
-    transform: scaleY(0.95);
 }
 
 main .test-level .middle-rectangle {
@@ -768,12 +806,27 @@ main .test-level .middle-rectangle button {
     border-radius: 36px;
     border: none;
     text-align: center;
+    margin-right: 10%;
+}
+
+main .test-level .middle-rectangle button:hover{
+    cursor: pointer;
+    background-color: #f2dda6;
+}
+
+main .test-level .middle-rectangle button:active{
+    background-color: #f8b811;
+}
+
+
+main .test-level .middle-rectangle button a{
     line-height: 1.38rem;
     font-family: var(--noto-font);
     font-weight: 600;
     font-size: 1.5rem;
     color: var(--white-color);
-    margin-right: 10%;
+    text-decoration: none;
+    padding: 8% 9%;
 }
 
 main .test-level .test-your-level {
@@ -800,7 +853,6 @@ main .test-level .test-your-level .test-now {
     align-items: center;
     height: 100%;
 }
-
 
 main .test-level .test-your-level .test-now h2 {
     font-family: 'Ball-Pen', sans-serif;
@@ -855,12 +907,27 @@ main .test-level .test-your-level .test-now button {
     border-radius: 33px;
     background-color: var(--second-orange-color);
     border: none;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+main .test-level .test-your-level .test-now button:hover{
+    cursor: pointer;
+    background-color: rgba(235, 88, 90, 0.71);
+}
+
+main .test-level .test-your-level .test-now button:active{
+    background-color: #ce1719;
+}
+
+main .test-level .test-your-level .test-now button a{
     font-family: var(--noto-font);
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.36rem;
-    text-align: center;
     color: var(--white-color);
+    text-decoration: none;
+    padding: 8% 12%;
 }
 
 main .test-level .img-container {
@@ -882,13 +949,18 @@ main .test-level .right-img-container {
     grid-area: right-images;
 }
 
+main .test-level .bottom-background {
+    grid-area: bottom-background;
+    background: var(--white-color);
+}
+
 main .newsletter-section {
     position: relative;
     display: grid;
     grid-template-columns: 68.722% 1fr;
     grid-template-rows: auto;
     grid-template-areas: "main-container images";
-    margin: -40% 0 10% 0;
+    margin-bottom:11%;
 }
 
 main .newsletter-section .container {
@@ -984,16 +1056,29 @@ main .newsletter-section .container .main-content .suscribe button {
     height: 48px;
     border-radius: 1.5rem;
     background-color: var(--violet-color);
-    font-family: var(--noto-font);
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.38rem;
     text-align: center;
-    color: var(--yellow-color);
     border: none;
     margin-left: 3.10%;
 }
 
+main .newsletter-section .container .main-content .suscribe button:hover{
+    cursor: pointer;
+    background-color: #7e6e91;
+}
+
+main .newsletter-section .container .main-content .suscribe button:active{
+    background-color: #2b0457;
+}
+
+main .newsletter-section .container .main-content .suscribe button a{
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    color: var(--yellow-color);
+    text-decoration: none;
+    padding: 7% 15%;
+}
 
 main .newsletter-section .images-container {
     grid-area: images;
@@ -1056,8 +1141,8 @@ footer main .the-spanish-toolbox {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
-    margin: -27% 0 0 30.341%;
+    justify-content: flex-start;
+    margin: 4% 0 0 22.341%;
 }
 
 footer main .the-spanish-toolbox .logo {
@@ -1066,7 +1151,7 @@ footer main .the-spanish-toolbox .logo {
     align-items: center;
     width: 100%;
     height: auto;
-    margin-bottom: 14px;
+    margin-bottom: 5%;
 }
 
 footer main .the-spanish-toolbox .logo-img {
@@ -1100,14 +1185,17 @@ footer main .courses-container .courses-text {
     color: var(--white-color);
     width: 100%;
     align-self: flex-start;
-    margin-bottom: 30.5px;
+}
 
+footer main .the-spanish-toolbox p{
+    min-height: 66px;
 }
 
 footer main .the-spanish-toolbox nav {
-    width: 100%;
     align-self: flex-start;
     width: 90%;
+    position: relative;
+    top: 12%;
 }
 
 footer main .the-spanish-toolbox nav ul {
@@ -1232,7 +1320,7 @@ footer footer .terms-privacy .terms {
         font-size: 1rem;
     }
 
-    .header .contact {
+    .header .contact-button {
         min-width: 130px;
         height: 45px;
         margin: 0 4% -1% 0;
@@ -1353,7 +1441,15 @@ footer footer .terms-privacy .terms {
     }
 
     footer main .the-spanish-toolbox{
-        margin: -27% 0 0 9.341%;
+        margin: 3% 0 0 9.341%;
+    }
+
+    footer main .the-spanish-toolbox p, footer main .courses-container .courses-text{
+        font-size: 1.1rem;
+    }
+
+    footer main .the-spanish-toolbox nav ul li a{
+        font-size: 1rem;
     }
 
     
