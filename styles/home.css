@@ -98,6 +98,10 @@
     color: var(--violet-color);
 }
 
+.header .burguer-menu{
+    display: none;
+}
+
 .header .contact-button {
     min-width: 144px;
     height: 48px;
@@ -1456,17 +1460,130 @@ footer footer .terms-privacy .terms {
 
 }
 
-/* small screen Laptop + landscape view Tablet */
-@media (min-width: 768px) and (max-width: 1199px) {
+/* landscape view Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
     .header nav, .header .contact-button, main .hero .right-circle{
         display: none;
     }
 
+    .header .burguer-menu{
+        display: block;
+        position: relative;
+        height: 12px;
+        margin: 10px 5.9375% 10px 0px;
+        width: 18px;
+    }
+
+    .header .burguer-menu .lbl-menu {
+        cursor: pointer;
+    }
+    
+    .header .burguer-menu .lbl-menu .spn1,
+    .header .burguer-menu .lbl-menu .spn2,
+    .header .burguer-menu .lbl-menu .spn3 {
+        position: absolute;
+        content: '';
+        background: #000000;
+        width: 18px;
+        height: 2px;
+        border-radius: 5px;
+        transition: all 1ms linear;
+    }
+
+    .header .burguer-menu .lbl-menu .spn2{
+        top: 5px;
+    }
+
+    .header .burguer-menu .lbl-menu .spn3{
+        top: 10px;
+    }
+
+    .header .burguer-menu .btn-menu{
+        display: none;
+
+    }
+
+    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn1 {
+        transform: rotate(140deg);
+        top: 5px;
+    }
+
+    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn2 {
+        opacity: 0;
+    }
+    
+    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn3 {
+        transform: rotate(-140deg);
+        top: 5px;
+    }
+
+    .header .burguer-menu .menu-mobile {
+    height: 224px;
+    display: flex;
+    position: fixed;
+    right: 54%;
+    bottom: 90%;
+    }
+
+    .header .burguer-menu .menu-mobile ul{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: #0000EC;
+        list-style-type: none;
+        justify-content: space-evenly;
+        height: 224px;
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    .header .burguer-menu .menu-mobile ul li{
+        height: 28px;
+        display: flex;
+        width: 100%;
+    }
+
+    .header .burguer-menu .menu-mobile ul li a{
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-left: 16px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 400;
+    }
+
+    .header .burguer-menu .menu-mobile .language-courses-link{
+        width: 87px;
+    }
+
+    .header .burguer-menu .menu-mobile .special-courses-link{
+        width: 77px;
+    }
+
+    .header .burguer-menu .menu-mobile .about-us-link{
+        width: 106px;
+    }
+
+    .header .burguer-menu .menu-mobile .contact-link{
+        width: 68px;
+    }
+
+    .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
+        transform: translate(0px);
+    }
+
+    .header .burguer-menu .menu-mobile ul{
+        transform: translateY(-100vh);
+        transition: all 2s ease;
+    }
+
+    
 
 }
 
 /* vertical view Tablet + lansdcape view Mobile */
-@media (max-width:767px) {}
+@media (min-width:480px) and (max-width:767px) {}
 
 /* vertical view Mobile */
-@media (max-width:480px) {}
+@media (max-width:320px) {}
