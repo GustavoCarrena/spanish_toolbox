@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: ball-pen;
-    src: url('/styles/fonts/Ball-Pen-Regular.woff'), url('/styles/fonts/Ball-Pen-Extra.woff');
+    src: url('../fonts/Ball-Pen-Regular.woff'), url('../fonts/Ball-Pen-Extra.woff');
 }
 
 * {
@@ -29,6 +29,7 @@
     justify-content: space-between;
     align-items: end;
     height: 4.938rem;
+    background-repeat: no-repeat;
 }
 
 .header .logo {
@@ -240,7 +241,7 @@ main .hero .varius .cofee {
 
 main .lets-learn {
     display: grid;
-    background-image: url(/styles/img/home/generales/inicio-ilustracion_onda_superior_blanco.svg);
+    background-image: url(../img/home/generales/inicio-ilustracion_onda_superior_blanco.svg);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 243px auto auto;
     grid-template-areas: "learn-blue-circle learn-header-text .""main-cards main-cards main-cards"". . .";
@@ -448,7 +449,7 @@ main .online-courses video {
 }
 
 main .special-courses {
-    background: url(/styles/img/home/generales/inicio-ilustracion_onda\ superior.svg);
+    background: url(../img/home/generales/inicio-ilustracion_onda\ superior.svg);
     background-repeat: no-repeat;
     background-size: auto auto;
     height: auto;
@@ -1466,6 +1467,19 @@ footer footer .terms-privacy .terms {
         display: none;
     }
 
+    .header{
+    align-items: flex-start;
+    margin-top: 28px;
+    }
+
+    .header .right-burguer-image{
+    position: absolute;
+    width: fit-content;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    }
+
     .header .burguer-menu{
         display: block;
         position: relative;
@@ -1483,19 +1497,20 @@ footer footer .terms-privacy .terms {
     .header .burguer-menu .lbl-menu .spn3 {
         position: absolute;
         content: '';
-        background: #000000;
-        width: 18px;
-        height: 2px;
+        background: #fff;
+        width: 25px;
+        height: 3px;
         border-radius: 5px;
         transition: all 1ms linear;
     }
 
     .header .burguer-menu .lbl-menu .spn2{
-        top: 5px;
+        top: 50%;
+        margin: 16px 0;
     }
 
     .header .burguer-menu .lbl-menu .spn3{
-        top: 10px;
+        top: 11px;
     }
 
     .header .burguer-menu .btn-menu{
@@ -1518,11 +1533,13 @@ footer footer .terms-privacy .terms {
     }
 
     .header .burguer-menu .menu-mobile {
-    height: 224px;
-    display: flex;
-    position: fixed;
-    right: 54%;
-    bottom: 90%;
+        height: 224px;
+        display: flex;
+        position: fixed;
+        right: 0;
+        bottom: 42%;
+        z-index: 2;
+        width: 100vw;
     }
 
     .header .burguer-menu .menu-mobile ul{
@@ -1578,7 +1595,21 @@ footer footer .terms-privacy .terms {
         transition: all 2s ease;
     }
 
-    
+    main .hero {
+        grid-template-columns: 12% auto auto auto;
+        grid-template-rows: 61% 22% auto;
+        grid-template-areas:
+            "left-small-circles lamp-flowerpot computer varius"
+            ". lamp-flowerpot computer varius"
+            ". lamp-flowerpot computer varius";
+    }
+
+    main .hero .lamp-flowerpot .lamp,
+    main .hero .varius .cell-phone{
+        display: none;
+    }
+
+
 
 }
 
