@@ -53,12 +53,12 @@ function footerTemplate() {
             <img src="img/home/logo/logo.svg" alt="logo" class="logo-img">
             <span>The Spanish Toolbox</span>
         </div>
-        <p class="text">We teach meaningful language, not language with meaning </p>
+        <p class="text">We teach meaningful language, not language with meaning</p>
         <nav>
             <ul>
                 <li class="link about-us"><a href="about_us.html">About Us</a></li>
                 <li class="link contact-us"><a href="language_courses.html">Contact Us</a></li>
-                <li class="link faqs"><a href="faqs.html">FaQs</a></li>
+                <li class="link faqs"><a href="faqs.html">FAQ's</a></li>
             </ul>
         </nav>
     </div>
@@ -76,7 +76,7 @@ function footerTemplate() {
     </div>
 </main>
 <footer>
-    <span class="all-rights-reserved">© 2021 The Spanish Toolbox. All Rights Reserved.</span>
+    <span class="all-rights-reserved">© 2022 The Spanish Toolbox.<br> All Rights Reserved.</span>
     <div class="social-media">
         <img src="img/home/footer/iconos_instagram.svg" alt="image" class="social-icons">
         <img src="img/home/footer/iconos_linkedin.svg" alt="image" class="social-icons">
