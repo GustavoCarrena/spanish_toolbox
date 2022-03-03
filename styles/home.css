@@ -140,6 +140,7 @@
     display: none;
     position: absolute;
     width: 14%;
+    min-width: 85px;
     right: 0;
     top: 0;
     z-index: -1;
@@ -151,7 +152,7 @@ main {
 
 main .hero {
     display: grid;
-    grid-template-columns: 6.823% 24.527% auto 1fr 6.823%;
+    grid-template-columns: auto 24.527% auto 1fr auto;
     grid-template-rows: 61% 22% auto;
     grid-template-areas: "left-small-circles lamp-flowerpot computer varius right-circle"". lamp-flowerpot computer varius . "". lamp-flowerpot computer varius . ";
     align-items: stretch;
@@ -170,13 +171,11 @@ main .hero .line {
 
 main .hero .left-small {
     grid-area: left-small-circles;
-    width: auto;
-    height: fit-content;
 }
 
 main .hero .left-small .left-circle {
-    width: auto;
-    height: 188px;
+    min-width: 93.2px;
+    height: 63.5%;
 }
 
 main .hero .left-small .small-circle {
@@ -187,9 +186,9 @@ main .hero .left-small .small-circle {
 
 main .hero .right-circle {
     grid-area: right-circle;
-    width: auto;
+    width:  86.1px;
     height: 186.4px;
-    margin-top: 4px;
+    margin-top: 23px;
     position: absolute;
     right: 0;
 }
@@ -1288,6 +1287,7 @@ footer footer {
     font-size: 0.813rem;
 }
 
+
 footer footer .social-media {
     display: flex;
     flex-flow: row nowrap;
@@ -1357,6 +1357,36 @@ footer footer .terms-privacy .terms {
 
     main .lets-learn header h1 .third {
         font-size: 1.575rem;
+    }
+
+    main .hero .lamp-flowerpot {
+        margin: 138px 40.3px 0 0;
+    }
+
+    main .hero .lamp-flowerpot .lamp{
+        width: 150px;
+        height: auto;
+    }
+
+    main .hero .lamp-flowerpot .flowerpot {
+        width: 79px;
+        height: auto;
+        margin-left: 7%;
+    }
+
+    main .hero .computer {
+        width: 425px;
+        margin: 127px 0 0 0;
+    }
+
+    main .hero .varius .cofee {
+        height: 120px;
+        margin: 0 0 44px 2.63%;
+    }
+
+    main .hero .varius .cell-phone {
+        height: 157px;
+        margin-top: 276px;
     }
 
     main .lets-learn main .card {
@@ -1481,6 +1511,7 @@ footer footer .terms-privacy .terms {
 @media (max-width: 1023px) {
     .header .logo {
         margin: 0 3% 0.18% 1.5%;
+        width: 35%;
     }
 
     .header .logo-img {
@@ -1489,6 +1520,10 @@ footer footer .terms-privacy .terms {
 
     .header span {
         font-size: 1rem;
+    }
+
+    .header nav{
+        width: 50%;
     }
 
     .header nav ul {
@@ -1772,9 +1807,13 @@ footer footer .terms-privacy .terms {
         line-height: 1.2rem;
     }
 
-    footer footer .all-rights-reserved br {
-        display: block;
+    footer footer .all-rights-reserved {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
     }
+    
 
     footer footer .terms-privacy {
         display: none;
@@ -1804,6 +1843,14 @@ footer footer .terms-privacy .terms {
     .header {
         align-items: flex-start;
         margin-top: 20px;
+    }
+
+    .header .logo {
+        width: 60%;
+    }
+
+    .header span {
+        font-size: 1.2rem;
     }
 
     .header .right-burguer-image {
@@ -1903,20 +1950,31 @@ footer footer .terms-privacy .terms {
         transition: all 1.5s ease;
     }
 
-    main .hero {
-        grid-template-columns: 12% auto auto auto;
-        grid-template-rows: 61% 22% auto;
-        grid-template-areas:
-            "left-small-circles lamp-flowerpot computer varius"
-            ". lamp-flowerpot computer varius"
-            ". lamp-flowerpot computer varius";
-    }
-
     main .hero .lamp-flowerpot .lamp,
     main .hero .varius .cell-phone {
         display: none;
     }
 
+    main .hero .left-small .small-circle {
+        position: absolute;
+        left: 12%;
+        margin: 0;
+        top: 72%;
+    }
+
+    main .hero .computer {
+        width: 57%;
+        min-width: 360px;
+    }
+
+    main .hero .line {
+        max-width: 355px;
+        top: 85%;
+    }
+
+    main .lets-learn .blue-circle {
+        width: 166px;
+    }
 
 
 

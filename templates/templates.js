@@ -76,7 +76,7 @@ function footerTemplate() {
     </div>
 </main>
 <footer>
-    <span class="all-rights-reserved">© 2022 The Spanish Toolbox.<br> All Rights Reserved.</span>
+    <div class="all-rights-reserved"><span>© 2022 The Spanish Toolbox.</span> <span>All Rights Reserved.</span></div>
     <div class="social-media">
         <img src="img/home/footer/iconos_instagram.svg" alt="image" class="social-icons">
         <img src="img/home/footer/iconos_linkedin.svg" alt="image" class="social-icons">
