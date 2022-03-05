@@ -1,16 +1,18 @@
-import {headerSection} from "../templates/templates.js"
-import {footerSection} from "../templates/templates.js";
-
-const heroMove = document.getElementById('hero');
-heroMove.addEventListener('mouseover', () => {
-    heroMove.classList.add('animate__shakeX')
-});
-heroMove.addEventListener('mouseout', () => {
-    heroMove.classList.remove('animate__shakeX')
-});
+import {headerSection} from "../templates/header.js"
+import {footerSection} from "../templates/footer.js";
 
 headerSection()
 footerSection()
+
+$(document).ready(function(){
+    $('#leftBookcase').plaxify({"xRange":60,"yRange":0,"data-invert":true})
+    $('#calendar').plaxify({"xRange":40,"yRange":0,"data-invert":true})
+    $('#watch').plaxify({"xRange":40,"yRange":0,"data-invert":true})
+    $('#desk').plaxify({"xRange":40,"yRange":0,"data-invert":true})
+    $('#rightBookcase').plaxify({"xRange":60,"yRange":0,"data-invert":true})
+    $.plax.enable()
+    });
+
 
 
 

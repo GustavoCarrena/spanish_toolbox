@@ -29,7 +29,8 @@
     justify-content: space-between;
     align-items: end;
     height: 4.938rem;
-    background-repeat: no-repeat;
+    background: var(--yellow-color);
+    padding: 73px 0;
 }
 
 .header .logo {
@@ -108,12 +109,20 @@
 }
 
 .header .contact-button {
-    min-width: 144px;
+    min-width: 179px;
     height: 48px;
     border-radius: 24px;
     border: none;
     background-color: var(--second-orange-color);
     margin: 0 4.25% -1% 0;
+    text-decoration: none;
+    font-family: var(--noto-font);
+    font-weight: 600;
+    line-height: 1.38rem;
+    text-align: center;
+    color: #fcfcfc;
+    font-size: 16px;
+    padding: 12px 11px;
 }
 
 .header .contact-button:hover {
@@ -123,17 +132,6 @@
 
 .header .contact-button:active {
     background-color: #ce1719;
-}
-
-.header .contact-button a {
-    text-decoration: none;
-    font-family: var(--noto-font);
-    font-weight: 600;
-    line-height: 1.38rem;
-    text-align: center;
-    color: #fcfcfc;
-    font-size: 16px;
-    padding: 2px;
 }
 
 .header .right-burguer-image {
@@ -151,122 +149,113 @@ main {
 }
 
 main .hero {
+    position: relative;
     display: grid;
-    grid-template-columns: auto 24.527% auto 1fr auto;
-    grid-template-rows: 61% 22% auto;
-    grid-template-areas: "left-small-circles lamp-flowerpot computer varius right-circle"". lamp-flowerpot computer varius . "". lamp-flowerpot computer varius . ";
-    align-items: stretch;
-    justify-content: center;
+    grid-template-columns: 21.112% auto 20.139%;
+    grid-template-rows: 520px;
+    grid-template-areas: 
+        "left-bookcase main-area right-bookcase"
+        ;
+    align-items: center;
+    justify-items: center;
+    width: 100vw;
+    background: var(--yellow-color);
 }
 
-main .hero .line {
-    width: 100%;
-    height: 1px;
-    border: solid 1px #2e2a4a;
-    background: #2e2a4a;
-    grid-row: 2/4;
-    grid-column: 2/5;
-    margin-left: -66px;
-}
-
-main .hero .left-small {
-    grid-area: left-small-circles;
-}
-
-main .hero .left-small .left-circle {
-    min-width: 93.2px;
-    height: 63.5%;
-}
-
-main .hero .left-small .small-circle {
-    width: 26.2px;
-    height: 26.2px;
-    margin: 38.4px 0 0 25.2%;
-}
-
-main .hero .right-circle {
-    grid-area: right-circle;
-    width:  86.1px;
-    height: 186.4px;
-    margin-top: 23px;
+main .hero .left-bookcase{
+    grid-area: left-bookcase;
     position: absolute;
-    right: 0;
+    top: 0;
+    left: 71px;
+    width: 233px;
+    height: 520px;
 }
 
-main .hero .lamp-flowerpot {
-    grid-area: lamp-flowerpot;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-end;
-    width: auto;
-    height: fit-content;
-    margin: 138px 40.3px 0 13.55%;
-    z-index: 1;
-}
-
-main .hero .lamp-flowerpot .lamp {
-    width: auto;
-    height: 314px;
-}
-
-main .hero .lamp-flowerpot .flowerpot {
-    width: auto;
-    height: 184px;
-    margin-left: 15%;
-}
-
-main .hero .computer {
-    grid-area: computer;
-    width: 473.5px;
-    height: 358px;
-    margin: 127px 0 0 7.5%;
-}
-
-main .hero .varius {
-    grid-area: varius;
+main .hero .main-area{
+    grid-area: main-area;
+    position: relative;
     display: grid;
-    grid-template-columns: 39% 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: "post-it cell-phone ""cofee cell-phone";
+    grid-template-columns: 115px 346px 107px;
+    grid-template-rows: 160px 360px;
+    grid-template-areas: 
+        "calendar . watch"
+        "desk desk desk";
+        justify-self: center;
 }
 
-main .hero .varius .post-it {
-    grid-area: post-it;
-    width: auto;
-    height: 73px;
-    margin-top: 192px;
+main .hero .main-area .calendar{
+    grid-area: calendar;
 }
 
-main .hero .varius .cell-phone {
-    grid-area: cell-phone;
-    width: auto;
-    height: 218px;
-    margin-top: 228px;
+main .hero .main-area .calendar img{
+    position: absolute;
+    width: 115px;
 }
 
-main .hero .varius .cofee {
-    grid-area: cofee;
-    width: auto;
-    height: 137px;
-    margin: 0 0 44px 15.63%;
+main .hero .main-area .watch{
+    grid-area: watch;
+}
+
+main .hero .main-area .watch img{
+    position: absolute;
+    width: 107px;
+}
+
+main .hero .main-area .desk{
+    grid-area: desk;
+}
+
+main .hero .main-area .desk img{
+    position: absolute;
+    width: 569px;
+    top: 126px;
+}
+
+main .hero .right-bookcase{
+    grid-area: right-bookcase;
+    top: 0;
+    left: 0;
+    width: 233px;
+    height: 520px;
+    z-index: 1;
+    justify-self: center;
+}
+
+main .hero .violet-circle{
+    grid-column-start: 3;
+    position: absolute;
+    width: 90px;
+    height: 187px;
+    z-index: 2;
+    right: 0;
+    top: 0;
 }
 
 main .lets-learn {
     display: grid;
-    background-image: url(../img/home/generales/inicio-ilustracion_onda_superior_blanco.svg);
+    background: #ffffff;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 243px auto auto;
-    grid-template-areas: "learn-blue-circle learn-header-text .""main-cards main-cards main-cards"". . .";
+    grid-template-areas:
+        "learn-blue-circle learn-header-text ."
+        "main-cards main-cards main-cards"
+        ". . .";
     position: relative;
-    top: -95px;
+    bottom: 28px;
     z-index: 1;
+    width: 100vw;
 }
 
-main .lets-learn .blue-circle,
-main .lets-learn header,
-main .lets-learn .main {
-    margin-top: 23%;
+
+main .lets-learn .white-top {
+    position: absolute;
+    width: 100%;
+    grid-row: 1;
+    grid-column: 1/4;
+    margin-top: -99px;
 }
+
+
 
 main .lets-learn .blue-circle {
     grid-area: learn-blue-circle;
@@ -282,16 +271,12 @@ main .lets-learn header h1 {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: max-content;
+    width: 100%;
     height: auto;
 }
 
-main .lets-learn header h1 line {
+main .lets-learn header h1 .line {
     font-family: var(--montserrat-font);
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 159px;
-    text-align: left;
 }
 
 main .lets-learn header h1 .first {
@@ -331,7 +316,7 @@ main .lets-learn main .yellow-circle {
     width: 100%;
     height: 88.7%;
     background: var(--yellow-color);
-    clip-path: circle(44% at 74% 50%);
+    clip-path: circle(42% at 74% 50%);
 }
 
 main .lets-learn main .first-card {
@@ -388,7 +373,7 @@ main .lets-learn main .card p {
     margin-bottom: 7.5%;
 }
 
-main .lets-learn main .card button {
+main .lets-learn main .card a {
     min-width: 38%;
     height: auto;
     padding: 3.2% 9%;
@@ -397,24 +382,31 @@ main .lets-learn main .card button {
     text-align: center;
     margin-bottom: 8.5%;
     background: var(--blue-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.38rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-family: var(--montserrat-font);
+    font-weight: 600;
 }
 
-main .lets-learn main .card button:hover {
+main .lets-learn main .card a:hover {
     background-color: #6e95bf;
     cursor: pointer;
 }
 
-main .lets-learn main .card button:active {
+main .lets-learn main .card a:active {
     background-color: #005e9e;
 }
 
-main .lets-learn main .card button a {
+/* main .lets-learn main .card button a {
     font-size: 0.813rem;
     font-weight: 600;
     line-height: 1.38rem;
     color: var(--white-color);
     text-decoration: none;
-}
+} */
 
 main .online-courses {
     display: flex;
@@ -464,6 +456,7 @@ main .special-courses {
     background: url(../img/home/generales/inicio-ilustracion_onda\ superior.svg);
     background-repeat: no-repeat;
     background-size: auto auto;
+    width: 100vw;
     height: auto;
     display: flex;
     flex-flow: column nowrap;
@@ -574,10 +567,17 @@ main .special-courses main .cards-container .cards .card-button {
     height: 48px;
     border-radius: 24px;
     border: none;
-    background-color: var(--yellow-color);
+    background-color: var(--violet-color);
     text-align: center;
     position: relative;
     margin-bottom: 32%;
+    font-family: var(--noto-font);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.29rem;
+    color: #fcfcfc;
+    text-decoration: none;
+    padding: 14px 41px;
 }
 
 main .special-courses main .cards-container .cards .card-button:hover {
@@ -589,18 +589,8 @@ main .special-courses main .cards-container .cards .card-button:active {
     background-color: #f8b811;
 }
 
-main .special-courses main .cards-container .cards .card-button a {
-    font-family: var(--noto-font);
-    font-size: 1rem;
-    font-weight: 600;
-    line-height: 1.38rem;
-    color: #fcfcfc;
-    text-decoration: none;
-    padding: 7% 17%;
-}
-
 main .why-us {
-    width: 100%;
+    width: 100vw;
     background: var(--violet-color);
     display: flex;
     flex-flow: column nowrap;
@@ -669,7 +659,7 @@ main .why-us main .cards {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 279px;
+    width: 291px;
     height: fit-content;
 }
 
@@ -689,6 +679,8 @@ main .why-us main .cards img {
 main .why-us main .first-card img {
     margin-right: 9%;
 }
+
+
 
 main .why-us main .cards .card-text {
     display: flex;
@@ -712,7 +704,8 @@ main .why-us main .cards .card-text p {
     margin: 5px 0 0 7%;
     font-size: 1.125rem;
     color: #eee;
-    min-height: 88px;
+    width: 100%;
+    height: 88px;
 }
 
 main .why-us footer {
@@ -722,7 +715,7 @@ main .why-us footer {
     margin-top: -3.7%;
 }
 
-main .why-us footer button {
+main .why-us footer a {
     width: 17.85%;
     height: 48px;
     border-radius: 24px;
@@ -730,20 +723,8 @@ main .why-us footer button {
     border: none;
     margin: 115px 0 50px 1%;
     text-align: center;
-}
-
-main .why-us footer button:hover {
-    cursor: pointer;
-    background-color: #f2dda6;
-}
-
-main .why-us footer button:active {
-    background-color: #f8b811;
-}
-
-main .why-us footer button a {
     line-height: 1.375rem;
-    color: var(--violet-color);
+    color: var(--blue-color);
     font-family: var(--noto-font);
     font-size: 1rem;
     font-weight: 600;
@@ -751,8 +732,28 @@ main .why-us footer button a {
     padding: 13px 40px;
 }
 
+main .why-us footer a:hover {
+    cursor: pointer;
+    background-color: #f2dda6;
+}
+
+main .why-us footer a:active {
+    background-color: #f8b811;
+}
+
+/* main .why-us footer button a {
+    line-height: 1.375rem;
+    color: var(--violet-color);
+    font-family: var(--noto-font);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 13px 40px;
+} */
+
 main .test-level {
     display: grid;
+    width: 100vw;
     grid-template-columns: 1fr 65.8858% 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -806,17 +807,7 @@ main .test-level .middle-rectangle .all-levels-container p {
     width: 83.34%;
 }
 
-main .test-level .middle-rectangle .all-levels-container p {
-    font-family: var(--montserrat-font);
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.19rem;
-    text-align: center;
-    color: var(--gray-color);
-    width: 83.34%;
-}
-
-main .test-level .middle-rectangle button {
+main .test-level .middle-rectangle a {
     width: 216px;
     height: 72px;
     background: var(--yellow-color);
@@ -824,26 +815,22 @@ main .test-level .middle-rectangle button {
     border: none;
     text-align: center;
     margin-right: 10%;
+    line-height: 1.21rem;
+    font-family: var(--noto-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--blue-color);
+    text-decoration: none;
+    padding: 26px 38px;
 }
 
-main .test-level .middle-rectangle button:hover {
+main .test-level .middle-rectangle a:hover {
     cursor: pointer;
     background-color: #f2dda6;
 }
 
-main .test-level .middle-rectangle button:active {
+main .test-level .middle-rectangle a:active {
     background-color: #f8b811;
-}
-
-
-main .test-level .middle-rectangle button a {
-    line-height: 1.38rem;
-    font-family: var(--noto-font);
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--white-color);
-    text-decoration: none;
-    padding: 8% 9%;
 }
 
 main .test-level .test-your-level {
@@ -918,7 +905,7 @@ main .test-level .test-your-level .test-now .second-p {
     width: 100%;
 }
 
-main .test-level .test-your-level .test-now button {
+main .test-level .test-your-level .test-now a {
     width: 199px;
     height: 66px;
     border-radius: 33px;
@@ -926,25 +913,22 @@ main .test-level .test-your-level .test-now button {
     border: none;
     text-align: center;
     margin-bottom: 10%;
-}
-
-main .test-level .test-your-level .test-now button:hover {
-    cursor: pointer;
-    background-color: rgba(235, 88, 90, 0.71);
-}
-
-main .test-level .test-your-level .test-now button:active {
-    background-color: #ce1719;
-}
-
-main .test-level .test-your-level .test-now button a {
     font-family: var(--noto-font);
     font-size: 1.375rem;
     font-weight: 600;
     line-height: 1.36rem;
     color: var(--white-color);
     text-decoration: none;
-    padding: 8% 12%;
+    padding: 21px 35px;
+}
+
+main .test-level .test-your-level .test-now a:hover {
+    cursor: pointer;
+    background-color: rgba(235, 88, 90, 0.71);
+}
+
+main .test-level .test-your-level .test-now a:active {
+    background-color: #ce1719;
 }
 
 main .test-level .img-container {
@@ -973,6 +957,7 @@ main .test-level .bottom-background {
 
 main .newsletter-section {
     position: relative;
+    width: 100vw;
     display: grid;
     grid-template-columns: 68.722% 1fr;
     grid-template-rows: auto;
@@ -1068,7 +1053,7 @@ main .newsletter-section .container .main-content .suscribe .input::placeholder 
     color: var(--gray-color);
 }
 
-main .newsletter-section .container .main-content .suscribe button {
+main .newsletter-section .container .main-content .suscribe a {
     width: 144px;
     height: 48px;
     border-radius: 1.5rem;
@@ -1076,25 +1061,22 @@ main .newsletter-section .container .main-content .suscribe button {
     text-align: center;
     border: none;
     margin-left: 3.10%;
-}
-
-main .newsletter-section .container .main-content .suscribe button:hover {
-    cursor: pointer;
-    background-color: #7e6e91;
-}
-
-main .newsletter-section .container .main-content .suscribe button:active {
-    background-color: #2b0457;
-}
-
-main .newsletter-section .container .main-content .suscribe button a {
     font-family: var(--noto-font);
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.38rem;
     color: var(--yellow-color);
     text-decoration: none;
-    padding: 7% 15%;
+    padding: 13px 19px;
+}
+
+main .newsletter-section .container .main-content .suscribe a:hover {
+    cursor: pointer;
+    background-color: #7e6e91;
+}
+
+main .newsletter-section .container .main-content .suscribe a:active {
+    background-color: #2b0457;
 }
 
 main .newsletter-section .images-container {
@@ -1133,6 +1115,10 @@ main .newsletter-section .images-container .lamp {
     left: 85%;
     position: absolute;
     margin-top: 11%;
+}
+
+footer{
+    width: 100vw;
 }
 
 footer main {
@@ -1341,10 +1327,8 @@ footer footer .terms-privacy .terms {
         font-size: 1rem;
     }
 
-    .header .contact-button {
-        min-width: 80px;
-        height: 45px;
-        margin: 0 4% -1% 0;
+    main .lets-learn .white-top {
+        margin-top: -82px;
     }
 
     main .lets-learn header h1 .first {
@@ -1359,35 +1343,7 @@ footer footer .terms-privacy .terms {
         font-size: 1.575rem;
     }
 
-    main .hero .lamp-flowerpot {
-        margin: 138px 40.3px 0 0;
-    }
 
-    main .hero .lamp-flowerpot .lamp{
-        width: 150px;
-        height: auto;
-    }
-
-    main .hero .lamp-flowerpot .flowerpot {
-        width: 79px;
-        height: auto;
-        margin-left: 7%;
-    }
-
-    main .hero .computer {
-        width: 425px;
-        margin: 127px 0 0 0;
-    }
-
-    main .hero .varius .cofee {
-        height: 120px;
-        margin: 0 0 44px 2.63%;
-    }
-
-    main .hero .varius .cell-phone {
-        height: 157px;
-        margin-top: 276px;
-    }
 
     main .lets-learn main .card {
         width: 89%;
@@ -1437,7 +1393,7 @@ footer footer .terms-privacy .terms {
         font-size: 0.95rem;
     }
 
-    main .test-level .middle-rectangle button {
+    main .test-level .middle-rectangle a {
         width: 205px;
         height: 63px;
     }
@@ -1539,58 +1495,6 @@ footer footer .terms-privacy .terms {
         font-size: 0.9rem;
     }
 
-    .header .contact-button {
-        min-width: 98px;
-        height: 34px;
-        margin: 0 1% -1% 0;
-    }
-
-    main .hero {
-        grid-template-columns: 9% 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "left-small-circles computer";
-            justify-items: center;
-
-    }
-
-    main .hero .right-circle,
-    main .hero .lamp-flowerpot,
-    main .hero .varius {
-        display: none;
-    }
-
-    main .hero .left-small {
-        margin-top: 40%;
-    }
-
-    main .hero .left-small .left-circle {
-        height: 140px;
-    }
-
-    main .hero .left-small .small-circle {
-        margin: 126% 0 0 137.2%;
-    }
-
-    main .hero .line {
-        max-width: 428px;
-        height: 1px;
-        border: solid 1px #2e2a4a;
-        background: #2e2a4a;
-        grid-row: 1/1;
-        margin-left: -3%;
-        position: absolute;
-        top: 92%;
-        z-index: -1;
-    
-    }
-
-    main .hero .computer {
-        grid-area: computer;
-        width: 462.5px;
-        height: auto;
-        margin: 127px 8% 3% 0;
-    }
 
 
     main .lets-learn {
@@ -1608,7 +1512,7 @@ footer footer .terms-privacy .terms {
         width: 86%;
     }
 
-    main .lets-learn main .card button {
+    main .lets-learn main .card a {
         margin-top: 16%;
     }
 
@@ -1649,7 +1553,7 @@ footer footer .terms-privacy .terms {
         font-size: 0.9rem;
     }
 
-    main .why-us footer button {
+    main .why-us footer a {
         width: 175px;
     }
 
@@ -1657,14 +1561,12 @@ footer footer .terms-privacy .terms {
         font-size: 1.55rem;
     }
 
-    main .test-level .middle-rectangle button {
+    main .test-level .middle-rectangle a {
         width: 190px;
         height: 53px;
-    }
-
-    main .test-level .middle-rectangle button a {
         font-size: 1.3rem;
     }
+
 
     main .test-level .test-your-level .test-now {
         margin-left: 7%;
@@ -1686,7 +1588,7 @@ footer footer .terms-privacy .terms {
         margin: -16.8% 0 11.46% 27.6%;
     }
 
-    main .test-level .test-your-level .test-now button {
+    main .test-level .test-your-level .test-now a {
         width: 189px;
         height: 50px;
         margin-top: -25px;
@@ -1836,8 +1738,8 @@ footer footer .terms-privacy .terms {
 @media (max-width: 768px) {
 
     .header nav,
-    .header .contact-button,
-    main .hero .right-circle {
+    .header .contact-button
+     {
         display: none;
     }
 
@@ -1951,27 +1853,7 @@ footer footer .terms-privacy .terms {
         transition: all 1.5s ease;
     }   
 
-    main .hero .lamp-flowerpot .lamp,
-    main .hero .varius .cell-phone {
-        display: none;
-    }
 
-    main .hero .left-small .small-circle {
-        position: absolute;
-        left: 12%;
-        margin: 0;
-        top: 72%;
-    }
-
-    main .hero .computer {
-        width: 57%;
-        min-width: 360px;
-    }
-
-    main .hero .line {
-        max-width: 355px;
-        top: 85%;
-    }
 
     main .lets-learn .blue-circle {
         width: 166px;
@@ -1984,7 +1866,7 @@ footer footer .terms-privacy .terms {
         height: auto;
     }
 
-    main .lets-learn main .card button {
+    main .lets-learn main .card a {
         margin-top: 3%;
     }
     
