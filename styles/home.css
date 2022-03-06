@@ -39,7 +39,7 @@
     align-items: flex-end;
     width: 60%;
     height: auto;
-    margin: 0 5% 0.18% 5.341%;
+    margin: 0 2% 0.18% 5.341%;
 }
 
 .header .logo-img {
@@ -59,7 +59,7 @@
     line-height: 0.75rem;
     letter-spacing: normal;
     text-align: left;
-    color: var(--first-orange-color);
+    color: #3c3c3c;
 }
 
 .header nav {
@@ -68,7 +68,7 @@
 
 .header nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -86,8 +86,8 @@
 }
 
 .header nav ul li a:active {
-    color: var(--yellow-color);
-    border-bottom: 2px solid var(--yellow-color);
+    color: var(--second-orange-color);
+    border-bottom: 2px solid var(--second-orange-color);
 }
 
 .header nav ul li a {
@@ -114,7 +114,7 @@
     border-radius: 24px;
     border: none;
     background-color: var(--second-orange-color);
-    margin: 0 4.25% -1% 0;
+    margin: 0 4% -1% 0;
     text-decoration: none;
     font-family: var(--noto-font);
     font-weight: 600;
@@ -180,7 +180,7 @@ main .hero .main-area{
     grid-template-areas: 
         "calendar . watch"
         "desk desk desk";
-        justify-self: center;
+    justify-self: center;
 }
 
 main .hero .main-area .calendar{
@@ -208,7 +208,34 @@ main .hero .main-area .desk{
 main .hero .main-area .desk img{
     position: absolute;
     width: 569px;
-    top: 126px;
+    top: 270px;
+}
+
+main .hero .main-area .desk img#screen{
+    width: 250px;
+    top: 183px;
+    left: 25%;
+}
+main .hero .main-area .desk img#hello_msg{
+    width: 156px;
+    top: 166px;
+    left: 33%;
+}
+
+main .hero .main-area .desk img#apple{
+    position: absolute;
+    width: 40px;
+    height: 43px;
+    top: 328px;
+    left: 373px;
+}
+
+main .hero .main-area .desk img#lamp{
+    position: absolute;
+    width: 120px;
+    height: 165px;
+    left: 421px;
+    top: 210px;
 }
 
 main .hero .right-bookcase{
@@ -218,61 +245,62 @@ main .hero .right-bookcase{
     width: 233px;
     height: 520px;
     z-index: 1;
-    justify-self: center;
+    justify-self: start;
 }
 
 main .hero .violet-circle{
     grid-column-start: 3;
     position: absolute;
-    width: 90px;
-    height: 187px;
+    width: 86px;
+    height: 186px;
     z-index: 2;
     right: 0;
     top: 0;
+}
+
+main .lets-learn header .white-top {
+    width: 100vw;
+    z-index: 2;
+    position: relative;
+    margin-top: -9%;
+    transform: scaley(1.20);
 }
 
 main .lets-learn {
     display: grid;
     background: #ffffff;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 243px auto auto;
+    grid-template-rows: 212px 1fr 76px;
     grid-template-areas:
-        "learn-blue-circle learn-header-text ."
+        "learn-header-text learn-header-text learn-header-text"
         "main-cards main-cards main-cards"
         ". . .";
-    position: relative;
-    bottom: 28px;
-    z-index: 1;
     width: 100vw;
+    margin-top: -20px;
 }
 
 
-main .lets-learn .white-top {
+main .lets-learn .green-circle{
     position: absolute;
-    width: 100%;
-    grid-row: 1;
-    grid-column: 1/4;
-    margin-top: -99px;
+    width: 234px;
+    height: 393px;
+    z-index: 3;
+    left: -15px;
+    top: 585px;
 }
 
 
 
-main .lets-learn .blue-circle {
-    grid-area: learn-blue-circle;
-    width: 187px;
-    height: 319px;
-    background: var(--blue-color);
-    border-radius: 0 319px 319px 0;
+main .lets-learn header{
+    grid-area: learn-header-text;
 }
+
 
 main .lets-learn header h1 {
-    grid-area: learn-header-text;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: auto;
 }
 
 main .lets-learn header h1 .line {
@@ -280,13 +308,13 @@ main .lets-learn header h1 .line {
 }
 
 main .lets-learn header h1 .first {
-    color: var(--second-orange-color);
+    color: var(--blue-color);
     font-weight: 600;
     font-size: 3.75rem;
 }
 
 main .lets-learn header h1 .second {
-    color: var(--yellow-color);
+    color: var(--blue-color);
     font-weight: 600;
     font-size: 5.313rem;
     margin-top: -13px;
@@ -305,9 +333,10 @@ main .lets-learn main {
     grid-template-areas: "first-card second-card third-card";
     place-items: center;
     align-items: baseline;
+    z-index: 4;
 }
 
-main .lets-learn main .yellow-circle {
+/* main .lets-learn main .yellow-circle {
     position: absolute;
     right: 0;
     top: 28%;
@@ -317,7 +346,7 @@ main .lets-learn main .yellow-circle {
     height: 88.7%;
     background: var(--yellow-color);
     clip-path: circle(42% at 74% 50%);
-}
+} */
 
 main .lets-learn main .first-card {
     grid-area: first-card;
@@ -342,13 +371,14 @@ main .lets-learn main .card {
     border-radius: 30px;
     box-shadow: 0 3px 8px 0 rgb(0 0 0 / 16%);
     background-color: var(--white-color);
-    margin-top: 20%;
+    margin-top: 10%;
 }
 
 main .lets-learn main .card img {
     width: 100%;
     height: fit-content;
     margin-bottom: 9.5%;
+    border-radius: 30px 30px 0 0;
 }
 
 main .lets-learn main .card h6 {
@@ -416,7 +446,7 @@ main .online-courses {
     height: auto;
     position: relative;
     overflow: hidden;
-    margin-top: -5%;
+    /* margin-top: -5%; */
 }
 
 main .online-courses .online-courses-text-container {

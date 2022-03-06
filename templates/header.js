@@ -8,7 +8,7 @@ function headerTemplate() {
         <nav>
             <ul>
                 <li><a href="views/language_courses.html">Language Courses</a></li>
-                <li><a href="views/special_courses.html">Special Courses</a></li>
+                <li><a href="views/special_courses.html">On-Demand Courses</a></li>
                 <li class="last"><a href="views/about_us.html">About Us</a></li>
             </ul>
         </nav>
