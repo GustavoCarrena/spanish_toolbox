@@ -331,7 +331,7 @@ main .lets-learn header h1 .third {
 main .lets-learn main {
     grid-area: main-cards;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr auto 1fr;
     grid-template-areas: "first-card second-card third-card";
     place-items: center;
     align-items: baseline;
@@ -342,13 +342,15 @@ main .lets-learn main .yellow-circle{
     position: absolute;
     right: 0;
     grid-column: span 3;
-    width: 542px;
-    height: 760px;
+    width: 558px;
+    height: 831px;
     z-index: -1;
+    top: 800px;
 }
 
 main .lets-learn main .first-card {
     grid-area: first-card;
+    margin-left: 8%;
 }
 
 main .lets-learn main .second-card {
@@ -358,6 +360,7 @@ main .lets-learn main .second-card {
 main .lets-learn main .third-card {
     grid-area: third-card;
     z-index: 2;
+    margin-right: 8%;
 }
 
 
@@ -394,7 +397,7 @@ main .lets-learn main .card h6 {
 }
 
 main .lets-learn main .card p {
-    width: 80%;
+    width: 88%;
     height: 114px;
     text-align: center;
     font-family: var(--montserrat-font);
@@ -448,13 +451,12 @@ main .online-courses {
     height: auto;
     position: relative;
     overflow: hidden;
-    /* margin-top: -5%; */
 }
 
 main .online-courses .online-courses-text-container {
     z-index: 1;
     position: absolute;
-    left: 2.8%;
+    left: 6.8%;
     margin-bottom: 5%;
 }
 
@@ -478,6 +480,7 @@ main .online-courses .online-courses-text-container p {
     align-items: center;
     justify-content: center;
     background-color: var(--yellow-color);
+    padding: 2.5px;
 }
 
 main .online-courses video {
@@ -531,7 +534,7 @@ main .special-courses header p .text {
 }
 
 main .special-courses header p .line {
-    width: 30.37%;
+    width: 66%;
     border-bottom: 1px solid var(--yellow-color);
 }
 
@@ -583,7 +586,7 @@ main .special-courses main .cards-container .third-card h6 {
 main .special-courses main .cards-container .cards p {
     display: flex;
     flex-flow: column nowrap;
-    width: 100%;
+    width: 90%;
     height: 174px;
     line-height: 1.188rem;
     text-align: center;
@@ -764,7 +767,7 @@ main .why-us footer a {
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
-    padding: 13px 40px;
+    padding: 12px 40px;
 }
 
 main .why-us footer a:hover {
@@ -908,15 +911,15 @@ main .test-level .test-your-level .test-now h2 {
 main .test-level .test-your-level .test-now .arrow-image {
     position: absolute;
     height: auto;
-    width: 10%;
+    width: 8%;
     left: 75%;
-    margin-top: 18px;
+    margin-top: 7px;
 }
 
 main .test-level .test-your-level .test-now .line {
     border: 1px solid var(--yellow-color);
-    width: 36%;
-    margin: -7% 0 8.46% 12.6%;
+    width: 47.5%;
+    margin: -9% 0 8.46% 18%;
 }
 
 
@@ -987,12 +990,11 @@ main .test-level .bottom-background {
 
 main .newsletter-section {
     width: 100vw;
-    /* height: 345px; */
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 28.29% 45.20% 6.47% 19.44%;
+    grid-template-rows: 345px;
     grid-template-areas: 
-        "packet-img main-content papers lamp";
+        "packet-img main-content papers lamp-img";
     background-color: var(--white-color);
 }
 
@@ -1001,11 +1003,14 @@ main .newsletter-section .packet-img {
     width: 190px;
     height: 150px;
     transform: rotate(-7deg);
-    margin: 7% -18% 0 18%;
+    justify-self: end;
+    margin-top: 20%;
+    margin: 29% -18% 0 0;
 }
 
 main .newsletter-section .main-content {
-    grid-area: main-contect;
+    grid-area: main-content;
+    justify-self: center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -1036,10 +1041,10 @@ main .newsletter-section .main-content .receive-news {
     font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.22rem;
-    text-align: left;
     color: var(--violet-color);
     margin-bottom: 15px;
-    width: 51%;
+    width: 80%;
+    text-align: center;
 }
 
 main .newsletter-section .main-content .suscribe {
@@ -1047,6 +1052,7 @@ main .newsletter-section .main-content .suscribe {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+    width: 86%;
 }
 
 main .newsletter-section .main-content .suscribe .input {
@@ -1103,37 +1109,37 @@ main .newsletter-section .main-content .suscribe a:active {
     background-color: #2b0457;
 }
 
-/* main .newsletter-section .images-container {
-position: absolute;
-right: 12%;
-} */
 
-main .newsletter-section .images-container .papers {
+
+main .newsletter-section .papers {
 grid-area: papers;
+margin-left: 44px;
 }
 
-main .newsletter-section .images-container .paper {
+
+
+main .newsletter-section .papers .paper {
     transform: rotate(8.5deg);
     width: 80px;
     height: 85px;
-    margin-top: 35.17%;
+    margin: 63px 0 0 15%;
 }
 
-main .newsletter-section .images-container .smaller-paper {
+main .newsletter-section .papers .smaller-paper {
     transform: rotate(-12.5deg);
     width: 67px;
     height: 70px;
     margin-top: 42%;
 }
 
-main .newsletter-section .images-container .lamp {
+main .newsletter-section .lamp {
     grid-area: lamp-img;
-    /* transform: scaleX(-1);
+    transform: scaleX(-1);
     width: 142px;
-    height: 254px;
     left: 85%;
-    position: absolute;
-    margin-top: 11%; */
+    justify-self: end;
+    align-self: end;
+    margin: 0 48px -35px 0;
 }
 
 footer{
@@ -1193,29 +1199,36 @@ footer main .the-spanish-toolbox span {
     line-height: 0.75rem;
     letter-spacing: normal;
     text-align: left;
-    color: var(--first-orange-color);
+    color: #3c3c3c;
     margin-top: 5px;
 }
 
-footer main .the-spanish-toolbox p,
 footer main .courses-container .courses-text {
     font-family: var(--noto-font);
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.36rem;
     text-align: left;
-    color: var(--white-color);
+    color: #707070;
     width: 100%;
     align-self: flex-start;
 }
 
 footer main .the-spanish-toolbox p {
+    font-family: var(--noto-font);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.36rem;
+    text-align: left;
+    color: var(--second-orange-color);
+    width: 87%;
+    align-self: flex-start;
     min-height: 66px;
 }
 
 footer main .the-spanish-toolbox nav {
     align-self: flex-start;
-    width: 90%;
+    width: 85%;
     position: relative;
     top: 12%;
 }
@@ -1271,7 +1284,8 @@ footer main .language-courses {
 
 footer main .special-courses-footer {
     grid-area: special;
-    max-width: 79.1%;
+    max-width: 56.1%;
+    margin-right: 32%;
 }
 
 footer .the-spanish-toolbox,
@@ -1365,7 +1379,7 @@ footer footer .terms-privacy .terms {
 
 
     main .lets-learn main .card {
-        width: 89%;
+        width: 340px;
     }
 
     main .lets-learn main .card h6 {
@@ -1437,27 +1451,22 @@ footer footer .terms-privacy .terms {
         height: 120px;
     }
 
-    main .newsletter-section .images-container .paper {
+    main .newsletter-section .papers .paper {
         width: 65px;
         height: auto;
         margin-top: 66.17%;
     }
 
-    main .newsletter-section .images-container .smaller-paper {
+    main .newsletter-section .papers .smaller-paper {
         width: 53px;
         height: auto;
         margin-top: 100%;
     }
 
-    main .newsletter-section .images-container .lamp {
+    main .newsletter-section .lamp {
         width: 118px;
         height: auto;
         margin-top: 14%;
-    }
-
-    main .newsletter-section .images-container {
-        grid-template-columns: 26% 1fr;
-        margin-left: 18.2%;
     }
 
     footer main .left-image {
@@ -1620,7 +1629,7 @@ footer footer .terms-privacy .terms {
     }
 
     main .newsletter-section .packet-img,
-    main .newsletter-section .images-container {
+    main .newsletter-section {
         display: none;
     }
 
