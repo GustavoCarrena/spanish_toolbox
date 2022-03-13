@@ -102,10 +102,6 @@
 
 .header .burguer-menu {
     display: none;
-    position: relative;
-    width: 5.5%;
-    height: 13px;
-    margin: 2% 3% 0 0;
 }
 
 .header .contact-button {
@@ -144,21 +140,25 @@
     z-index: -1;
 }
 
+main .hero-mobile-area {
+    display: none;
+}
+
 main .hero {
     position: relative;
     display: grid;
     grid-template-columns: 21.112% auto 20.139%;
     grid-template-rows: 520px;
-    grid-template-areas: 
+    grid-template-areas:
         "left-bookcase main-area right-bookcase"
-        ;
+    ;
     align-items: center;
     justify-items: center;
     width: 100vw;
     background: var(--yellow-color);
 }
 
-main .hero .left-bookcase{
+main .hero .left-bookcase {
     grid-area: left-bookcase;
     position: absolute;
     top: 0;
@@ -167,58 +167,59 @@ main .hero .left-bookcase{
     height: 520px;
 }
 
-main .hero .main-area{
+main .hero .main-area {
     grid-area: main-area;
     position: relative;
     display: grid;
     grid-template-columns: 115px 346px 107px;
     grid-template-rows: 160px 360px;
-    grid-template-areas: 
+    grid-template-areas:
         "calendar . watch"
         "desk desk desk";
     justify-self: center;
 }
 
-main .hero .main-area .calendar{
+main .hero .main-area .calendar {
     grid-area: calendar;
 }
 
-main .hero .main-area .calendar img{
+main .hero .main-area .calendar img {
     position: absolute;
     width: 115px;
 }
 
-main .hero .main-area .watch{
+main .hero .main-area .watch {
     grid-area: watch;
 }
 
-main .hero .main-area .watch img{
+main .hero .main-area .watch img {
     position: absolute;
     width: 107px;
 }
 
-main .hero .main-area .desk{
+main .hero .main-area .desk {
     grid-area: desk;
 }
 
-main .hero .main-area .desk img{
+main .hero .main-area .desk img {
     position: absolute;
     width: 569px;
     top: 270px;
 }
 
-main .hero .main-area .desk img#screen{
+main .hero .main-area .desk img#screen {
     width: 250px;
     top: 183px;
     left: 25%;
 }
-main .hero .main-area .desk img#hello_msg{
+
+main .hero .main-area .desk img#hello_msg {
     width: 156px;
     top: 166px;
     left: 33%;
 }
 
-main .hero .main-area .desk img#apple{
+main .hero .main-area .desk img#apple {
     position: absolute;
     width: 40px;
     height: 43px;
@@ -226,7 +227,7 @@ main .hero .main-area .desk img#apple{
     left: 373px;
 }
 
-main .hero .main-area .desk img#lamp{
+main .hero .main-area .desk img#lamp {
     position: absolute;
     width: 120px;
     height: 165px;
@@ -234,7 +235,7 @@ main .hero .main-area .desk img#lamp{
     top: 210px;
 }
 
-main .hero .right-bookcase{
+main .hero .right-bookcase {
     grid-area: right-bookcase;
     top: 0;
     left: 0;
@@ -244,7 +245,7 @@ main .hero .right-bookcase{
     justify-self: start;
 }
 
-main .hero .violet-circle{
+main .hero .violet-circle {
     grid-column-start: 3;
     position: absolute;
     width: 86px;
@@ -483,10 +484,20 @@ main .online-courses .online-courses-text-container p {
     padding: 2.5px;
 }
 
-main .online-courses video {
-    width: 100%;
+
+
+main .online-courses .mobile-video {
+    width: 100vw;
     height: auto;
 }
+
+main .online-courses .video video {
+    width: 100%;
+    height: 100%;
+    transform: scale(2,2);
+}
+
+
 
 main .special-courses {
     background: url(../img/home/generales/inicio-ilustracion_onda\ superior.svg);
@@ -1170,6 +1181,7 @@ footer main .the-spanish-toolbox {
     align-items: center;
     justify-content: flex-start;
     margin: 4% 0 0 22.341%;
+    width: 80%;
 }
 
 footer main .the-spanish-toolbox .logo {
@@ -1220,7 +1232,7 @@ footer main .the-spanish-toolbox p {
     line-height: 1.36rem;
     text-align: left;
     color: var(--second-orange-color);
-    width: 87%;
+    width: 100%;
     align-self: flex-start;
     min-height: 66px;
 }
@@ -1334,56 +1346,56 @@ footer footer .terms-privacy .terms {
 
 /* Laptop */
 
-@media (max-width: 1263px){
-    main .hero{
+@media (max-width: 1263px) {
+    main .hero {
         grid-template-columns: 24.112% auto 23.139%;
         grid-template-rows: 498px;
     }
 
-    main .lets-learn header .white-top{
+    main .lets-learn header .white-top {
         transform: scaley(1.7);
     }
 
-    main .lets-learn header h1{
+    main .lets-learn header h1 {
         margin-top: 17px;
     }
 
-    main .lets-learn main{
+    main .lets-learn main {
         margin-bottom: 20px;
     }
 
-    main .test-level .test-your-level .test-now .arrow-image{
+    main .test-level .test-your-level .test-now .arrow-image {
         width: 10%;
         left: 76%;
         margin-top: 7px;
     }
 
-    footer main .the-spanish-toolbox p{
+    footer main .the-spanish-toolbox p {
         width: 100%;
     }
 
-    footer main .special-courses-footer{
+    footer main .special-courses-footer {
         max-width: 67%;
     }
 
 }
 
-@media (max-width: 1250px){
-    .header nav ul li a{
+@media (max-width: 1250px) {
+    .header nav ul li a {
         font-size: 1.1rem;
     }
 
-    .header .contact-button{
+    .header .contact-button {
         min-width: 156px;
         margin: 0 5% -1% 0;
         line-height: 1.50rem;
     }
 
-    main .newsletter-section .main-content .receive-news{
+    main .newsletter-section .main-content .receive-news {
         width: 84%;
     }
 
- 
+
 }
 
 @media (max-width: 1200px) {
@@ -1410,13 +1422,13 @@ footer footer .terms-privacy .terms {
     }
 
     main .hero .left-bookcase,
-    main .hero .right-bookcase{
+    main .hero .right-bookcase {
         width: 213px;
         height: auto;
         align-self: baseline;
     }
 
-    main .hero .main-area .calendar img{
+    main .hero .main-area .calendar img {
         width: 105px;
         top: 11px;
     }
@@ -1529,8 +1541,8 @@ footer footer .terms-privacy .terms {
         bottom: 430px;
         transform: scaleY(1.0);
     }
-    
-    main .newsletter-section{
+
+    main .newsletter-section {
         grid-template-columns: auto 65% auto 1fr;
     }
 
@@ -1550,11 +1562,11 @@ footer footer .terms-privacy .terms {
         margin-left: 7%;
     }
 
-    main .newsletter-section .main-content .suscribe{
+    main .newsletter-section .main-content .suscribe {
         width: 71%;
     }
 
-    main .newsletter-section .main-content .suscribe .input{
+    main .newsletter-section .main-content .suscribe .input {
         width: 500px;
     }
 
@@ -1597,13 +1609,14 @@ footer footer .terms-privacy .terms {
     }
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1150px) {
+
     main .hero .main-area .calendar img,
-    main .hero .main-area .watch img{
+    main .hero .main-area .watch img {
         top: 27px;
     }
 
-    main .hero .main-area .desk img{
+    main .hero .main-area .desk img {
         top: 250px;
     }
 
@@ -1615,25 +1628,25 @@ footer footer .terms-privacy .terms {
         top: 306px;
     }
 
-    main .why-us footer a{
+    main .why-us footer a {
         width: 18.85%;
     }
 
-    main .test-level .middle-rectangle a{
+    main .test-level .middle-rectangle a {
         margin-right: 7%;
     }
 
     main .newsletter-section {
         grid-template-columns: auto 62% auto 1fr;
     }
-} 
+}
 
-@media (max-width: 1100px){
-    
-    .header .logo{
+@media (max-width: 1100px) {
+
+    .header .logo {
         width: 47%;
     }
-    
+
     .header .logo-img {
         height: 32px;
     }
@@ -1642,7 +1655,7 @@ footer footer .terms-privacy .terms {
         font-size: 1.15rem;
     }
 
-    .header nav{
+    .header nav {
         width: 79%;
     }
 
@@ -1655,34 +1668,37 @@ footer footer .terms-privacy .terms {
         margin: 0 3% -1% 0;
     }
 
-    main .hero{
+    main .hero {
         grid-template-columns: 22% auto 22.139%;
         grid-template-rows: 437px;
     }
 
-    main .hero .left-bookcase, main .hero .right-bookcase {
+    main .hero .left-bookcase,
+    main .hero .right-bookcase {
         width: 193px;
     }
 
-    main .hero .left-bookcase{
+    main .hero .left-bookcase {
         left: 50px;
     }
 
-    main .hero .main-area .calendar img, main .hero .main-area .watch img {
+    main .hero .main-area .calendar img,
+    main .hero .main-area .watch img {
         top: 41px;
     }
-    main .hero .main-area .calendar img{
+
+    main .hero .main-area .calendar img {
         width: 90px;
     }
 
-    main .hero .main-area .watch img{
+    main .hero .main-area .watch img {
         width: 80px;
     }
 
     main .hero .main-area .desk img#screen {
-            width: 192px;
-            left: 178px;
-            top: 205px;
+        width: 192px;
+        left: 178px;
+        top: 205px;
     }
 
     main .hero .main-area .desk img {
@@ -1697,15 +1713,15 @@ footer footer .terms-privacy .terms {
         width: 129px;
     }
 
-    main .hero .main-area .desk img#apple{
+    main .hero .main-area .desk img#apple {
         left: 343px;
     }
 
-    main .hero .main-area .desk img#lamp{
+    main .hero .main-area .desk img#lamp {
         left: 386px;
     }
 
-    main .lets-learn header h1 .first{
+    main .lets-learn header h1 .first {
         font-size: 3rem;
     }
 
@@ -1792,7 +1808,7 @@ footer footer .terms-privacy .terms {
         height: 32px;
     }
 
-    footer main .the-spanish-toolbox span{
+    footer main .the-spanish-toolbox span {
         font-size: 1.2rem;
     }
 }
@@ -1831,9 +1847,10 @@ footer footer .terms-privacy .terms {
     main .hero .violet-circle {
         width: 64px;
     }
-    
 
-    main .hero .left-bookcase, main .hero .right-bookcase {
+
+    main .hero .left-bookcase,
+    main .hero .right-bookcase {
         width: 193px;
         height: auto;
     }
@@ -1850,7 +1867,7 @@ footer footer .terms-privacy .terms {
     }
 
 
-    main .hero .main-area .calendar img{
+    main .hero .main-area .calendar img {
         width: 90px;
         top: 1px;
         left: 29px;
@@ -1864,7 +1881,7 @@ footer footer .terms-privacy .terms {
 
 
 
-    main .hero .main-area .desk img#screen{
+    main .hero .main-area .desk img#screen {
         width: 204px;
         left: 29%;
         top: 36%;
@@ -1876,7 +1893,7 @@ footer footer .terms-privacy .terms {
         top: 59%;
         left: 64%;
     }
-    
+
 
     main .hero .main-area .desk img#hello_msg {
         width: 140px;
@@ -1904,6 +1921,7 @@ footer footer .terms-privacy .terms {
         width: 432px;
         top: 768px;
     }
+
     main .special-courses main .cards-container .cards img {
         min-height: 39.5vh;
     }
@@ -1931,17 +1949,12 @@ footer footer .terms-privacy .terms {
         left: 78%;
     }
 
-    footer main .the-spanish-toolbox p, footer main .courses-container .courses-text {
+    footer main .the-spanish-toolbox p,
+    footer main .courses-container .courses-text {
         font-size: 1rem;
     }
 
 }
-
-
-
-
-
-
 
 
 /* landscape view Tablet */
@@ -1953,8 +1966,8 @@ footer footer .terms-privacy .terms {
     }
 
     .header {
-        align-items: flex-start;
-        margin-top: 20px;
+        align-items: center;
+        padding: 42px 0 91px 15px;
     }
 
     .header nav ul {
@@ -1971,10 +1984,31 @@ footer footer .terms-privacy .terms {
 
     .header .right-burguer-image {
         display: block;
+        z-index: 2;
     }
+
+    main .hero .left-bookcase,
+    main .hero .right-bookcase,
+    main .hero .violet-circle,
+    main .hero .main-area,
+    main .hero .main-area .desk,
+    main .hero .main-area .calendar,
+    main .hero .main-area .watch,
+    .header .burguer-menu .btn-menu,
+    main .lets-learn main .yellow-circle
+     {
+        display: none;
+    }
+
+
 
     .header .burguer-menu {
         display: block;
+        position: relative;
+        width: 5.5%;
+        height: 13px;
+        margin: -1% 3% 0 0;
+        z-index: 3;
     }
 
     .header .burguer-menu .lbl-menu {
@@ -2002,10 +2036,7 @@ footer footer .terms-privacy .terms {
         top: 11px;
     }
 
-    .header .burguer-menu .btn-menu {
-        display: none;
 
-    }
 
     .header .burguer-menu .btn-menu:checked~.lbl-menu .spn1 {
         transform: rotate(140deg);
@@ -2052,7 +2083,7 @@ footer footer .terms-privacy .terms {
 
     .header .burguer-menu .btn-menu:checked~.menu-mobile,
     .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
-        transform: translateY(0);
+        transform: translateY(-5px);
         transition: all 1s ease;
         margin: 0;
     }
@@ -2062,21 +2093,298 @@ footer footer .terms-privacy .terms {
         transition: all 1.5s ease;
     }
 
+    main .hero {
+        display: block;
+        width: 100vw;
+    }
+
+    main .hero-mobile-area {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    main .hero-mobile-area header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        margin-top: -33px;
+    }
+
+    main .hero-mobile-area header #mobileCalendar {
+        width: 90px;
+        height: auto;
+        margin-right: 41%;
+    }
+
+    main .hero-mobile-area header #mobileWatch {
+        width: 79px;
+        height: auto;
+    }
+
+    main .hero-mobile-area main {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    main .hero-mobile-area main #mobileScreen {
+        width: 190px;
+        height: auto;
+        position: absolute;
+        bottom: 91px;
+        left: 277px;
+    }
+
+    main .hero-mobile-area main #mobileHello_msg {
+        width: 130px;
+        height: auto;
+        position: absolute;
+        bottom: 169px;
+        left: 303px;
+    }
 
 
-    main .lets-learn .blue-circle {
+    main .hero-mobile-area main #mobileApple {
+        width: 31px;
+        height: auto;
+        position: absolute;
+        bottom: 89px;
+        left: 448px;
+    }
+
+    main .hero-mobile-area main #mobileLamp {
+        width: 109px;
+        height: auto;
+        position: absolute;
+        bottom: 91px;
+        left: 497px;
+    }
+
+
+    main .hero-mobile-area main #mobileDesk {
+        width: 476px;
+        height: 207px;
+    }
+
+    main .lets-learn .green-circle{
+        top: 586px;
         width: 166px;
+        height: 319px;
+        left: -40px;
+    }
+
+    main .lets-learn header .white-top{
+        transform: scaleY(1.3);
+    }
+
+    main .lets-learn header h1 {
+        margin-top: 0;
+    }
+
+    main .lets-learn main {
+        margin-top: -26px;
+    }
+
+    main .lets-learn header h1 .first {
+        font-size: 2.5rem;
+    }
+
+    main .lets-learn header h1 .second {
+        font-size: 4rem;
+    }
+
+
+    main .lets-learn main .card {
+        width: 220px;
     }
 
     main .lets-learn main .card p {
-        font-size: 0.8rem;
-        display: flex;
-        flex-flow: column nowrap;
-        height: auto;
+            font-size: 0.8rem;
+            display: flex;
+            flex-flow: column nowrap;
+            height: auto;
+            min-height: 150px;
+            justify-content: flex-start;
+            width: 95%;
+            padding: 0 9px;
+    }
+
+    main .lets-learn main .first-card p, 
+    main .lets-learn main .third-card p {
+        width: 95%;
+        padding: 0 17px;
     }
 
     main .lets-learn main .card a {
         margin-top: 3%;
+    }
+
+    main .online-courses {
+        margin-top: -10.4%;
+    }
+
+    main .online-courses .online-courses-text-container {
+        left: 3.8%;
+        margin-bottom: 11%;
+    }
+
+    main .online-courses .online-courses-text-container h2 {
+        font-size: 1.8rem;
+    }
+
+    main .online-courses .online-courses-text-container p {
+        font-size: 1rem;
+        line-height: 1.45rem;
+    }
+
+    main .special-courses header .logo {
+        width: 85px;
+        height: 100%;
+    }
+
+    main .special-courses header p .text {
+        font-size: 1.8rem;
+    }
+
+    main .special-courses header p .line {
+        width: 41%;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        min-height: 29.5vh;
+    }
+
+    main .special-courses main .cards-container .cards h6 {
+        font-size: 0.95rem;
+        min-height: 53px;
+    }
+
+    main .special-courses main .cards-container .cards p {
+        font-size: 0.85rem;
+        width: 95%;
+        margin-bottom: 36px;
+    }
+
+    main .why-us .title h6 {
+        font-size: 1.8rem;
+    }
+
+    main .why-us .title .line {
+        width: 6%;
+    }
+
+    main .why-us main .cards img {
+        width: 166px;
+        height: 108px;
+    }
+
+    main .why-us main .cards .card-text h6 {
+        font-size: 1.05rem;
+        height: 10px;
+    }
+
+    main .why-us main .cards .card-text p {
+        font-size: 0.9rem;
+    }
+
+    main .why-us main .first-card{
+        margin-right: 2%;
+    }
+    main .why-us main .third-card {
+        margin-left: 2%;
+    }
+
+    main .why-us footer {
+        margin-top: -9.7%;
+    }
+
+    main .why-us footer a {
+        font-size: 1.1rem;
+        width: 23%;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container {
+        width: 100%;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container h6 {
+        font-size: 1.55rem;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container span {
+        border: 1px solid var(--yellow-color);
+        width: 70%;
+        height: 1px;
+        position: relative;
+        top: -22px;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container p {
+        font-size: 0.9rem;
+    }
+
+    main .test-level .middle-rectangle a {
+        font-size: 1.1rem;
+        padding: 17px 21px;
+        width: 190px;
+        height: 50px;
+    }
+
+    main .test-level .test-your-level .test-now h2 {
+        font-size: 4rem;
+    }
+
+    main .test-level .test-your-level .test-now .line {
+        margin: -17% 0 15.46% 24%;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 17%;
+        left: 78%;
+        margin-top: 9px;
+    }
+
+    main .test-level .test-your-level .test-now .first-p {
+        width: 96%;
+        font-size: 0.95rem;
+    }
+
+    main .newsletter-section {
+        grid-template-columns: auto 64% 10% 16%;
+        grid-template-rows: 274px;
+    }
+
+    main .newsletter-section .packet-img {
+        left: 5%;
+        width: 154px;
+        height: 172px;
+    }
+
+    main .newsletter-section .papers,
+    main .newsletter-section .lamp{
+        display: none;
+    }
+
+    main .newsletter-section .main-content .title {
+        font-size: 1.8rem;
+    }
+
+    main .newsletter-section .main-content .receive-news {
+        width: 68%;
+        font-size: 1rem;
+    }
+
+    main .newsletter-section .main-content .suscribe {
+        width: 70%;
     }
 
     footer main {
@@ -2202,14 +2510,389 @@ footer footer .terms-privacy .terms {
     footer footer .social-media img {
         margin: 0 1%;
     }
-
 }
 
-
-
-
 /* vertical view Tablet + lansdcape view Mobile */
-@media (max-width:480px) {}
+@media (max-width:480px) {
+
+    .header {
+        padding: 41px 0 74px 15px;
+    }
+
+    .header .logo-img {
+        width: 22px;
+        height: 16px;
+    }
+
+    .header span {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+    }
+
+    .header .right-burguer-image{
+        width: 93px;
+        height: 93px;
+        right: -4px;
+    }
+
+    .header .burguer-menu {
+        width: 8%;
+        height: 12px;
+        margin: -5% 5% 0 0;
+    }
+
+    main .hero-mobile-area header {
+        margin-bottom: 44px;
+    }
+
+    .header .burguer-menu .btn-menu:checked~.menu-mobile, .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
+        transform: translateY(-14px);
+    }
+
+    main .hero-mobile-area header #mobileCalendar {
+        width: 71px;
+        height: 99px;
+        margin-right: 156px;
+    }
+
+    main .hero-mobile-area header #mobileWatch {
+        width: 66px;
+    }
+
+    main .hero-mobile-area main #mobileScreen {
+        width: 149px;
+        height: 113px;
+        bottom: 64px;
+        left: 161px;
+    }
+
+    main .hero-mobile-area main #mobileDesk {
+        width: 417px;
+        height: 153px;
+    }
+
+    main .hero-mobile-area main #mobileApple {
+        bottom: 66px;
+        left: 294px;
+    }
+
+    main .hero-mobile-area main #mobileLamp {
+        bottom: 66px;
+        left: 338px;
+        width: 95px;
+    }
+
+    main .hero-mobile-area main #mobileHello_msg {
+        width: 101px;
+        bottom: 123px;
+        left: 186px;
+    }
+
+    main .lets-learn header .white-top {
+        transform: scaleY(1.4);
+    }
+
+    main .lets-learn .green-circle {
+        top: 514px;
+        width: 260px;
+        height: auto;
+    }
+
+    main .lets-learn header h1 .first {
+        font-size: 2rem;
+    }
+
+    main .lets-learn header h1 .second {
+        font-size: 3.75rem;
+    }
+
+    main .lets-learn header h1 .third {
+        font-size: 1.5rem;
+    }
+
+    main .lets-learn main{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: -55px;
+    }
+
+    main .lets-learn main .card {
+        width: 59.38%;
+        height: auto;
+        margin: 36px 0 0 0;
+    }
+
+    main .lets-learn main .card h6 {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+
+    main .lets-learn main .card p{
+        width: 80%;
+        padding: 0;
+        margin: 0;
+    }
+
+    main .lets-learn main .card a {
+        margin-top: 0;
+    }
+
+    main .lets-learn main .yellow-circle {
+        display: block;
+        width: 100%;
+        height: 723px;
+        top: 1378px;
+        right: -2px;
+    }
+
+    main .online-courses .video{
+        width: 100vw;
+        height: 500px;  
+    }
+
+    main .online-courses .video video {
+        width: 100%;
+        height: 100%;
+        transform: scale(2,2.5);
+        position: relative;
+        zoom: normal;
+    }
+
+    main .online-courses .online-courses-text-container {
+        left: 20.8%;
+        bottom: 19%;
+        margin-bottom: 0;
+    }
+
+    main .online-courses .online-courses-text-container h2 {
+        font-size: 1.938rem;
+        color: #ffffff;
+    }
+
+    main .special-courses header {
+        margin: 21.6% 0 4% 3.74%;
+    }
+
+
+    main .special-courses main .cards-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .special-courses main .cards-container .cards {
+        width: 50.63%;
+    }
+
+    main .special-courses main .cards-container .cards h6 {
+        font-size: 1.25rem;
+        min-height: 0;
+        margin: 8% 0 12% 0;
+        width: 110%;
+    }
+
+    main .special-courses main .cards-container .cards p {
+        font-size: 0.75rem;
+        width: 100%;
+        margin-bottom: 38px;
+        height: fit-content;
+    }
+
+    main .special-courses main .cards-container .cards .card-button {
+        margin-bottom: 23%;
+    }
+
+    main .why-us .title h6 {
+        font-size: 2rem;
+    }
+
+    main .why-us .title .line {
+        width: 17%;
+    }
+
+    main .why-us main {
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: inherit;
+        margin: 0;
+        padding: 0;
+    }
+
+    main .why-us main .cards,
+    main .why-us main .first-card,
+    main .why-us main .second-card,
+    main .why-us main .third-card
+     {
+        margin: 0;
+    }
+
+    main .why-us main .cards img {
+        width: 179px;
+        height: 133px;
+    }
+
+    main .why-us main .cards .card-text h6 {
+        font-size: 1.25rem;
+    }
+
+    main .why-us main .cards .card-text p {
+        font-size: 1.125rem;
+        margin-bottom: 100px;
+    }
+
+    main .why-us footer {
+        margin-top: -29.7%;
+    }
+
+    main .why-us footer a {
+        font-size: 1.5rem;
+        width: 80%;
+        margin: 82px 0 50px 1%;
+        height: 56px;
+        padding: 16px 40px;
+    }
+
+    main .test-level .middle-rectangle {
+        grid-area: rectangle;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 311px;
+        margin: 73px 0 81px 0;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container h6 {
+        font-size: 1.25rem;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container p {
+        font-size: 1rem;
+        width: 70%;
+    }
+
+    main .test-level .middle-rectangle a {
+        font-size: 1.125rem;
+        padding: 20px 12px;
+        width: 223px;
+        height: 56px;
+        align-self: center;
+        margin: 20px 0 0 0;
+    }
+
+    main .test-level .test-your-level {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .test-level .test-your-level img {
+        width: 100%;
+        margin: 0 0 18px 0
+    }
+
+    main .test-level .test-your-level .test-now .first-p {
+        width: 82%;
+        font-size: 1rem;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 19%;
+        left: 75%;
+        margin-top: 89px;
+    }
+
+    main .test-level .test-your-level .test-now a {
+        width: 220px;
+        height: 42px;
+        margin-bottom: 10%;
+        font-size: 1.2rem;
+        padding: 10px 48px;
+    }
+
+    main .newsletter-section{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .newsletter-section .packet-img {
+        left: -29%;
+        width: 119px;
+        height: auto;
+        position: relative;
+        bottom: -66px;
+        margin: 0;
+    }
+
+    main .newsletter-section .main-content .title {
+        font-size: 1.75rem;
+    }
+
+    main .newsletter-section .main-content .receive-news {
+        width: 68%;
+        font-size: 1.125rem;
+    }
+
+    main .newsletter-section .main-content .receive-news {
+        width:  57%;
+        font-size: 1.125rem;
+        margin: 36px 0 32px 0;
+    }
+
+    main .newsletter-section .main-content .suscribe {
+        width: 70%;
+        flex-flow: column nowrap;
+        margin-bottom: 74px;
+    }
+
+    main .newsletter-section .main-content .suscribe .input {
+        width: 88%;
+        margin: 0 0 20px 0;
+    }
+
+    main .newsletter-section .main-content .suscribe a {
+        width: 298px;
+    }
+
+    footer main .the-spanish-toolbox {
+        width: 100%;
+    }
+
+    footer main .the-spanish-toolbox p {
+        font-size: 1.313rem;
+        padding: 0 13%;
+    }
+
+    footer main .language-courses {
+        margin: 4% 0 5% 0;
+    }
+
+    footer main .special-courses-footer {
+        margin: 0 0 10% 0;
+    }
+
+    footer main .the-spanish-toolbox p {
+        font-size: 1.063rem;
+    }
+
+    footer main .title {
+        font-size: 1.20rem;
+    }
+
+
+    
+
+
+
+
+
+}
 
 /* vertical view Mobile */
 @media (max-width:320px) {}
