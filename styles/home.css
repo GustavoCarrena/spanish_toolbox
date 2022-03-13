@@ -2007,8 +2007,8 @@ footer footer .terms-privacy .terms {
         position: relative;
         width: 5.5%;
         height: 13px;
-        margin: -1% 3% 0 0;
-        z-index: 3;
+        margin: -3% 3% 0 0;
+        z-index: 3333;
     }
 
     .header .burguer-menu .lbl-menu {
@@ -2136,7 +2136,17 @@ footer footer .terms-privacy .terms {
         width: 100%;
     }
 
-    main .hero-mobile-area main #mobileScreen {
+    main .hero-mobile-area main .mobile-desk {
+        width: 479px;
+        height: auto;
+        bottom: 34px;
+        left: 10px;
+        position: relative;
+    }
+
+
+
+    /* main .hero-mobile-area main #mobileScreen {
         width: 190px;
         height: auto;
         position: absolute;
@@ -2173,7 +2183,7 @@ footer footer .terms-privacy .terms {
     main .hero-mobile-area main #mobileDesk {
         width: 476px;
         height: 207px;
-    }
+    } */
 
     main .lets-learn .green-circle{
         top: 586px;
@@ -2586,6 +2596,17 @@ footer footer .terms-privacy .terms {
         width: 101px;
         bottom: 123px;
         left: 186px;
+    }
+
+    main .hero-mobile-area header {
+        margin-bottom: 12px;
+    }
+
+    main .hero-mobile-area main .mobile-desk {
+        width: 369px;
+        height: auto;
+        bottom: 18px;
+        left: 10px;
     }
 
     main .lets-learn header .white-top {
