@@ -144,10 +144,6 @@
     z-index: -1;
 }
 
-main {
-    grid-area: main;
-}
-
 main .hero {
     position: relative;
     display: grid;
@@ -258,13 +254,8 @@ main .hero .violet-circle{
     top: 0;
 }
 
-main .lets-learn header .white-top {
-    width: 100vw;
-    z-index: 2;
-    position: relative;
-    margin-top: -9%;
-    transform: scaley(1.20);
-}
+
+
 
 main .lets-learn {
     display: grid;
@@ -280,7 +271,7 @@ main .lets-learn {
 }
 
 
-main .lets-learn .green-circle{
+main .lets-learn .green-circle {
     position: absolute;
     width: 234px;
     height: 393px;
@@ -292,8 +283,18 @@ main .lets-learn .green-circle{
 
 
 
-main .lets-learn header{
+main .lets-learn header .white-top {
+    width: 100vw;
+    z-index: 2;
+    position: relative;
+    margin-top: -9%;
+    transform: scaley(1.20);
+
+}
+
+main .lets-learn header {
     grid-area: learn-header-text;
+    height: fit-content;
 }
 
 
@@ -302,7 +303,6 @@ main .lets-learn header h1 {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    margin-top: -6px;
 }
 
 main .lets-learn header h1 .line {
@@ -338,7 +338,7 @@ main .lets-learn main {
     z-index: 4;
 }
 
-main .lets-learn main .yellow-circle{
+main .lets-learn main .yellow-circle {
     position: absolute;
     right: 0;
     grid-column: span 3;
@@ -597,7 +597,7 @@ main .special-courses main .cards-container .cards p {
 }
 
 main .special-courses main .cards-container .second-card p {
-font-weight: normal;
+    font-weight: normal;
 }
 
 main .special-courses main .cards-container .cards .card-button {
@@ -608,7 +608,7 @@ main .special-courses main .cards-container .cards .card-button {
     background-color: var(--violet-color);
     text-align: center;
     position: relative;
-    margin-bottom: 32%;
+    margin-bottom: 23%;
     font-family: var(--noto-font);
     font-size: 0.875rem;
     font-weight: 600;
@@ -666,7 +666,7 @@ main .why-us .title {
     width: inherit;
     justify-content: center;
     align-items: center;
-    margin: 73px 0;
+    margin-bottom: 70px;
 }
 
 main .why-us .title h6 {
@@ -990,10 +990,10 @@ main .test-level .bottom-background {
 
 main .newsletter-section {
     width: 100vw;
-    display:grid;
+    display: grid;
     grid-template-columns: 28.29% 45.20% 6.47% 19.44%;
     grid-template-rows: 345px;
-    grid-template-areas: 
+    grid-template-areas:
         "packet-img main-content papers lamp-img";
     background-color: var(--white-color);
 }
@@ -1004,7 +1004,6 @@ main .newsletter-section .packet-img {
     height: 150px;
     transform: rotate(-7deg);
     justify-self: end;
-    margin-top: 20%;
     margin: 29% -18% 0 0;
 }
 
@@ -1052,7 +1051,7 @@ main .newsletter-section .main-content .suscribe {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    width: 86%;
+    width: 96%;
 }
 
 main .newsletter-section .main-content .suscribe .input {
@@ -1068,7 +1067,7 @@ main .newsletter-section .main-content .suscribe .input {
     line-height: 1.38rem;
     text-align: left;
     color: var(--gray-color);
-    margin-left: 8%;
+    margin-left: 12%;
 }
 
 main .newsletter-section .main-content .suscribe .input::placeholder {
@@ -1112,8 +1111,8 @@ main .newsletter-section .main-content .suscribe a:active {
 
 
 main .newsletter-section .papers {
-grid-area: papers;
-margin-left: 44px;
+    grid-area: papers;
+    margin-left: 44px;
 }
 
 
@@ -1129,7 +1128,7 @@ main .newsletter-section .papers .smaller-paper {
     transform: rotate(-12.5deg);
     width: 67px;
     height: 70px;
-    margin-top: 42%;
+    margin-top: 131%;
 }
 
 main .newsletter-section .lamp {
@@ -1142,7 +1141,7 @@ main .newsletter-section .lamp {
     margin: 0 48px -35px 0;
 }
 
-footer{
+footer {
     width: 100vw;
 }
 
@@ -1335,21 +1334,66 @@ footer footer .terms-privacy .terms {
 
 /* Laptop */
 
+@media (max-width: 1263px){
+    main .hero{
+        grid-template-columns: 24.112% auto 23.139%;
+        grid-template-rows: 498px;
+    }
 
+    main .lets-learn header .white-top{
+        transform: scaley(1.7);
+    }
 
+    main .lets-learn header h1{
+        margin-top: 17px;
+    }
+
+    main .lets-learn main{
+        margin-bottom: 20px;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image{
+        width: 10%;
+        left: 76%;
+        margin-top: 7px;
+    }
+
+    footer main .the-spanish-toolbox p{
+        width: 100%;
+    }
+
+    footer main .special-courses-footer{
+        max-width: 67%;
+    }
+
+}
+
+@media (max-width: 1250px){
+    .header nav ul li a{
+        font-size: 1.1rem;
+    }
+
+    .header .contact-button{
+        min-width: 156px;
+        margin: 0 5% -1% 0;
+        line-height: 1.50rem;
+    }
+
+    main .newsletter-section .main-content .receive-news{
+        width: 84%;
+    }
+
+ 
+}
 
 @media (max-width: 1200px) {
 
     .header .logo {
-        margin: 0 4.5% 0.18% 2%;
-    }
-
-    .header .logo-img {
-        height: 32px;
+        margin: 0 0.5% 0 5.341%;
     }
 
     .header span {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .header nav ul li {
@@ -1357,11 +1401,52 @@ footer footer .terms-privacy .terms {
     }
 
     .header nav ul li a {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
-    main .lets-learn .white-top {
-        margin-top: -82px;
+    main .hero {
+        grid-template-columns: 24% auto 22.139%;
+        grid-template-rows: 465px;
+    }
+
+    main .hero .left-bookcase,
+    main .hero .right-bookcase{
+        width: 213px;
+        height: auto;
+        align-self: baseline;
+    }
+
+    main .hero .main-area .calendar img{
+        width: 105px;
+        top: 11px;
+    }
+
+    main .hero .main-area .watch img {
+        width: 95px;
+        top: 11px;
+    }
+
+    main .hero .main-area .desk img#screen {
+        top: 199px;
+        width: 230px;
+        left: 157px;
+    }
+
+
+    main .hero .main-area .desk img#hello_msg {
+        top: 172px;
+    }
+
+    main .hero .main-area .desk img#apple {
+        top: 338px;
+    }
+
+    main .hero .main-area .desk img#lamp {
+        top: 221px;
+    }
+
+    main .hero .main-area .desk img {
+        top: 280px;
     }
 
     main .lets-learn header h1 .first {
@@ -1376,14 +1461,18 @@ footer footer .terms-privacy .terms {
         font-size: 1.575rem;
     }
 
-
+    main .lets-learn main .yellow-circle {
+        width: 477px;
+        height: auto;
+        top: 845px;
+    }
 
     main .lets-learn main .card {
         width: 340px;
     }
 
     main .lets-learn main .card h6 {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     main .lets-learn main .card p {
@@ -1392,7 +1481,7 @@ footer footer .terms-privacy .terms {
     }
 
     main .online-courses {
-        margin-top: -6.4%;
+        margin-top: -2.4%;
     }
 
     main .online-courses .online-courses-text-container h2 {
@@ -1415,7 +1504,6 @@ footer footer .terms-privacy .terms {
 
     main .why-us main .cards .card-text p {
         font-size: 1rem;
-
     }
 
     main .test-level .middle-rectangle .all-levels-container h6 {
@@ -1426,55 +1514,68 @@ footer footer .terms-privacy .terms {
         font-size: 0.95rem;
     }
 
-    main .test-level .middle-rectangle a {
-        width: 205px;
-        height: 63px;
-    }
-
     main .test-level .test-your-level .test-now .line {
-        width: 52%;
+        width: 55%;
+        margin: -9% 0 8.46% 20%;
     }
 
-    main .test-level .test-your-level .test-now .first-p {
-        width: 100%;
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 11%;
+        left: 77%;
+        margin-top: 27px;
     }
 
     main .background {
         bottom: 430px;
         transform: scaleY(1.0);
     }
-
-
+    
+    main .newsletter-section{
+        grid-template-columns: auto 65% auto 1fr;
+    }
 
     main .newsletter-section .packet-img {
-        width: 160px;
-        height: 120px;
+        margin: 29% 0 0 0;
+        position: relative;
+        left: 75%;
+    }
+
+    main .newsletter-section .main-content .receive-news {
+        width: 70%;
+    }
+
+
+    main .newsletter-section .main-content .suscribe .input {
+        width: 455px;
+        margin-left: 7%;
+    }
+
+    main .newsletter-section .main-content .suscribe{
+        width: 71%;
+    }
+
+    main .newsletter-section .main-content .suscribe .input{
+        width: 500px;
+    }
+
+    main .newsletter-section .main-content .suscribe a {
+        width: 195px;
     }
 
     main .newsletter-section .papers .paper {
         width: 65px;
-        height: auto;
-        margin-top: 66.17%;
     }
 
     main .newsletter-section .papers .smaller-paper {
         width: 53px;
-        height: auto;
-        margin-top: 100%;
     }
 
     main .newsletter-section .lamp {
         width: 118px;
-        height: auto;
-        margin-top: 14%;
     }
 
     footer main .left-image {
         width: 132px;
-    }
-
-    footer main .the-spanish-toolbox {
-        margin: 3% 0 0 9.341%;
     }
 
     footer main .the-spanish-toolbox p,
@@ -1482,155 +1583,500 @@ footer footer .terms-privacy .terms {
         font-size: 1.1rem;
     }
 
+    footer main .the-spanish-toolbox p {
+        width: 100%;
+    }
+
+    footer main .courses-container .courses-text {
+        width: 110%;
+    }
+
+
     footer main .the-spanish-toolbox nav ul li a {
         font-size: 1rem;
     }
-
-
-
 }
 
-@media (max-width: 1023px) {
-    .header .logo {
-        margin: 0 3% 0.18% 1.5%;
-        width: 30%;
+@media (max-width: 1150px){
+    main .hero .main-area .calendar img,
+    main .hero .main-area .watch img{
+        top: 27px;
     }
 
+    main .hero .main-area .desk img{
+        top: 250px;
+    }
+
+    main .hero .main-area .desk img#lamp {
+        top: 189px;
+    }
+
+    main .hero .main-area .desk img#apple {
+        top: 306px;
+    }
+
+    main .why-us footer a{
+        width: 18.85%;
+    }
+
+    main .test-level .middle-rectangle a{
+        margin-right: 7%;
+    }
+
+    main .newsletter-section {
+        grid-template-columns: auto 62% auto 1fr;
+    }
+} 
+
+@media (max-width: 1100px){
+    
+    .header .logo{
+        width: 47%;
+    }
+    
     .header .logo-img {
-        height: 25px;
+        height: 32px;
     }
 
     .header span {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
 
     .header nav{
-        width: 50%;
-    }
-
-    .header nav ul {
-        justify-content: flex-end;
-        margin-right: 5%;
-    }
-
-    .header nav ul li {
-        margin-right: 17px;
+        width: 79%;
     }
 
     .header nav ul li a {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
     }
 
+    .header .contact-button {
+        min-width: 141px;
+        margin: 0 3% -1% 0;
+    }
 
+    main .hero{
+        grid-template-columns: 22% auto 22.139%;
+        grid-template-rows: 437px;
+    }
 
-    main .lets-learn {
-        background-repeat: no-repeat;
-        background-size: cover;
-        grid-template-rows: 243px auto auto;
-        grid-template-areas:
-            "learn-blue-circle learn-header-text ."
-            "main-cards main-cards main-cards"
-            ". . .";
-        top: -51px;
+    main .hero .left-bookcase, main .hero .right-bookcase {
+        width: 193px;
+    }
+
+    main .hero .left-bookcase{
+        left: 50px;
+    }
+
+    main .hero .main-area .calendar img, main .hero .main-area .watch img {
+        top: 41px;
+    }
+    main .hero .main-area .calendar img{
+        width: 90px;
+    }
+
+    main .hero .main-area .watch img{
+        width: 80px;
+    }
+
+    main .hero .main-area .desk img#screen {
+            width: 192px;
+            left: 178px;
+            top: 205px;
+    }
+
+    main .hero .main-area .desk img {
+        top: 269px;
+        width: 450px;
+        left: 53px;
+    }
+
+    main .hero .main-area .desk img#hello_msg {
+        top: 176px;
+        left: 39%;
+        width: 129px;
+    }
+
+    main .hero .main-area .desk img#apple{
+        left: 343px;
+    }
+
+    main .hero .main-area .desk img#lamp{
+        left: 386px;
+    }
+
+    main .lets-learn header h1 .first{
+        font-size: 3rem;
+    }
+
+    main .lets-learn header h1 .second {
+        font-size: 4.25rem;
+    }
+
+    main .lets-learn header h1 .third {
+        font-size: 1.35rem;
+    }
+
+    main .lets-learn .green-circle {
+        top: 527px;
+    }
+
+    main .lets-learn main .yellow-circle {
+        width: 455px;
+        top: 751px;
     }
 
     main .lets-learn main .card {
-        width: 86%;
+        width: 300px;
     }
 
-    main .lets-learn main .card a {
-        margin-top: 16%;
+    main .lets-learn main .card h6 {
+        font-size: 0.97rem;
+    }
+
+    main .lets-learn main .card p {
+        font-size: 0.79rem;
     }
 
     main .online-courses {
-        margin-top: -4.4%;
+        margin-top: -5.4%;
     }
 
     main .online-courses .online-courses-text-container h2 {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
 
     main .online-courses .online-courses-text-container p {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
-
-
-
 
     main .special-courses main .cards-container .cards img {
-        min-height: auto;
-    }
-
-    main .special-courses main .cards-container .cards {
-        width: 29.74%;
-        min-height: 680px;
-    }
-
-    main .special-courses main .cards-container .cards h6 {
-        font-size: 1rem;
-        min-height: 48px;
+        width: 100%;
+        height: auto;
+        min-height: 42.5vh;
     }
 
     main .special-courses main .cards-container .cards p {
-        height: 228px;
-    }
-
-    main .why-us main .cards .card-text p {
         font-size: 0.9rem;
+        width: 96%;
     }
 
     main .why-us footer a {
-        width: 175px;
-    }
-
-    main .test-level .middle-rectangle .all-levels-container h6 {
-        font-size: 1.55rem;
-    }
-
-    main .test-level .middle-rectangle a {
-        width: 190px;
-        height: 53px;
+        width: 18%;
         font-size: 1.3rem;
     }
 
-
-    main .test-level .test-your-level .test-now {
-        margin-left: 7%;
+    main .test-level .test-your-level .test-now .line {
+        width: 59%;
+        margin: -10% 0 8.46% 23%;
     }
 
-    main .test-level .test-your-level .test-now h2 {
-        font-size: 4.5rem;
+    main .test-level .test-your-level .test-now .first-p {
+        width: 86%;
     }
 
-    main .test-level .test-your-level .test-now .arrow-image {
-        width: 25%;
-        left: 73.7%;
-        margin-top: 3.7%;
-        height: max-content;
+    main .newsletter-section {
+        grid-template-columns: auto 55% 10% 16%;
+    }
+
+    main .newsletter-section .packet-img {
+        left: 26%;
+    }
+
+    main .newsletter-section .papers .smaller-paper {
+        margin-top: 95%;
+        margin-left: -20px;
+    }
+
+    footer main .the-spanish-toolbox .logo-img {
+        height: 32px;
+    }
+
+    footer main .the-spanish-toolbox span{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .header .logo {
+        margin: 0 0.5% 0 3.341%;
+    }
+
+    .header .logo-img {
+        height: 32px;
+    }
+
+    .header span {
+        font-size: 1.1rem;
+    }
+
+    .header nav ul li a {
+        font-size: 1rem;
+    }
+
+    .header .contact-button {
+        min-width: 140px;
+        height: 43px;
+        margin: 0 6.3% -1% 0;
+        line-height: 1.15rem;
+    }
+
+    main .hero {
+        grid-template-columns: 22.5% 55.5% 22%;
+        grid-template-rows: 447px;
+        align-items: start;
+    }
+
+    main .hero .violet-circle {
+        width: 64px;
+    }
+    
+
+    main .hero .left-bookcase, main .hero .right-bookcase {
+        width: 193px;
+        height: auto;
+    }
+
+
+    main .hero .left-bookcase {
+        left: 35px;
+    }
+
+
+    main .hero .main-area {
+        grid-template-columns: 90px 339px 84px;
+        grid-template-rows: 160px 326px;
+    }
+
+
+    main .hero .main-area .calendar img{
+        width: 90px;
+        top: 1px;
+        left: 29px;
+    }
+
+    main .hero .main-area .watch img {
+        width: 84px;
+        top: 1px;
+        left: 401px;
+    }
+
+
+
+    main .hero .main-area .desk img#screen{
+        width: 204px;
+        left: 29%;
+        top: 36%;
+    }
+
+    main .hero .main-area .desk img#apple {
+        width: 38px;
+        height: 41px;
+        top: 59%;
+        left: 64%;
+    }
+    
+
+    main .hero .main-area .desk img#hello_msg {
+        width: 140px;
+        top: 31%;
+        left: 35%;
+    }
+
+    main .hero .main-area .desk img {
+        width: 490px;
+        left: 2.5%;
+        top: 242px;
+    }
+
+    main .hero .main-area .desk img#lamp {
+        width: 97px;
+        top: 37.8%;
+        left: 75%;
+    }
+
+    main .lets-learn header .white-top {
+        transform: scaleY(1.2);
+    }
+
+    main .lets-learn main .yellow-circle {
+        width: 432px;
+        top: 768px;
+    }
+    main .special-courses main .cards-container .cards img {
+        min-height: 39.5vh;
+    }
+
+    main .special-courses main .cards-container .third-card h6 {
+        margin: 4% 0 9% 0;
+    }
+
+    main .why-us footer a {
+        font-size: 1.2rem;
+    }
+
+    main .test-level .middle-rectangle a {
+        line-height: 1rem;
+        font-size: 1.3rem;
+        padding: 29px 38px;
     }
 
     main .test-level .test-your-level .test-now .line {
-        width: 72%;
-        margin: -16.8% 0 11.46% 27.6%;
+        margin: -12% 0 15.46% 24%;
     }
 
-    main .test-level .test-your-level .test-now a {
-        width: 189px;
-        height: 50px;
-        margin-top: -25px;
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 14%;
+        left: 78%;
     }
 
-    main .newsletter-section {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 50px 0 100px 0;
-
+    footer main .the-spanish-toolbox p, footer main .courses-container .courses-text {
+        font-size: 1rem;
     }
 
-    main .newsletter-section .packet-img,
-    main .newsletter-section {
+}
+
+
+
+
+
+
+
+
+/* landscape view Tablet */
+@media (max-width: 768px) {
+
+    .header nav,
+    .header .contact-button {
         display: none;
+    }
+
+    .header {
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .header nav ul {
+        margin: 0;
+    }
+
+    .header .logo {
+        width: 60%;
+    }
+
+    .header span {
+        font-size: 1.2rem;
+    }
+
+    .header .right-burguer-image {
+        display: block;
+    }
+
+    .header .burguer-menu {
+        display: block;
+    }
+
+    .header .burguer-menu .lbl-menu {
+        cursor: pointer;
+    }
+
+    .header .burguer-menu .lbl-menu .spn1,
+    .header .burguer-menu .lbl-menu .spn2,
+    .header .burguer-menu .lbl-menu .spn3 {
+        position: absolute;
+        content: '';
+        background: #fff;
+        width: 100%;
+        height: 4px;
+        border-radius: 5px;
+        transition: all 1ms linear;
+    }
+
+    .header .burguer-menu .lbl-menu .spn2 {
+        top: 50%;
+        margin: 16px 0;
+    }
+
+    .header .burguer-menu .lbl-menu .spn3 {
+        top: 11px;
+    }
+
+    .header .burguer-menu .btn-menu {
+        display: none;
+
+    }
+
+    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn1 {
+        transform: rotate(140deg);
+        top: 5px;
+    }
+
+    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn2 {
+        opacity: 0;
+    }
+
+    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn3 {
+        transform: rotate(-140deg);
+        top: 5px;
+    }
+
+    .header .burguer-menu .menu-mobile {
+        position: fixed;
+        width: 100vw;
+        height: 60vh;
+        right: 0;
+        bottom: 17.5%;
+        display: flex;
+        z-index: 2;
+    }
+
+    .header .burguer-menu .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100%;
+        background: #2f6fb6;
+        justify-content: space-evenly;
+    }
+
+    .header .burguer-menu .menu-mobile ul li a {
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-left: 16px;
+        font-family: var(--noto-font);
+        font-weight: 700;
+        font-size: 1.05rem;
+    }
+
+    .header .burguer-menu .btn-menu:checked~.menu-mobile,
+    .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
+        transform: translateY(0);
+        transition: all 1s ease;
+        margin: 0;
+    }
+
+    .header .burguer-menu .menu-mobile ul {
+        transform: translateY(-100vh);
+        transition: all 1.5s ease;
+    }
+
+
+
+    main .lets-learn .blue-circle {
+        width: 166px;
+    }
+
+    main .lets-learn main .card p {
+        font-size: 0.8rem;
+        display: flex;
+        flex-flow: column nowrap;
+        height: auto;
+    }
+
+    main .lets-learn main .card a {
+        margin-top: 3%;
     }
 
     footer main {
@@ -1742,7 +2188,7 @@ footer footer .terms-privacy .terms {
         align-items: center;
         justify-content: center;
     }
-    
+
 
     footer footer .terms-privacy {
         display: none;
@@ -1760,145 +2206,7 @@ footer footer .terms-privacy .terms {
 }
 
 
-/* landscape view Tablet */
-@media (max-width: 768px) {
 
-    .header nav,
-    .header .contact-button
-     {
-        display: none;
-    }
-
-    .header {
-        align-items: flex-start;
-        margin-top: 20px;
-    }
-
-    .header nav ul{
-        margin: 0;
-    }
-
-    .header .logo {
-        width: 60%;
-    }
-
-    .header span {
-        font-size: 1.2rem;
-    }
-
-    .header .right-burguer-image {
-        display: block;
-    }
-
-    .header .burguer-menu {
-        display: block;
-    }
-
-    .header .burguer-menu .lbl-menu {
-        cursor: pointer;
-    }
-
-    .header .burguer-menu .lbl-menu .spn1,
-    .header .burguer-menu .lbl-menu .spn2,
-    .header .burguer-menu .lbl-menu .spn3 {
-        position: absolute;
-        content: '';
-        background: #fff;
-        width: 100%;
-        height: 4px;
-        border-radius: 5px;
-        transition: all 1ms linear;
-    }
-
-    .header .burguer-menu .lbl-menu .spn2 {
-        top: 50%;
-        margin: 16px 0;
-    }
-
-    .header .burguer-menu .lbl-menu .spn3 {
-        top: 11px;
-    }
-
-    .header .burguer-menu .btn-menu {
-        display: none;
-
-    }
-
-    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn1 {
-        transform: rotate(140deg);
-        top: 5px;
-    }
-
-    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn2 {
-        opacity: 0;
-    }
-
-    .header .burguer-menu .btn-menu:checked~.lbl-menu .spn3 {
-        transform: rotate(-140deg);
-        top: 5px;
-    }
-
-    .header .burguer-menu .menu-mobile {
-        position: fixed;
-        width: 100vw;
-        height: 60vh;
-        right: 0;
-        bottom: 17.5%;
-        display: flex;
-        z-index: 2;
-    }
-
-    .header .burguer-menu .menu-mobile ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        height: 100%;
-        background: #2f6fb6;
-        justify-content: space-evenly;
-    }
-
-    .header .burguer-menu .menu-mobile ul li a {
-        color: #FFFFFF;
-        text-decoration: none;
-        margin-left: 16px;
-        font-family: var(--noto-font);
-        font-weight: 700;
-        font-size: 1.05rem;
-    }
-
-    .header .burguer-menu .btn-menu:checked~.menu-mobile,
-    .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
-        transform: translateY(0);
-        transition: all 1s ease;
-        margin: 0;
-    }
-
-    .header .burguer-menu .menu-mobile ul {
-        transform: translateY(-100vh);
-        transition: all 1.5s ease;
-    }   
-
-
-
-    main .lets-learn .blue-circle {
-        width: 166px;
-    }
-
-    main .lets-learn main .card p {
-        font-size: 0.8rem;
-        display: flex;
-        flex-flow: column nowrap;
-        height: auto;
-    }
-
-    main .lets-learn main .card a {
-        margin-top: 3%;
-    }
-    
-    
-
-}
 
 /* vertical view Tablet + lansdcape view Mobile */
 @media (max-width:480px) {}
