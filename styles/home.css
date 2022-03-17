@@ -133,8 +133,8 @@
 .header .right-burguer-image {
     display: none;
     position: absolute;
-    width: 14%;
-    min-width: 85px;
+    width: 17%;
+    height: auto;
     right: 0;
     top: 0;
     z-index: -1;
@@ -2137,7 +2137,7 @@ footer footer .terms-privacy .terms {
     }
 
     main .hero-mobile-area main .mobile-desk {
-        width: 479px;
+        width: 72%;
         height: auto;
         bottom: 34px;
         left: 10px;
@@ -2539,16 +2539,11 @@ footer footer .terms-privacy .terms {
         line-height: 1.2rem;
     }
 
-    .header .right-burguer-image{
-        width: 93px;
-        height: 93px;
-        right: -4px;
-    }
 
     .header .burguer-menu {
         width: 8%;
         height: 12px;
-        margin: -5% 5% 0 0;
+        margin: -5% 3% 0 0;
     }
 
     main .hero-mobile-area header {
@@ -2603,7 +2598,8 @@ footer footer .terms-privacy .terms {
     }
 
     main .hero-mobile-area main .mobile-desk {
-        width: 369px;
+        width: 65%;
+        max-width: 65%;
         height: auto;
         bottom: 18px;
         left: 10px;
@@ -2614,7 +2610,7 @@ footer footer .terms-privacy .terms {
     }
 
     main .lets-learn .green-circle {
-        top: 514px;
+        top: 547px;
         width: 260px;
         height: auto;
     }
@@ -2665,7 +2661,6 @@ footer footer .terms-privacy .terms {
         width: 100%;
         height: 723px;
         top: 1378px;
-        right: -2px;
     }
 
     main .online-courses .video{
