@@ -149,7 +149,7 @@ main .hero-mobile-area {
 main .hero {
     width: 100vw;
     background: var(--yellow-color);
-    height: 630px;
+    height: 600px;
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
@@ -158,9 +158,8 @@ main .hero {
 
 main .hero .left-bookcase {
     position: relative;
-    width: 233px;
+    min-width: 234px;
     height: 520px;
-    min-width: 191px;
     align-self: flex-end;
     margin-left: 5%;
 }
@@ -169,15 +168,14 @@ main .hero .left-bookcase #leftBookcase {
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 main .hero .right-bookcase {
     position: relative;
-    width: 233px;
+    min-width: 234px;
     height: 520px;
-    min-width: 191px;
     align-self: flex-end;
     margin-right: 5%;
 }
@@ -186,8 +184,8 @@ main .hero .right-bookcase #rightBookcase {
     position: absolute;
     top: 0;
     left: 0;
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 
 main .hero .main-area {
@@ -195,30 +193,46 @@ main .hero .main-area {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 57%;
+    width: 100%;
     height: 100%;
 }
 
 main .hero .main-area .calendar-watch {
-    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
-    height: 26%;
+    height: max-content;
+    margin-top: 73px;
 }
 
-main .hero .main-area .calendar-watch img#calendar {
-    width: 14%;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 10%;
+main .hero .main-area .calendar-watch .calendar {
+position: relative;
+width: 114px;
+height: 159px;
 }
 
-main .hero .main-area .calendar-watch img#watch {
-    width: 13%;
-    height: auto;
+main .hero .main-area .calendar-watch .calendar img#calendar {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+main .hero .main-area .calendar-watch .watch {
+    position: relative;
+    width: 106px;
+height: 106px;
+    }
+
+main .hero .main-area .calendar-watch .watch img#watch {
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
-    right: 10%;
+    right: 0;
 }
 
 main .hero .main-area .desk {
@@ -226,18 +240,22 @@ main .hero .main-area .desk {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     width: 100%;
-    height: 30%;
-    bottom: -2%;
+    height: 100%;
+}
+
+main .hero .main-area .desk .screen {
+    position: relative;
+    width: 204px;
+    height: 250px;
 }
 
 
 main .hero .main-area .desk img#screen {
     position: absolute;
-    width: 34%;
-    left: 32%;
-    bottom: 32%;
+    width: 100%;
+    height: 100%;
 }
 
 main .hero .main-area .desk img#hello_msg {
