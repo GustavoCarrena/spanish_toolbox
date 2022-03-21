@@ -30,7 +30,7 @@
     align-items: end;
     height: 4.938rem;
     background: var(--yellow-color);
-    padding: 73px 0;
+    padding-top: 73px;
     width: 100vw;
 }
 
@@ -150,67 +150,62 @@ main .hero {
     width: 100vw;
     background: var(--yellow-color);
     height: 630px;
-
-}
-
-main .hero .hero-container{
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
     justify-content: center;
-    margin: 0 5.4%;
-    height: 100%;
 }
 
-main .hero .hero-container .left-bookcase {
+main .hero .left-bookcase {
     position: relative;
-    width: 23%;
-    height: 93%;
+    width: 233px;
+    height: 520px;
     min-width: 191px;
     align-self: flex-end;
+    margin-left: 5%;
 }
 
-main .hero .hero-container .left-bookcase #leftBookcase {
+main .hero .left-bookcase #leftBookcase {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
-main .hero .hero-container .right-bookcase {
+main .hero .right-bookcase {
     position: relative;
-    width: 24%;
-    height: 90%;
+    width: 233px;
+    height: 520px;
     min-width: 191px;
     align-self: flex-end;
+    margin-right: 5%;
 }
 
-main .hero .hero-container .right-bookcase #rightBookcase {
+main .hero .right-bookcase #rightBookcase {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
-main .hero .hero-container .main-area {
+main .hero .main-area {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
-    width: 64%;
-    height: 91%;
+    width: 57%;
+    height: 100%;
 }
 
-main .hero .hero-container .main-area .calendar-watch {
+main .hero .main-area .calendar-watch {
     position: relative;
     width: 100%;
-    height: 19%;
-    top: 11%;
+    height: 26%;
 }
 
-main .hero .hero-container .main-area .calendar-watch img#calendar {
+main .hero .main-area .calendar-watch img#calendar {
     width: 14%;
     height: auto;
     position: absolute;
@@ -218,7 +213,7 @@ main .hero .hero-container .main-area .calendar-watch img#calendar {
     left: 10%;
 }
 
-main .hero .hero-container .main-area .calendar-watch img#watch {
+main .hero .main-area .calendar-watch img#watch {
     width: 13%;
     height: auto;
     position: absolute;
@@ -226,7 +221,7 @@ main .hero .hero-container .main-area .calendar-watch img#watch {
     right: 10%;
 }
 
-main .hero .hero-container .main-area .desk {
+main .hero .main-area .desk {
     position: relative;
     display: flex;
     flex-flow: column nowrap;
@@ -238,14 +233,14 @@ main .hero .hero-container .main-area .desk {
 }
 
 
-main .hero .hero-container .main-area .desk img#screen {
+main .hero .main-area .desk img#screen {
     position: absolute;
     width: 34%;
     left: 32%;
     bottom: 32%;
 }
 
-main .hero .hero-container .main-area .desk img#hello_msg {
+main .hero .main-area .desk img#hello_msg {
     position: absolute;
     width: 21%;
     /* top: -13%; */
@@ -253,7 +248,7 @@ main .hero .hero-container .main-area .desk img#hello_msg {
     bottom: 97%;
 }
 
-main .hero .hero-container .main-area .desk img#apple {
+main .hero .main-area .desk img#apple {
     position: absolute;
     width: 5%;
     height: auto;
@@ -261,7 +256,7 @@ main .hero .hero-container .main-area .desk img#apple {
     left: 0;
 }
 
-main .hero .hero-container .main-area .desk img#lamp {
+main .hero .main-area .desk img#lamp {
     position: absolute;
     width: 120px;
     height: auto;
@@ -269,7 +264,7 @@ main .hero .hero-container .main-area .desk img#lamp {
     bottom: 28%;
 }
 
-main .hero .hero-container .main-area .desk .desk-bottom {
+main .hero .main-area .desk .desk-bottom {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -279,7 +274,7 @@ main .hero .hero-container .main-area .desk .desk-bottom {
     align-items: flex-end;
 }
 
-main .hero .hero-container .main-area .desk img#desk {
+main .hero .main-area .desk img#desk {
     position: absolute;
     width: 80%;
     height: auto;
@@ -300,7 +295,6 @@ main #white-top {
     z-index: 2;
     width: 100vw;
     height: 81px;
-    background-color: var(--white-color);
     }
 
     main #white-top img{
