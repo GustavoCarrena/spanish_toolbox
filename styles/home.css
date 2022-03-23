@@ -201,7 +201,7 @@ main .hero .main-area .calendar-watch {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     height: max-content;
     margin-top: 73px;
@@ -211,6 +211,7 @@ main .hero .main-area .calendar-watch .calendar {
 position: relative;
 width: 114px;
 height: 159px;
+margin-left: 13%;
 }
 
 main .hero .main-area .calendar-watch .calendar img#calendar {
@@ -225,6 +226,7 @@ main .hero .main-area .calendar-watch .watch {
     position: relative;
     width: 106px;
 height: 106px;
+margin-right: 13%;
     }
 
 main .hero .main-area .calendar-watch .watch img#watch {
@@ -243,50 +245,70 @@ main .hero .main-area .desk {
     justify-content: flex-end;
     width: 100%;
     height: 100%;
+    top: 10px;
 }
 
 main .hero .main-area .desk .screen {
     position: relative;
-    width: 204px;
-    height: 250px;
+    width: 240px;
+    height: 184px;
+    top: 38px;
 }
 
 
 main .hero .main-area .desk img#screen {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
+main .hero .main-area .desk .hello_msg {
+    position: relative;
+    width: 174px;
+    height: 122px;
+    top: -80px;
+}
+
+
 main .hero .main-area .desk img#hello_msg {
-    position: absolute;
-    width: 21%;
-    /* top: -13%; */
-    left: 40%;
-    bottom: 97%;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+main .hero .main-area .desk .apple {
+    position: relative;
+    width: 42px;
+    height: 55px;
+    top: 182px;
+    left: 115px;
 }
 
 main .hero .main-area .desk img#apple {
     position: absolute;
-    width: 5%;
+    width: 100%;
     height: auto;
-    top: 0;
-    left: 0;
+}
+
+main .hero .main-area .desk .lamp {
+    position: relative;
+    width: 120px;
+    height: 150px;
+    top: -143px;
+    left: 206px;
 }
 
 main .hero .main-area .desk img#lamp {
     position: absolute;
-    width: 120px;
+    width: 100%;
     height: auto;
-    left: 70%;
-    bottom: 28%;
 }
 
 main .hero .main-area .desk .desk-bottom {
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 596px;
     height: 100%;
-    bottom: -9px;
+   bottom: 206px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -294,25 +316,25 @@ main .hero .main-area .desk .desk-bottom {
 
 main .hero .main-area .desk img#desk {
     position: absolute;
-    width: 80%;
+    width: 100%;
     height: auto;
 }
 
 main .hero .violet-circle {
     grid-column-start: 3;
     position: absolute;
-    width: 86px;
-    height: 186px;
+    width: 105px;
+    height: auto;
     z-index: 2;
     right: 0;
-    top: 0;
+    top: 149px;
 }
 
 main #white-top {
     position: relative;
     z-index: 2;
     width: 100vw;
-    height: 81px;
+    height: 1px;
     }
 
     main #white-top img{
@@ -326,7 +348,7 @@ main .lets-learn {
     display: grid;
     background: #ffffff;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 212px 1fr 76px;
+    grid-template-rows: 212px 1fr 15px;
     grid-template-areas:
         "learn-header-text learn-header-text learn-header-text"
         "main-cards main-cards main-cards"
@@ -341,23 +363,14 @@ main .lets-learn .green-circle {
     height: 393px;
     z-index: 3;
     left: -15px;
-    top: 585px;
+    top: 610px;
 }
-
-
-
-
-
-
-
 
 
 main .lets-learn header {
     grid-area: learn-header-text;
     height: fit-content;
-    padding-top: 25px;
 }
-
 
 main .lets-learn header h1 {
     display: flex;
@@ -403,10 +416,10 @@ main .lets-learn main .yellow-circle {
     position: absolute;
     right: 0;
     grid-column: span 3;
-    width: 558px;
-    height: 831px;
+    width: 486px;
+    height: 100%;
     z-index: -1;
-    top: 800px;
+    top: 845px;
 }
 
 main .lets-learn main .first-card {
@@ -554,7 +567,6 @@ main .online-courses .mobile-video {
 main .online-courses .video video {
     width: 100%;
     height: 100%;
-    transform: scale(2,2);
 }
 
 
@@ -1408,12 +1420,42 @@ footer footer .terms-privacy .terms {
 
 @media (max-width: 1263px) {
 
-    main .lets-learn header h1 {
-        margin-top: 17px;
+    main .hero .left-bookcase,
+    main .hero .right-bookcase{
+        min-width: 230px;
     }
 
-    main .lets-learn main {
-        margin-bottom: 20px;
+    main .hero .main-area .calendar-watch .calendar{
+        width: 100px;
+        height: 142px;
+        margin-left: 8%;
+    }
+
+    main .hero .main-area .calendar-watch .watch {
+        width: 98px;
+        height: 98px;
+        margin-right: 10%;
+    }
+
+    main .hero .main-area .desk .screen {
+        top: 56px;
+    }
+
+    main .hero .main-area .desk .apple {
+        width: 38px;
+        height: 51px;
+        top: 208px;
+        left: 104px;
+    }
+
+    main .hero .main-area .desk .lamp {
+        top: -118px;
+        left: 190px;
+    }
+
+    main .hero .main-area .desk .desk-bottom{
+        width: 533px;
+        bottom: 189px;
     }
 
     main .test-level .test-your-level .test-now .arrow-image {
