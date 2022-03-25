@@ -40,7 +40,7 @@
     align-items: flex-end;
     width: 60%;
     height: auto;
-    margin: 0 2% 0.18% 5.341%;
+    margin: 0 0 0.18% 5.341%;
 }
 
 .header .logo-img {
@@ -252,7 +252,7 @@ main .hero .main-area .desk .screen {
     position: relative;
     width: 240px;
     height: 184px;
-    top: 38px;
+    top: 49px;
 }
 
 
@@ -280,7 +280,7 @@ main .hero .main-area .desk .apple {
     position: relative;
     width: 42px;
     height: 55px;
-    top: 182px;
+    top: 197px;
     left: 115px;
 }
 
@@ -294,7 +294,7 @@ main .hero .main-area .desk .lamp {
     position: relative;
     width: 120px;
     height: 150px;
-    top: -143px;
+    top: -126px;
     left: 206px;
 }
 
@@ -416,7 +416,7 @@ main .lets-learn main .yellow-circle {
     position: absolute;
     right: 0;
     grid-column: span 3;
-    width: 486px;
+    width: 469px;
     height: 100%;
     z-index: -1;
     top: 845px;
@@ -1304,7 +1304,7 @@ footer main .the-spanish-toolbox p {
     line-height: 1.36rem;
     text-align: left;
     color: var(--second-orange-color);
-    width: 100%;
+    width: 354px;
     align-self: flex-start;
     min-height: 66px;
 }
@@ -1484,6 +1484,12 @@ footer footer .terms-privacy .terms {
         margin: 0 5% -1% 0;
         line-height: 1.50rem;
     }
+
+    main .hero .main-area .desk .screen{
+        width: 230px;
+    
+    }
+
 
     main .newsletter-section .main-content .receive-news {
         width: 84%;
