@@ -194,7 +194,7 @@ main .hero .main-area {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 94%;
 }
 
 main .hero .main-area .calendar-watch {
@@ -237,87 +237,84 @@ main .hero .main-area .calendar-watch .watch img#watch {
     right: 0;
 }
 
-main .hero .main-area .desk {
-    position: relative;
+main .hero .main-area .top{
+    grid-area: top;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: flex-end;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;  
     width: 100%;
-    height: 100%;
-    top: 10px;
 }
 
-main .hero .main-area .desk .screen {
+main .hero .main-area .top .screen {
     position: relative;
-    width: 240px;
-    height: 184px;
-    top: 49px;
-}
+    width: 259px;
+    height: 193px;
+    z-index: 1;
+    right: 16px;
+    }
 
 
-main .hero .main-area .desk img#screen {
+main .hero .main-area .top img#screen {
     position: absolute;
     width: 100%;
     height: auto;
 }
 
-main .hero .main-area .desk .hello_msg {
+main .hero .main-area .top .hello_msg {
     position: relative;
     width: 174px;
     height: 122px;
-    top: -80px;
+    bottom: 100px;
+    left: 200px;
+    z-index: 2;
 }
 
 
-main .hero .main-area .desk img#hello_msg {
+main .hero .main-area .top img#hello_msg {
     position: relative;
     width: 100%;
     height: auto;
 }
 
-main .hero .main-area .desk .apple {
+main .hero .main-area .top .apple {
     position: relative;
     width: 42px;
     height: 55px;
-    top: 197px;
-    left: 115px;
+    right: 36px;
 }
 
-main .hero .main-area .desk img#apple {
+main .hero .main-area .top img#apple {
     position: absolute;
     width: 100%;
     height: auto;
 }
 
-main .hero .main-area .desk .lamp {
+main .hero .main-area .top .lamp {
     position: relative;
     width: 120px;
-    height: 150px;
-    top: -126px;
-    left: 206px;
+    height: 154px;
 }
 
-main .hero .main-area .desk img#lamp {
+main .hero .main-area .top img#lamp {
     position: absolute;
     width: 100%;
     height: auto;
 }
 
-main .hero .main-area .desk .desk-bottom {
+main .hero .main-area .desk-bottom {
     position: relative;
-    width: 596px;
-    height: 100%;
-   bottom: 206px;
+    width: 670px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-main .hero .main-area .desk img#desk {
+main .hero .main-area .desk-bottom img#desk {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 230px;
 }
 
 main .hero .violet-circle {
@@ -348,7 +345,7 @@ main .lets-learn {
     display: grid;
     background: #ffffff;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 212px 1fr 15px;
+    grid-template-rows: 212px 1fr 14px;
     grid-template-areas:
         "learn-header-text learn-header-text learn-header-text"
         "main-cards main-cards main-cards"
@@ -416,10 +413,10 @@ main .lets-learn main .yellow-circle {
     position: absolute;
     right: 0;
     grid-column: span 3;
-    width: 469px;
-    height: 100%;
+    width: 568px;
+    height: 803px;
     z-index: -1;
-    top: 845px;
+    top: 836px;
 }
 
 main .lets-learn main .first-card {
@@ -1221,7 +1218,7 @@ main .newsletter-section .lamp {
     left: 85%;
     justify-self: end;
     align-self: end;
-    margin: 0 48px -35px 0;
+    margin: 0 48px -35px 52px;
 }
 
 footer {
@@ -1416,14 +1413,52 @@ footer footer .terms-privacy .terms {
     margin-left: 73px;
 }
 
-/* Laptop */
-
-@media (max-width: 1263px) {
-
+@media (max-width: 1300px){
     main .hero .left-bookcase,
     main .hero .right-bookcase{
         min-width: 230px;
     }
+
+    main .hero .main-area .top .screen {
+        width: 250px;
+        height: 182px;
+    }
+
+    main .hero .main-area .desk-bottom img#desk {
+        height: 190px;
+    }
+
+    main .hero .main-area .top .apple {
+        width: 42px;
+        height: 49px;
+        right: 38px;
+    }
+
+    main .hero .main-area .top .lamp {
+        width: 120px;
+        height: 148px;
+        right: 23px;
+    }
+
+
+    main .hero .main-area .desk-bottom {
+        width: 580px;
+        height: 16px;
+    }
+
+    main .lets-learn main .yellow-circle {
+        width: 481px;
+        height: 715px;
+        top: 836px;
+    }
+
+
+}
+
+/* Laptop */
+
+@media (max-width: 1263px) {
+
 
     main .hero .main-area .calendar-watch .calendar{
         width: 100px;
@@ -1431,32 +1466,18 @@ footer footer .terms-privacy .terms {
         margin-left: 8%;
     }
 
-    main .hero .main-area .calendar-watch .watch {
-        width: 98px;
-        height: 98px;
-        margin-right: 10%;
+    main .hero .main-area .calendar-watch {
+        margin-top: 77px;
+        margin-bottom: 15px;
     }
 
-    main .hero .main-area .desk .screen {
-        top: 56px;
-    }
 
-    main .hero .main-area .desk .apple {
-        width: 38px;
-        height: 51px;
-        top: 208px;
-        left: 104px;
-    }
 
-    main .hero .main-area .desk .lamp {
-        top: -118px;
-        left: 190px;
-    }
 
-    main .hero .main-area .desk .desk-bottom{
-        width: 533px;
-        bottom: 189px;
-    }
+
+
+
+
 
     main .test-level .test-your-level .test-now .arrow-image {
         width: 10%;
@@ -1485,10 +1506,11 @@ footer footer .terms-privacy .terms {
         line-height: 1.50rem;
     }
 
-    main .hero .main-area .desk .screen{
-        width: 230px;
-    
+
+    main .lets-learn main .card {
+        width: 344px;
     }
+
 
 
     main .newsletter-section .main-content .receive-news {
@@ -1516,6 +1538,36 @@ footer footer .terms-privacy .terms {
         font-size: 1.1rem;
     }
 
+
+    main .hero .main-area .calendar-watch {
+        margin-bottom: 51px;
+    }
+
+    main .hero .main-area .top .screen {
+        width: 227px;
+        height: 166px;
+    }
+
+    main .hero .main-area .top .apple {
+        width: 38px;
+        height: 46px;
+        right: 37px;
+    }
+
+    main .hero .main-area .top .lamp {
+        width: 119px;
+        right: 25px;
+    }
+
+    main .hero .main-area .desk-bottom {
+        width: 523px;
+    }
+
+    main .hero .main-area .desk-bottom img#desk {
+        height: 167px;
+    }
+
+
     main .lets-learn header h1 .first {
         font-size: 3.5rem;
     }
@@ -1529,7 +1581,6 @@ footer footer .terms-privacy .terms {
     }
 
 
-
     main .lets-learn main .card {
         width: 340px;
     }
@@ -1541,10 +1592,6 @@ footer footer .terms-privacy .terms {
     main .lets-learn main .card p {
         font-size: 0.85rem;
         width: 85%;
-    }
-
-    main .online-courses {
-        margin-top: -2.4%;
     }
 
     main .online-courses .online-courses-text-container h2 {
@@ -1568,12 +1615,20 @@ footer footer .terms-privacy .terms {
         font-size: 1rem;
     }
 
+    main .why-us footer a {
+        padding: 12px 6px;
+    }
+
     main .test-level .middle-rectangle .all-levels-container h6 {
         font-size: 1.85rem;
     }
 
     main .test-level .middle-rectangle .all-levels-container p {
         font-size: 0.95rem;
+    }
+
+    main .test-level .middle-rectangle a {
+        padding: 26px 8px;
     }
 
     main .test-level .test-your-level .test-now .line {
@@ -1593,13 +1648,13 @@ footer footer .terms-privacy .terms {
     }
 
     main .newsletter-section {
-        grid-template-columns: auto 65% auto 1fr;
+        grid-template-columns: 18% 57% 7% 18%;
     }
 
     main .newsletter-section .packet-img {
         margin: 29% 0 0 0;
         position: relative;
-        left: 75%;
+        left: 42%;
     }
 
     main .newsletter-section .main-content .receive-news {
@@ -1632,6 +1687,8 @@ footer footer .terms-privacy .terms {
         width: 53px;
     }
 
+
+
     main .newsletter-section .lamp {
         width: 118px;
     }
@@ -1646,7 +1703,7 @@ footer footer .terms-privacy .terms {
     }
 
     footer main .the-spanish-toolbox p {
-        width: 100%;
+        width: 98%;
     }
 
     footer main .courses-container .courses-text {
@@ -1666,13 +1723,27 @@ footer footer .terms-privacy .terms {
         width: 18.85%;
     }
 
+    .header .contact-button {
+        margin: 0 4% -1% 0;
+    }
+
+    main .hero .violet-circle {
+        width: 74px;
+        top: 177px;
+    }
+
+    main .special-courses main .cards-container .cards .card-button{
+        margin-top: 15px;
+    }
+
+    main .lets-learn main .card {
+        width: 320px;
+    }
+
     main .test-level .middle-rectangle a {
         margin-right: 7%;
     }
 
-    main .newsletter-section {
-        grid-template-columns: auto 62% auto 1fr;
-    }
 }
 
 @media (max-width: 1100px) {
@@ -1702,9 +1773,31 @@ footer footer .terms-privacy .terms {
         margin: 0 3% -1% 0;
     }
 
+    main .hero{
+        height: 526px;
+    }
+
+    main .hero .left-bookcase, main .hero .right-bookcase {
+        min-width: 200px;
+        height: 448px;
+    }
+
+    main .hero .main-area .calendar-watch {
+        margin-bottom: -15px;
+    }
+
+    main .hero .main-area .desk-bottom{
+        height: 12px;
+    }
 
     main .lets-learn header h1 .first {
         font-size: 3rem;
+    }
+
+    main .lets-learn main .yellow-circle {
+        width: 429px;
+        height: 608px;
+        top: 784px;
     }
 
     main .lets-learn header h1 .second {
@@ -1719,11 +1812,6 @@ footer footer .terms-privacy .terms {
         top: 527px;
     }
 
-    main .lets-learn main .yellow-circle {
-        width: 455px;
-        top: 751px;
-    }
-
     main .lets-learn main .card {
         width: 300px;
     }
@@ -1734,10 +1822,6 @@ footer footer .terms-privacy .terms {
 
     main .lets-learn main .card p {
         font-size: 0.79rem;
-    }
-
-    main .online-courses {
-        margin-top: -5.4%;
     }
 
     main .online-courses .online-courses-text-container h2 {
@@ -1751,7 +1835,7 @@ footer footer .terms-privacy .terms {
     main .special-courses main .cards-container .cards img {
         width: 100%;
         height: auto;
-        min-height: 42.5vh;
+        min-height: 193px;
     }
 
     main .special-courses main .cards-container .cards p {
@@ -1790,12 +1874,16 @@ footer footer .terms-privacy .terms {
         height: 32px;
     }
 
+    footer main .the-spanish-toolbox p {
+        width: 106%;
+    }
+
     footer main .the-spanish-toolbox span {
         font-size: 1.2rem;
     }
 }
 
-@media (max-width: 1024px) {
+/* @media (max-width: 1023px) {
 
     .header .logo {
         margin: 0 0.5% 0 3.341%;
@@ -1820,14 +1908,71 @@ footer footer .terms-privacy .terms {
         line-height: 1.15rem;
     }
 
+    main .hero{
+        height: 450px;
+    }
+
+    main .hero .left-bookcase, main .hero .right-bookcase {
+        min-width: 171px;
+        height: 386px;
+    }
+
+    main .hero .main-area .calendar-watch {
+        margin-bottom: -39px;
+        margin-top: 64px;
+    }
+
+    main .hero .main-area .calendar-watch .calendar {
+        width: 83px;
+        height: 121px;
+    }
+
+    main .hero .main-area .calendar-watch .watch {
+        position: relative;
+        width: 90px;
+        height: 90px;
+        margin-right: 13%;
+    }
+
+    main .hero .main-area .top .screen {
+        width: 201px;
+        height: 148px;
+        right: 7px;
+    }
+
+    main .hero .main-area .top .hello_msg {
+        width: 143px;
+        height: 74px;
+        bottom: 98px;
+        left: 164px;
+    }
+
+    main .hero .main-area .top .apple {
+        width: 31px;
+        height: 39px;
+        right: 22px;
+    }
+
+    main .hero .main-area .top .lamp {
+        width: 111px;
+        right: 3px;
+        height: 139px;
+    }
+
+    main .hero .main-area .desk-bottom {
+        width: 498px;
+    }
+
+    main .hero .violet-circle {
+        top: 134px;
+    }
 
     main .lets-learn main .yellow-circle {
-        width: 432px;
-        top: 768px;
+        top: 713px;
     }
 
     main .special-courses main .cards-container .cards img {
-        min-height: 39.5vh;
+        min-height: 189px;
     }
 
     main .special-courses main .cards-container .third-card h6 {
@@ -1853,17 +1998,20 @@ footer footer .terms-privacy .terms {
         left: 78%;
     }
 
+    footer main .the-spanish-toolbox p{
+        width: 96%;
+    }
+
     footer main .the-spanish-toolbox p,
     footer main .courses-container .courses-text {
         font-size: 1rem;
     }
 
-}
+} */
 
 
-/* landscape view Tablet */
-@media (max-width: 768px) {
-
+@media (max-width: 1023px){
+    
     .header nav,
     .header .contact-button {
         display: none;
@@ -1890,21 +2038,6 @@ footer footer .terms-privacy .terms {
         display: block;
         z-index: 2;
     }
-
-    /* main .hero .left-bookcase,
-    main .hero .right-bookcase,
-    main .hero .violet-circle,
-    main .hero .main-area,
-    main .hero .main-area .desk,
-    main .hero .main-area .calendar,
-    main .hero .main-area .watch,
-    .header .burguer-menu .btn-menu,
-    main .lets-learn main .yellow-circle
-     {
-        display: none;
-    } */
-
-
 
     .header .burguer-menu {
         display: block;
@@ -1959,7 +2092,7 @@ footer footer .terms-privacy .terms {
     .header .burguer-menu .menu-mobile {
         position: fixed;
         width: 100vw;
-        height: 60vh;
+        height: auto;
         right: 0;
         bottom: 17.5%;
         display: flex;
@@ -1997,59 +2130,12 @@ footer footer .terms-privacy .terms {
         transition: all 1.5s ease;
     }
 
-    main .hero {
-        display: block;
-        width: 100vw;
+
+
+    main .hero .left-bookcase, main .hero .right-bookcase {
+        width: 195px;
+        min-width: 195px;
     }
-
-    /* main .hero-mobile-area {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 100%;
-    } */
-
-    /* main .hero-mobile-area header {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        margin-top: -33px;
-    }
-
-    main .hero-mobile-area header #mobileCalendar {
-        width: 90px;
-        height: auto;
-        margin-right: 41%;
-    }
-
-    main .hero-mobile-area header #mobileWatch {
-        width: 79px;
-        height: auto;
-    }
-
-    main .hero-mobile-area main {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    main .hero-mobile-area main .mobile-desk {
-        width: 72%;
-        height: auto;
-        bottom: 34px;
-        left: 10px;
-        position: relative;
-    } */
-
-
-
 
     main .lets-learn .green-circle{
         top: 586px;
@@ -2133,7 +2219,7 @@ footer footer .terms-privacy .terms {
     }
 
     main .special-courses main .cards-container .cards img {
-        min-height: 29.5vh;
+        min-height: 30px;
     }
 
     main .special-courses main .cards-container .cards h6 {
@@ -2385,6 +2471,13 @@ footer footer .terms-privacy .terms {
     }
 }
 
+
+/* landscape view Tablet */
+@media (max-width: 768px) {
+
+
+}
+
 /* vertical view Tablet + lansdcape view Mobile */
 @media (max-width:480px) {
 
@@ -2409,64 +2502,12 @@ footer footer .terms-privacy .terms {
         margin: -5% 3% 0 0;
     }
 
-    /* main .hero-mobile-area header {
-        margin-bottom: 44px;
-    } */
+
 
     .header .burguer-menu .btn-menu:checked~.menu-mobile, .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
         transform: translateY(-14px);
     }
 
-    /* main .hero-mobile-area header #mobileCalendar {
-        width: 71px;
-        height: 99px;
-        margin-right: 156px;
-    }
-
-    main .hero-mobile-area header #mobileWatch {
-        width: 66px;
-    }
-
-    main .hero-mobile-area main #mobileScreen {
-        width: 149px;
-        height: 113px;
-        bottom: 64px;
-        left: 161px;
-    }
-
-    main .hero-mobile-area main #mobileDesk {
-        width: 417px;
-        height: 153px;
-    }
-
-    main .hero-mobile-area main #mobileApple {
-        bottom: 66px;
-        left: 294px;
-    }
-
-    main .hero-mobile-area main #mobileLamp {
-        bottom: 66px;
-        left: 338px;
-        width: 95px;
-    }
-
-    main .hero-mobile-area main #mobileHello_msg {
-        width: 101px;
-        bottom: 123px;
-        left: 186px;
-    }
-
-    main .hero-mobile-area header {
-        margin-bottom: 12px;
-    }
-
-    main .hero-mobile-area main .mobile-desk {
-        width: 65%;
-        max-width: 65%;
-        height: auto;
-        bottom: 18px;
-        left: 10px;
-    } */
 
     main .lets-learn .green-circle {
         top: 547px;
