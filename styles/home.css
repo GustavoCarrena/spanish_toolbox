@@ -133,12 +133,6 @@
 
 .header .right-burguer-image {
     display: none;
-    position: absolute;
-    width: 17%;
-    height: auto;
-    right: 0;
-    top: 0;
-    z-index: -1;
 }
 
 main .hero-mobile-area {
@@ -673,7 +667,7 @@ main .special-courses main .cards-container .cards p {
     font-family: var(--montserrat-font);
     font-size: 1rem;
     color: var(--white-color);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 main .special-courses main .cards-container .second-card p {
@@ -2013,7 +2007,11 @@ footer footer .terms-privacy .terms {
 @media (max-width: 1023px){
     
     .header nav,
-    .header .contact-button {
+    .header .contact-button,
+    main .hero .violet-circle,
+    main .hero .left-bookcase,
+    main .hero .right-bookcase,
+    main .hero .main-area {
         display: none;
     }
 
@@ -2037,14 +2035,19 @@ footer footer .terms-privacy .terms {
     .header .right-burguer-image {
         display: block;
         z-index: 2;
+        position: absolute;
+        width: 129px;
+        height: 141px;
+        right: 0;
+        top: 0;
     }
 
     .header .burguer-menu {
         display: block;
         position: relative;
-        width: 5.5%;
+        width: 48px;
         height: 13px;
-        margin: -3% 3% 0 0;
+        margin: 1% 3% 0 0;
         z-index: 3333;
     }
 
@@ -2073,7 +2076,22 @@ footer footer .terms-privacy .terms {
         top: 11px;
     }
 
+    .header .burguer-menu .btn-menu{
+        display: none;
+    }
 
+    .checkHeader{
+        position: fixed;
+    }
+
+    .disable{
+        transform: translateX(120vw);
+        transition: all 0.7s ease;
+    }
+
+    .background{
+        background-color: #2f6fb6;
+    }
 
     .header .burguer-menu .btn-menu:checked~.lbl-menu .spn1 {
         transform: rotate(140deg);
@@ -2092,11 +2110,13 @@ footer footer .terms-privacy .terms {
     .header .burguer-menu .menu-mobile {
         position: fixed;
         width: 100vw;
-        height: auto;
+        height: 85%;
         right: 0;
-        bottom: 17.5%;
         display: flex;
-        z-index: 2;
+        top: 85px;
+        background: var(--blue-color);
+        transform: translateY(-105vh);
+        transition: all 1.5s ease;
     }
 
     .header .burguer-menu .menu-mobile ul {
@@ -2105,53 +2125,92 @@ footer footer .terms-privacy .terms {
         align-items: flex-start;
         width: 100%;
         height: 100%;
-        background: #2f6fb6;
         justify-content: space-evenly;
+    }
+    
+    .header .burguer-menu .menu-mobile ul li{
+        margin-left: 6%;
     }
 
     .header .burguer-menu .menu-mobile ul li a {
         color: #FFFFFF;
         text-decoration: none;
-        margin-left: 16px;
         font-family: var(--noto-font);
         font-weight: 700;
         font-size: 1.05rem;
     }
 
     .header .burguer-menu .btn-menu:checked~.menu-mobile,
-    .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
+    header .burguer-menu .btn-menu:checked~.menu-mobile ul {
         transform: translateY(-5px);
         transition: all 1s ease;
         margin: 0;
     }
 
-    .header .burguer-menu .menu-mobile ul {
-        transform: translateY(-100vh);
-        transition: all 1.5s ease;
+    main .hero .hero-mobile-area{
+        width: 100vw;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
-
-
-    main .hero .left-bookcase, main .hero .right-bookcase {
-        width: 195px;
-        min-width: 195px;
+    main .hero .hero-mobile-area header{
+        width: 65%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    main .lets-learn .green-circle{
-        top: 586px;
-        width: 166px;
-        height: 319px;
-        left: -40px;
+    main .hero .hero-mobile-area header img#mobileCalendar{
+        width: 110px;
+        height: 170px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileWatch{
+        width: 117px;
+        height: 104px;
+    }
+
+    main .hero .hero-mobile-area main{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .hero .hero-mobile-area main img#mobileDesk{
+        width: 630px;
+        height: 360px;
+    }
+
+    main .lets-learn{
+        grid-template-rows: 147px auto 0px;
+    }
+
+    main .lets-learn main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main .lets-learn main .yellow-circle {
+        width: 48%;
+        height: auto;
+        top: 815px;
+    }
+
+    main .lets-learn .green-circle {
+        top: 621px;
+        width: 153px;
+        height: 263px;
     }
 
 
     main .lets-learn header h1 {
-        margin-top: 0;
+        margin-top: 10px;
     }
 
-    main .lets-learn main {
-        margin-top: -26px;
-    }
 
     main .lets-learn header h1 .first {
         font-size: 2.5rem;
@@ -2163,7 +2222,8 @@ footer footer .terms-privacy .terms {
 
 
     main .lets-learn main .card {
-        width: 220px;
+        width: 90%;
+        height: 90%;
     }
 
     main .lets-learn main .card p {
@@ -2171,24 +2231,26 @@ footer footer .terms-privacy .terms {
             display: flex;
             flex-flow: column nowrap;
             height: auto;
-            min-height: 150px;
+            min-height: 140px;
             justify-content: flex-start;
             width: 95%;
             padding: 0 9px;
+            margin-bottom: 22px;
+    }
+
+    main .lets-learn main .card h6 {
+        font-size: 1rem;
+        width: 75%;
+    }
+
+    main .lets-learn main .card a{
+        margin-bottom: 19.5%;
     }
 
     main .lets-learn main .first-card p, 
     main .lets-learn main .third-card p {
         width: 95%;
         padding: 0 17px;
-    }
-
-    main .lets-learn main .card a {
-        margin-top: 3%;
-    }
-
-    main .online-courses {
-        margin-top: -10.4%;
     }
 
     main .online-courses .online-courses-text-container {
@@ -2205,6 +2267,10 @@ footer footer .terms-privacy .terms {
         line-height: 1.45rem;
     }
 
+    main .special-courses{
+        margin-top: -18%;
+    }
+
     main .special-courses header .logo {
         width: 85px;
         height: 100%;
@@ -2219,18 +2285,24 @@ footer footer .terms-privacy .terms {
     }
 
     main .special-courses main .cards-container .cards img {
-        min-height: 30px;
+        height: 173px;
+        transform: scaleY(0.9);
     }
 
     main .special-courses main .cards-container .cards h6 {
         font-size: 0.95rem;
-        min-height: 53px;
+        min-height: 72px;
+        margin: 6% 0 5% 0;
     }
 
     main .special-courses main .cards-container .cards p {
         font-size: 0.85rem;
         width: 95%;
         margin-bottom: 36px;
+    }
+
+    main .special-courses main .cards-container .cards .card-button {
+        margin-top: 0px;
     }
 
     main .why-us .title h6 {
@@ -2303,13 +2375,14 @@ footer footer .terms-privacy .terms {
     }
 
     main .test-level .test-your-level .test-now .line {
-        margin: -17% 0 15.46% 24%;
+        margin: -52px 0 52px 78px;
+        width: 200px;
     }
 
     main .test-level .test-your-level .test-now .arrow-image {
-        width: 17%;
+        width: 135px;
         left: 78%;
-        margin-top: 9px;
+        margin-top: 19px;
     }
 
     main .test-level .test-your-level .test-now .first-p {
@@ -2318,14 +2391,20 @@ footer footer .terms-privacy .terms {
     }
 
     main .newsletter-section {
-        grid-template-columns: auto 64% 10% 16%;
-        grid-template-rows: 274px;
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+justify-content: center;
+margin: 50px 0;
     }
 
     main .newsletter-section .packet-img {
-        left: 5%;
+        position: absolute;
         width: 154px;
         height: 172px;
+        margin: 0;
+        left: 5%;
+        margin-top: -24px;
     }
 
     main .newsletter-section .papers,
@@ -2333,17 +2412,32 @@ footer footer .terms-privacy .terms {
         display: none;
     }
 
+    main .newsletter-section .main-content{
+        width: 82%;
+        margin-bottom: 20px;
+    }
+
     main .newsletter-section .main-content .title {
         font-size: 1.8rem;
     }
 
     main .newsletter-section .main-content .receive-news {
-        width: 68%;
+        width: 61%;
         font-size: 1rem;
     }
 
     main .newsletter-section .main-content .suscribe {
-        width: 70%;
+        width: 100%;
+    }
+
+    main .newsletter-section .main-content .suscribe .input {
+        width: 340px;
+        margin: 0;
+    }
+
+    main .newsletter-section .main-content .suscribe a {
+        width: 130px;
+        margin-left: 5px;
     }
 
     footer main {
@@ -2391,11 +2485,11 @@ footer footer .terms-privacy .terms {
     }
 
     footer main .the-spanish-toolbox p {
-        font-size: 1rem;
+        font-size: 1.2rem;
         align-self: center;
         justify-self: center;
         text-align: center;
-        padding: 0 20%;
+        width: 320px;
     }
 
     footer main .the-spanish-toolbox nav {
@@ -2411,7 +2505,6 @@ footer footer .terms-privacy .terms {
 
     footer main .the-spanish-toolbox nav ul li a {
         font-size: 1.2rem;
-        border: none;
     }
 
     footer main .language-courses {
@@ -2457,6 +2550,11 @@ footer footer .terms-privacy .terms {
     }
 
 
+    footer footer .all-rights-reserved span{
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
     footer footer .terms-privacy {
         display: none;
     }
@@ -2467,45 +2565,75 @@ footer footer .terms-privacy .terms {
     }
 
     footer footer .social-media img {
-        margin: 0 1%;
+        margin: 0 2%;
+    width: 45px;
     }
 }
 
 
 /* landscape view Tablet */
-@media (max-width: 768px) {
-
-
-}
-
-/* vertical view Tablet + lansdcape view Mobile */
-@media (max-width:480px) {
+@media (max-width: 767px) {
 
     .header {
         padding: 41px 0 74px 15px;
     }
 
     .header .logo-img {
-        width: 22px;
-        height: 16px;
+        width: 39px;
+        height: 34px;
     }
 
     .header span {
-        font-size: 0.9rem;
-        line-height: 1.2rem;
+        font-size: 1.1rem;
+        line-height: 0.4rem;
+    }
+
+    .header .right-burguer-image {
+        width: 117px;
+        height: 128px;
     }
 
 
     .header .burguer-menu {
-        width: 8%;
+        width: 43px;
         height: 12px;
-        margin: -5% 3% 0 0;
+        margin: 0 31px 0 0;
     }
 
 
 
     .header .burguer-menu .btn-menu:checked~.menu-mobile, .header .burguer-menu .btn-menu:checked~.menu-mobile ul {
-        transform: translateY(-14px);
+        transform: translateY(-5px);
+    }
+
+    main .hero {
+        height: 413px;
+    }
+
+    main .hero .hero-mobile-area{
+        margin-top: 24px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileCalendar {
+        width: 88px;
+        height: 131px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileWatch {
+        width: 87px;
+        height: 89px;
+    }
+
+    main .hero .hero-mobile-area main img#mobileDesk {
+        width: 430px;
+        height: 260px;
+    }
+
+    main #white-top img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: -1px;
     }
 
 
@@ -2800,6 +2928,13 @@ footer footer .terms-privacy .terms {
     footer main .title {
         font-size: 1.20rem;
     }
+
+}
+
+/* vertical view Tablet + lansdcape view Mobile */
+@media (max-width:480px) {
+
+
 
 
     

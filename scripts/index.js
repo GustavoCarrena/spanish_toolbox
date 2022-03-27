@@ -4,6 +4,11 @@ import {footerSection} from "../templates/footer.js";
 headerSection()
 footerSection()
 
+const fixedHeader = document.getElementById("header")
+const btnMenu = document.getElementById("btnMenu")
+const main = document.getElementById("main")
+const footer = document.getElementById("footer")
+
 $(document).ready(function(){
     $('#leftBookcase').plaxify({"xRange":25,"yRange":0,"data-invert":false})
     $('#calendar').plaxify({"xRange":15,"yRange":0,"data-invert":true})
@@ -17,6 +22,19 @@ $(document).ready(function(){
 
     $.plax.enable()
     });
+
+    btnMenu.addEventListener("click", () =>{
+        fixedHeader.classList.toggle('checkHeader');
+        main.classList.toggle('disable')
+        footer.classList.toggle('disable');
+    })
+    
+
+
+
+
+
+
 
 
 

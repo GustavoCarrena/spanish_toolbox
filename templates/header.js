@@ -37,3 +37,5 @@ export function headerSection(background) {
     const headerSection = document.getElementById('header');
     headerSection.innerHTML = headerTemplate()
 };
+
+
