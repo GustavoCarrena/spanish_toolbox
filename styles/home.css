@@ -2636,11 +2636,16 @@ margin: 50px 0;
         bottom: -1px;
     }
 
+    main .lets-learn{
+        grid-template-rows: 193px auto 0px;
+    }
+
 
     main .lets-learn .green-circle {
-        top: 547px;
-        width: 260px;
+        top: 683px;
+        width: 45%;
         height: auto;
+        max-height: 545px;
     }
 
     main .lets-learn header h1 .first {
@@ -2664,9 +2669,10 @@ margin: 50px 0;
     }
 
     main .lets-learn main .card {
-        width: 59.38%;
+        width: 50%;
         height: auto;
         margin: 36px 0 0 0;
+        min-width: 313px;
     }
 
     main .lets-learn main .card h6 {
@@ -2686,27 +2692,28 @@ margin: 50px 0;
 
     main .lets-learn main .yellow-circle {
         display: block;
-        width: 100%;
-        height: 723px;
-        top: 1378px;
+        width: 101%;
+        height: auto;
+        top: 1691px;
     }
 
     main .online-courses .video{
         width: 100vw;
-        height: 500px;  
+        height: 438px;  
     }
 
     main .online-courses .video video {
         width: 100%;
-        height: 100%;
-        transform: scale(2,2.5);
+        height: auto;
+        transform: scale(2,2.1);
         position: relative;
         zoom: normal;
+        top: 124px;
     }
 
     main .online-courses .online-courses-text-container {
-        left: 20.8%;
-        bottom: 19%;
+        left: 22.8%;
+        bottom: 21%;
         margin-bottom: 0;
     }
 
@@ -2863,14 +2870,15 @@ margin: 50px 0;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
+        margin: 0;
     }
 
     main .newsletter-section .packet-img {
-        left: -29%;
+        left: -27%;
         width: 119px;
         height: auto;
         position: relative;
-        bottom: -66px;
+        bottom: -59px;
         margin: 0;
     }
 
@@ -2879,18 +2887,13 @@ margin: 50px 0;
     }
 
     main .newsletter-section .main-content .receive-news {
-        width: 68%;
-        font-size: 1.125rem;
-    }
-
-    main .newsletter-section .main-content .receive-news {
-        width:  57%;
+        width:  73%;
         font-size: 1.125rem;
         margin: 36px 0 32px 0;
     }
 
     main .newsletter-section .main-content .suscribe {
-        width: 70%;
+        width: 86%;
         flex-flow: column nowrap;
         margin-bottom: 74px;
     }
@@ -2909,8 +2912,9 @@ margin: 50px 0;
     }
 
     footer main .the-spanish-toolbox p {
-        font-size: 1.313rem;
-        padding: 0 13%;
+        font-size: 1.063rem;
+        padding: 0;
+        width: 300px;
     }
 
     footer main .language-courses {
@@ -2921,8 +2925,8 @@ margin: 50px 0;
         margin: 0 0 10% 0;
     }
 
-    footer main .the-spanish-toolbox p {
-        font-size: 1.063rem;
+    footer footer .all-rights-reserved span {
+        font-size: 1.2rem;
     }
 
     footer main .title {
@@ -2935,7 +2939,12 @@ margin: 50px 0;
 @media (max-width:480px) {
 
 
-
+    main .lets-learn main .yellow-circle {
+        display: block;
+        width: 101%;
+        height: auto;
+        top: 1691px;
+    }
 
     
 
