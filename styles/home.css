@@ -243,7 +243,7 @@ main .hero .main-area .top{
 main .hero .main-area .top .screen {
     position: relative;
     width: 259px;
-    height: 193px;
+    height: 189px;
     z-index: 1;
     right: 16px;
     }
@@ -274,7 +274,7 @@ main .hero .main-area .top img#hello_msg {
 main .hero .main-area .top .apple {
     position: relative;
     width: 42px;
-    height: 55px;
+    height: 47px;
     right: 36px;
 }
 
@@ -287,7 +287,7 @@ main .hero .main-area .top img#apple {
 main .hero .main-area .top .lamp {
     position: relative;
     width: 120px;
-    height: 154px;
+    height: 148px;
 }
 
 main .hero .main-area .top img#lamp {
@@ -299,7 +299,7 @@ main .hero .main-area .top img#lamp {
 main .hero .main-area .desk-bottom {
     position: relative;
     width: 670px;
-    height: 48px;
+    height: 58px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -1539,22 +1539,26 @@ footer footer .terms-privacy .terms {
 
     main .hero .main-area .top .screen {
         width: 227px;
-        height: 166px;
+        height: 168px;
+        bottom: 13px;
     }
+
 
     main .hero .main-area .top .apple {
         width: 38px;
-        height: 46px;
-        right: 37px;
+        height: 60px;
+        right: 41px;
     }
 
     main .hero .main-area .top .lamp {
         width: 119px;
         right: 25px;
+        height: 162px;
     }
 
     main .hero .main-area .desk-bottom {
         width: 523px;
+        height: 0;
     }
 
     main .hero .main-area .desk-bottom img#desk {
@@ -1780,9 +1784,6 @@ footer footer .terms-privacy .terms {
         margin-bottom: -15px;
     }
 
-    main .hero .main-area .desk-bottom{
-        height: 12px;
-    }
 
     main .lets-learn header h1 .first {
         font-size: 3rem;
@@ -2691,11 +2692,11 @@ margin: 50px 0;
     }
 
     main .lets-learn main .yellow-circle {
-        display: block;
-        width: 101%;
-        height: auto;
-        top: 1691px;
+        width: 101vw;
+        top: 1528px;
     }
+
+
 
     main .online-courses .video{
         width: 100vw;
@@ -2935,23 +2936,65 @@ margin: 50px 0;
 
 }
 
+
+@media (max-width:600px) {
+
+    main .lets-learn main .yellow-circle {
+        top: 1560px;
+    }
+}
+
+
+@media (max-width:570px) {
+
+    main .lets-learn main .yellow-circle {
+        top: 1603px;
+    }
+}
+
+@media (max-width:550px) {
+
+    main .lets-learn main .yellow-circle {
+        top: 1620px;
+    }
+}
+
+    @media (max-width:530px) {
+
+        main .lets-learn main .yellow-circle {
+            top: 1670px;
+        }
+    }
+
+    @media (max-width:500px) {
+
+        main .lets-learn main .yellow-circle {
+            top: 1690px;
+        }
+    }
+
 /* vertical view Tablet + lansdcape view Mobile */
 @media (max-width:480px) {
 
 
     main .lets-learn main .yellow-circle {
-        width: 101%;
-        height: auto;
-        top: 1691px;
+        top: 1700px;
     }
-
-    
-
-
-
 
 
 }
 
+@media (max-width:470px) {
+    main .lets-learn main .yellow-circle {
+        top: 1720px;
+    }
+}
+
 /* vertical view Mobile */
-@media (max-width:320px) {}
+@media (max-width:320px) {
+    main .lets-learn main .yellow-circle {
+        width: 101%;
+        height: auto;
+        top: 1700px;
+    }
+}
