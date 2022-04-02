@@ -2531,7 +2531,8 @@ margin: 50px 0;
     }
 
     main .lets-learn header h1 .third {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+        margin-bottom: 16px;
     }
 
     main .lets-learn main{
@@ -2568,8 +2569,6 @@ margin: 50px 0;
         width: 101vw;
         top: 1528px;
     }
-
-
 
     main .online-courses .video{
         width: 100vw;
@@ -2901,6 +2900,10 @@ margin: 50px 0;
         top: 1700px;
     }
 
+    main .lets-learn header h1 .third {
+        font-size: 1.1rem;
+    }
+
     main .online-courses .online-courses-text-container {
         top: 54%;
         left: 19%;
@@ -3165,10 +3168,6 @@ margin: 50px 0;
         font-size: 3.25rem;
     }
 
-    main .lets-learn header h1 .third {
-        font-size: 1.3rem;
-    }
-
     main .online-courses .video video {
         transform: scale(2.3,2.7);
     }
@@ -3193,6 +3192,7 @@ margin: 50px 0;
    
     main .online-courses .online-courses-text-container {
         left: 19%;
+        top: 50%
     }
 
     main .online-courses .online-courses-text-container h2 {
