@@ -1878,133 +1878,6 @@ footer footer .terms-privacy .terms {
     }
 }
 
-/* @media (max-width: 1023px) {
-
-    .header .logo {
-        margin: 0 0.5% 0 3.341%;
-    }
-
-    .header .logo-img {
-        height: 32px;
-    }
-
-    .header span {
-        font-size: 1.1rem;
-    }
-
-    .header nav ul li a {
-        font-size: 1rem;
-    }
-
-    .header .contact-button {
-        min-width: 140px;
-        height: 43px;
-        margin: 0 6.3% -1% 0;
-        line-height: 1.15rem;
-    }
-
-    main .hero{
-        height: 450px;
-    }
-
-    main .hero .left-bookcase, main .hero .right-bookcase {
-        min-width: 171px;
-        height: 386px;
-    }
-
-    main .hero .main-area .calendar-watch {
-        margin-bottom: -39px;
-        margin-top: 64px;
-    }
-
-    main .hero .main-area .calendar-watch .calendar {
-        width: 83px;
-        height: 121px;
-    }
-
-    main .hero .main-area .calendar-watch .watch {
-        position: relative;
-        width: 90px;
-        height: 90px;
-        margin-right: 13%;
-    }
-
-    main .hero .main-area .top .screen {
-        width: 201px;
-        height: 148px;
-        right: 7px;
-    }
-
-    main .hero .main-area .top .hello_msg {
-        width: 143px;
-        height: 74px;
-        bottom: 98px;
-        left: 164px;
-    }
-
-    main .hero .main-area .top .apple {
-        width: 31px;
-        height: 39px;
-        right: 22px;
-    }
-
-    main .hero .main-area .top .lamp {
-        width: 111px;
-        right: 3px;
-        height: 139px;
-    }
-
-    main .hero .main-area .desk-bottom {
-        width: 498px;
-    }
-
-    main .hero .violet-circle {
-        top: 134px;
-    }
-
-    main .lets-learn main .yellow-circle {
-        top: 713px;
-    }
-
-    main .special-courses main .cards-container .cards img {
-        min-height: 189px;
-    }
-
-    main .special-courses main .cards-container .third-card h6 {
-        margin: 4% 0 9% 0;
-    }
-
-    main .why-us footer a {
-        font-size: 1.2rem;
-    }
-
-    main .test-level .middle-rectangle a {
-        line-height: 1rem;
-        font-size: 1.3rem;
-        padding: 29px 38px;
-    }
-
-    main .test-level .test-your-level .test-now .line {
-        margin: -12% 0 15.46% 24%;
-    }
-
-    main .test-level .test-your-level .test-now .arrow-image {
-        width: 14%;
-        left: 78%;
-    }
-
-    footer main .the-spanish-toolbox p{
-        width: 96%;
-    }
-
-    footer main .the-spanish-toolbox p,
-    footer main .courses-container .courses-text {
-        font-size: 1rem;
-    }
-
-} */
-
-
 @media (max-width: 1023px){
     
     .header nav,
@@ -2638,7 +2511,7 @@ margin: 50px 0;
     }
 
     main .lets-learn{
-        grid-template-rows: 193px auto 0px;
+        grid-template-rows: 193px auto 09px;
     }
 
 
@@ -2714,7 +2587,6 @@ margin: 50px 0;
 
     main .online-courses .online-courses-text-container {
         left: 22.8%;
-        bottom: 21%;
         margin-bottom: 0;
     }
 
@@ -2736,7 +2608,12 @@ margin: 50px 0;
     }
 
     main .special-courses main .cards-container .cards {
-        width: 50.63%;
+        width: 46%;
+        margin: 0;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        height: auto;
     }
 
     main .special-courses main .cards-container .cards h6 {
@@ -2747,7 +2624,7 @@ margin: 50px 0;
     }
 
     main .special-courses main .cards-container .cards p {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         width: 100%;
         margin-bottom: 38px;
         height: fit-content;
@@ -2797,12 +2674,12 @@ margin: 50px 0;
     }
 
     main .why-us footer {
-        margin-top: -29.7%;
+        margin-top: -120px;
     }
 
     main .why-us footer a {
         font-size: 1.5rem;
-        width: 80%;
+        width: 290px;
         margin: 82px 0 50px 1%;
         height: 56px;
         padding: 16px 40px;
@@ -2818,6 +2695,10 @@ margin: 50px 0;
         margin: 73px 0 81px 0;
     }
 
+    main .test-level .middle-rectangle .all-levels-container span {
+        width: 205px;
+    }
+
     main .test-level .middle-rectangle .all-levels-container h6 {
         font-size: 1.25rem;
     }
@@ -2829,7 +2710,7 @@ margin: 50px 0;
 
     main .test-level .middle-rectangle a {
         font-size: 1.125rem;
-        padding: 20px 12px;
+        padding: 18px 6px;
         width: 223px;
         height: 56px;
         align-self: center;
@@ -2853,17 +2734,17 @@ margin: 50px 0;
     }
 
     main .test-level .test-your-level .test-now .arrow-image {
-        width: 19%;
-        left: 75%;
-        margin-top: 89px;
+        width: 128px;
+        left: 0;
+        margin: 13px 24% 0 76%;
     }
 
     main .test-level .test-your-level .test-now a {
-        width: 220px;
-        height: 42px;
+        width: 313px;
+        height: 46px;
         margin-bottom: 10%;
         font-size: 1.2rem;
-        padding: 10px 48px;
+        padding: 12px 11px;
     }
 
     main .newsletter-section{
@@ -2874,23 +2755,29 @@ margin: 50px 0;
         margin: 0;
     }
 
+    main .newsletter-section .main-content {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
     main .newsletter-section .packet-img {
-        left: -27%;
+        left: 0;
         width: 119px;
         height: auto;
         position: relative;
         bottom: -59px;
-        margin: 0;
+        margin: 0 284px 0 0;
     }
 
     main .newsletter-section .main-content .title {
         font-size: 1.75rem;
+        margin-left: 1.9%;
     }
 
     main .newsletter-section .main-content .receive-news {
-        width:  73%;
+        width: 368px;
         font-size: 1.125rem;
-        margin: 36px 0 32px 0;
+        margin: 24px 0 32px 0;
     }
 
     main .newsletter-section .main-content .suscribe {
@@ -2900,7 +2787,7 @@ margin: 50px 0;
     }
 
     main .newsletter-section .main-content .suscribe .input {
-        width: 88%;
+        width: 298px;
         margin: 0 0 20px 0;
     }
 
@@ -2915,15 +2802,19 @@ margin: 50px 0;
     footer main .the-spanish-toolbox p {
         font-size: 1.063rem;
         padding: 0;
-        width: 300px;
+        width: 265px;
+    }
+
+    footer main .the-spanish-toolbox nav {
+        width: 100%;
     }
 
     footer main .language-courses {
-        margin: 4% 0 5% 0;
+        margin: 38px 0;
     }
 
     footer main .special-courses-footer {
-        margin: 0 0 10% 0;
+        margin-bottom: 38px;
     }
 
     footer footer .all-rights-reserved span {
@@ -2942,6 +2833,12 @@ margin: 50px 0;
     main .lets-learn main .yellow-circle {
         top: 1560px;
     }
+
+    main .online-courses .online-courses-text-container {
+        top: 47%;
+    }
+
+
 }
 
 
@@ -2949,6 +2846,12 @@ margin: 50px 0;
 
     main .lets-learn main .yellow-circle {
         top: 1603px;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 108px;
+        left: 0;
+        margin: 24px 23% 0 77%;
     }
 }
 
@@ -2964,6 +2867,11 @@ margin: 50px 0;
         main .lets-learn main .yellow-circle {
             top: 1670px;
         }
+
+        main .test-level .test-your-level .test-now .arrow-image {
+            width: 77px;
+            margin: 62px 19% 0 81%;
+        }
     }
 
     @media (max-width:500px) {
@@ -2971,16 +2879,72 @@ margin: 50px 0;
         main .lets-learn main .yellow-circle {
             top: 1690px;
         }
+
+        main .special-courses main .cards-container .cards h6 {
+            font-size: 1.15rem;
+            width: 141%;
+        }
+
+        main .special-courses main .cards-container .cards p {
+            width: 130%;
+        }
     }
 
 /* vertical view Tablet + lansdcape view Mobile */
 @media (max-width:480px) {
 
+    .header .logo {
+        margin: 0 0.5% 0 2%;
+    }
 
     main .lets-learn main .yellow-circle {
         top: 1700px;
     }
 
+    main .online-courses .online-courses-text-container {
+        top: 54%;
+        left: 19%;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 77px;
+        margin: 92px 22% 0 78%;
+    }
+
+    main .test-level .test-your-level .test-now a {
+        width: 250px;
+    }
+
+    main .why-us .title h6 {
+        font-size: 1.9rem;
+    }
+
+    main .why-us main .cards img {
+        width: 160px;
+        height: 100px;
+    }
+
+    main .why-us main .cards .card-text p {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+
+    main .why-us footer a {
+        font-size: 1.3rem;
+        width: 245px;
+        margin: 82px 0 50px 1%;
+        height: 50px;
+        padding: 14px 40px;
+    }
+
+    footer footer .all-rights-reserved span {
+        font-size: 1.1rem;
+    }
+
+    footer footer .social-media img {
+        margin: 0 2%;
+        width: 35px;
+    }
 
 }
 
@@ -2990,11 +2954,356 @@ margin: 50px 0;
     }
 }
 
+@media (max-width:450px) {
+    main .lets-learn main .yellow-circle {
+        top: 1760px;
+    }
+
+    main .online-courses .video {
+        height: 438px;
+    }
+
+    main .online-courses .video video{
+        transform: scale(2.1,2.3);
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 69px;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        transform: scaleY(0.85);
+    }
+
+}
+
+@media (max-width:440px) {
+    
+    main .hero .hero-mobile-area header img#mobileCalendar {
+        width: 80px;
+        height: 135px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileWatch {
+        width: 78px;
+    }
+    
+    main .hero .hero-mobile-area main img#mobileDesk {
+        width: 387px;
+        height: 276px;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 60px;
+        margin: 92px 19% 0 81%;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        transform: scaleY(0.8);
+    }
+
+}
+
+@media (max-width:430px) {
+    
+    main .lets-learn main .yellow-circle {
+        top: 1780px;
+    }
+
+    main .online-courses .video video {
+        transform: scale(2.2,2.6);
+    }
+
+    main .online-courses .online-courses-text-container {
+        left: 16%;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        transform: scaleY(0.8);
+    }
+
+}
+
+
+@media (max-width:420px) {
+    
+    .header .logo {
+        width: 65%;
+    }
+
+    main .lets-learn main .yellow-circle {
+        top: 1800px;
+    }
+
+    main .online-courses .online-courses-text-container {
+        left: 14%;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 55px;
+        margin: 92px 18% 0 82%;
+    }
+
+}
+
+@media (max-width:400px) {
+    
+    .header .logo {
+        width: 63%;
+    }
+
+    .header .logo-img {
+        width: 37px;
+        height: 32px;
+    }
+
+    .header span {
+        font-size: 1rem;
+        line-height: 0.4rem;
+    }
+
+    main .hero {
+        height: 395px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileCalendar {
+        width: 70px;
+        height: 120px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileWatch {
+        width: 64px;
+    }
+
+    main .hero .hero-mobile-area main img#mobileDesk {
+        width: 345px;
+        height: 293px;
+    }
+    main .lets-learn {
+        grid-template-rows: 193px auto 0px;
+    }
+
+    main .lets-learn main .yellow-circle {
+        top: 1672px;
+    }
+
+    main .lets-learn main .card {
+        height: auto;
+        margin: 36px 0 0 0;
+        min-width: 250px;
+    }
+
+    main .lets-learn main .card p {
+        margin: 0 0 10px 0;
+    }
+
+    main .special-courses {
+        margin-top: -24%;
+    }
+
+    main .special-courses header p .text {
+        font-size: 1.4rem;
+    }
+
+    main .special-courses header .logo {
+        width: 70px;
+    }
+
+    main .special-courses main .cards-container .cards h6 {
+        font-size: 1.1rem;
+    }
+
+    main .special-courses main .cards-container .cards p {
+        font-size: 0.8rem;
+    }
+
+
+    main .test-level .middle-rectangle .all-levels-container p {
+        font-size: 1rem;
+        width: 86%;
+    }
+
+
+}
+
+@media (max-width:375px) {
+
+
+    .header .logo-img {
+        width: 34px;
+        height: 33px;
+    }
+
+    .header span {
+        font-size: 0.9rem;
+    }
+
+    main .hero {
+        height: 363px;
+    }
+
+    
+    main .hero .hero-mobile-area main img#mobileDesk {
+        width: 319px;
+        height: 285px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileCalendar {
+        width: 66px;
+        height: 97px;
+    }
+
+    main .hero .hero-mobile-area header img#mobileWatch {
+        width: 60px;
+    }
+
+    main .lets-learn header h1 .first {
+        font-size: 1.7rem;
+    }
+
+    main .lets-learn header h1 .second {
+        font-size: 3.25rem;
+    }
+
+    main .lets-learn header h1 .third {
+        font-size: 1.3rem;
+    }
+
+    main .online-courses .video video {
+        transform: scale(2.3,2.7);
+    }
+
+    main .special-courses main .cards-container .cards img {
+        transform: scaleY(0.75);
+    }
+
+    main .special-courses {
+        margin-top: -26%;
+    }
+
+    main .newsletter-section .main-content .receive-news {
+        width: 88%;
+    }
+
+
+}
+
+@media (max-width:360px) {
+
+   
+    main .online-courses .online-courses-text-container {
+        left: 19%;
+    }
+
+    main .online-courses .online-courses-text-container h2 {
+        font-size: 1.6rem;
+    }
+
+    main .online-courses .online-courses-text-container p {
+        font-size: 0.8rem;
+        line-height: 1.15rem;
+    }
+
+    main .online-courses .video video {
+        transform: scale(2.5,2.9);
+    }
+
+    main .special-courses {
+        margin-top: -31%;
+    }
+
+    main .special-courses main .cards-container .cards p {
+        width: 150%;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 49px;
+        margin: 126px 0 0 84%;
+    }
+
+    main .newsletter-section .packet-img {
+        width: 107px;
+        margin: 0 249px 0 0;
+    }
+
+    main .newsletter-section .main-content .receive-news {
+        width: 248px;
+        font-size: 1rem;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container h6 {
+        font-size: 1.1rem;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container span {
+        width: 168px;
+    }
+
+    main .test-level .middle-rectangle .all-levels-container p {
+        font-size: 0.9rem;
+    }
+
+    main .test-level .middle-rectangle a {
+        font-size: 1.1rem;
+        padding: 13px 6px;
+        width: 207px;
+        height: 46px;
+    }
+
+
+}
+
+@media (max-width:330px) {
+    .header {
+        padding: 41px 0 74px 0px;
+    }
+
+    main .special-courses {
+        margin-top: -31%;
+    }
+
+    main .online-courses .online-courses-text-container {
+        left: 13%;
+    }
+
+    main .special-courses header .logo {
+        width: 50px;
+    }
+
+    main .special-courses main .cards-container .cards img {
+        transform: scaleY(0.7);
+    }
+
+}
+
 /* vertical view Mobile */
 @media (max-width:320px) {
     main .lets-learn main .yellow-circle {
         width: 101%;
         height: auto;
-        top: 1700px;
+        top: 1683px;
     }
+
+    .header span {
+        font-size: 0.8rem;
+    }
+
+    main .hero {
+        height: 361px;
+    }
+
+    main .hero .hero-mobile-area main img#mobileDesk {
+        width: 305px;
+        height: 299px;
+    }
+
+    main .special-courses {
+        margin-top: -33%;
+    }
+
+    main .test-level .middle-rectangle a {
+        width: 190px;
+    }
+
+
 }
