@@ -1602,7 +1602,6 @@ footer footer .terms-privacy .terms {
 
     main .special-courses main .cards-container .cards img {
         width: 100%;
-        max-width: 100%;
     }
 
     main .special-courses main .cards-container .cards h6 {
@@ -1956,12 +1955,16 @@ footer footer .terms-privacy .terms {
 
     .checkHeader{
         position: fixed;
+        z-index: 22222;
     }
 
     .disable{
-        transform: translateX(120vw);
-        transition: all 0.7s ease;
+        position: relative;
+        top: 132px;
+        transform: translateX(100vw);
+        transition: all 1s ease;
     }
+
 
     .background{
         background-color: #2f6fb6;
@@ -1989,7 +1992,7 @@ footer footer .terms-privacy .terms {
         display: flex;
         top: 85px;
         background: var(--blue-color);
-        transform: translateY(-105vh);
+        transform: translateX(-100vw);
         transition: all 1.5s ease;
     }
 
@@ -2480,6 +2483,10 @@ margin: 50px 0;
         transform: translateY(-5px);
     }
 
+    .disable{
+        top: 115px;
+    }
+
     main .hero {
         height: 413px;
     }
@@ -2604,22 +2611,24 @@ margin: 50px 0;
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
+        margin: 0;
     }
 
     main .special-courses main .cards-container .cards {
-        width: 46%;
+        width: 52%;
         margin: 0;
     }
 
     main .special-courses main .cards-container .cards img {
         height: auto;
+        width: 100%;
+        transform: scale(1);
     }
 
     main .special-courses main .cards-container .cards h6 {
         font-size: 1.25rem;
         min-height: 0;
         margin: 8% 0 12% 0;
-        width: 110%;
     }
 
     main .special-courses main .cards-container .cards p {
@@ -2829,6 +2838,17 @@ margin: 50px 0;
 
 @media (max-width:600px) {
 
+    .header .right-burguer-image {
+        width: 83px;
+        height: auto;
+    }
+
+    .header .burguer-menu {
+        width: 40px;
+        height: 12px;
+        margin: 0px 13px 21px 0;
+    }
+
     main .lets-learn main .yellow-circle {
         top: 1560px;
     }
@@ -2848,16 +2868,30 @@ margin: 50px 0;
     }
 
     main .test-level .test-your-level .test-now .arrow-image {
-        width: 108px;
+        width: 102px;
         left: 0;
-        margin: 24px 23% 0 77%;
+        margin: 43px 23% 0 77%;
     }
+
+    main .test-level .test-your-level .test-now a {
+        width: 252px;
+        padding: 11px 6px;
+    }
+
+    main .test-level .test-your-level .test-now .first-p {
+        width: 77%;
+    }
+
 }
 
 @media (max-width:550px) {
 
     main .lets-learn main .yellow-circle {
         top: 1620px;
+    }
+
+    main .test-level .test-your-level .test-now .first-p {
+        font-size: 0.9rem;
     }
 }
 
@@ -2867,10 +2901,8 @@ margin: 50px 0;
             top: 1670px;
         }
 
-        main .test-level .test-your-level .test-now .arrow-image {
-            width: 77px;
-            margin: 62px 19% 0 81%;
-        }
+
+
     }
 
     @media (max-width:500px) {
@@ -2879,14 +2911,15 @@ margin: 50px 0;
             top: 1690px;
         }
 
-        main .special-courses main .cards-container .cards h6 {
-            font-size: 1.15rem;
-            width: 141%;
+        main .special-courses main .cards-container .cards {
+            width: 60%;
         }
 
-        main .special-courses main .cards-container .cards p {
-            width: 130%;
+        main .special-courses main .cards-container .cards h6 {
+            font-size: 1.15rem;
         }
+
+
     }
 
 /* vertical view Tablet + lansdcape view Mobile */
@@ -2910,8 +2943,8 @@ margin: 50px 0;
     }
 
     main .test-level .test-your-level .test-now .arrow-image {
-        width: 77px;
-        margin: 92px 22% 0 78%;
+        width: 92px;
+        margin: 58px 22% 0 78%;
     }
 
     main .test-level .test-your-level .test-now a {
@@ -2929,7 +2962,11 @@ margin: 50px 0;
 
     main .why-us main .cards .card-text p {
         font-size: 1rem;
-        margin-bottom: 40px;
+        margin: 5px 7% 40px 7%;
+    }
+
+    main .why-us footer {
+        margin-top: -95px;
     }
 
     main .why-us footer a {
@@ -2955,6 +2992,10 @@ margin: 50px 0;
     main .lets-learn main .yellow-circle {
         top: 1720px;
     }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 88px;
+    }
 }
 
 @media (max-width:450px) {
@@ -2971,12 +3012,14 @@ margin: 50px 0;
     }
 
     main .test-level .test-your-level .test-now .arrow-image {
-        width: 69px;
+        width: 88px;
+        margin: 80px 24% 0 76%;
+    }
+    main .test-level .test-your-level .test-now a {
+        width: 215px;
     }
 
-    main .special-courses main .cards-container .cards img {
-        transform: scaleY(0.85);
-    }
+
 
 }
 
@@ -2996,14 +3039,11 @@ margin: 50px 0;
         height: 276px;
     }
 
-    main .test-level .test-your-level .test-now .arrow-image {
-        width: 60px;
-        margin: 92px 19% 0 81%;
+
+    main .special-courses {
+        margin-top: -20%;
     }
 
-    main .special-courses main .cards-container .cards img {
-        transform: scaleY(0.8);
-    }
 
 }
 
@@ -3021,9 +3061,7 @@ margin: 50px 0;
         left: 16%;
     }
 
-    main .special-courses main .cards-container .cards img {
-        transform: scaleY(0.8);
-    }
+
 
 }
 
@@ -3042,10 +3080,14 @@ margin: 50px 0;
         left: 14%;
     }
 
-    main .test-level .test-your-level .test-now .arrow-image {
-        width: 55px;
-        margin: 92px 18% 0 82%;
+    main .special-courses header .logo {
+        width: 65px;
     }
+
+    main .special-courses header p .text {
+        font-size: 1.6rem;
+    }
+
 
 }
 
@@ -3121,9 +3163,28 @@ margin: 50px 0;
     }
 
 
+    main .test-level .test-your-level .test-now h2 {
+        font-size: 3.5rem;
+    }
+
+    main .test-level .test-your-level .test-now .line {
+        margin: -52px 0 52px 68px;
+        width: 126px;
+    }
+
+    main .test-level .test-your-level .test-now .first-p {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+
     main .test-level .middle-rectangle .all-levels-container p {
         font-size: 1rem;
         width: 86%;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 55px;
+        margin: 102px 20% 0 80%;
     }
 
 
@@ -3173,7 +3234,16 @@ margin: 50px 0;
     }
 
     main .special-courses main .cards-container .cards img {
-        transform: scaleY(0.75);
+        transform: scaleY(0.85);
+    }
+
+    main .test-level .test-your-level .test-now .first-p {
+        width: 100%;
+    }
+
+    main .test-level .test-your-level .test-now .arrow-image {
+        width: 55px;
+        margin: 90px 17% 0 83%;
     }
 
     main .special-courses {
@@ -3212,13 +3282,17 @@ margin: 50px 0;
         margin-top: -31%;
     }
 
-    main .special-courses main .cards-container .cards p {
-        width: 150%;
+    main .special-courses main .cards-container .cards h6 {
+        font-size: 1rem;
     }
 
+    main .special-courses main .cards-container .cards p {
+        font-size: 0.75rem;
+    }
+
+
     main .test-level .test-your-level .test-now .arrow-image {
-        width: 49px;
-        margin: 126px 0 0 84%;
+        margin: 105px 20% 0 80%;
     }
 
     main .newsletter-section .packet-img {
@@ -3270,9 +3344,11 @@ margin: 50px 0;
         width: 50px;
     }
 
-    main .special-courses main .cards-container .cards img {
-        transform: scaleY(0.7);
+    main .special-courses main .cards-container .cards {
+        width: 62%;
     }
+
+
 
 }
 

@@ -5,6 +5,7 @@ headerSection()
 footerSection()
 
 const fixedHeader = document.getElementById("header")
+const rightBurguerImage = document.getElementById("rightBurguerImage")
 const btnMenu = document.getElementById("btnMenu")
 const main = document.getElementById("main")
 const footer = document.getElementById("footer")
@@ -25,7 +26,8 @@ $(document).ready(function(){
 
     btnMenu.addEventListener("click", () =>{
         fixedHeader.classList.toggle('checkHeader');
-        main.classList.toggle('disable')
+        rightBurguerImage.classList.toggle('checkHeader');
+        main.classList.toggle('disable');
         footer.classList.toggle('disable');
     })
     

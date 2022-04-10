@@ -13,7 +13,7 @@ function headerTemplate() {
             </ul>
         </nav>
         <a class="contact-button" href="views/contact.html">Contact Us</a>
-        <img src="img/home/hero/circ-azul-2.svg" alt="image" class="right-burguer-image">
+        <img src="img/home/hero/circ-azul-2.svg" alt="image" class="right-burguer-image" id="rightBurguerImage">
         <div class="burguer-menu">
             <input id="btnMenu" class="btn-menu" name="btn-menu" type="checkbox" value="">
             <label for="btnMenu" class="lbl-menu">
